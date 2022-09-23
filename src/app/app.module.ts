@@ -5,10 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
+import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
+import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
+import { EducacionComponent } from './componentes/educacion/educacion.component';
+import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
+import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule, MatCardModule ],
-  declarations: [ AppComponent, EncabezadoComponent ],
+  declarations: [ AppComponent, EncabezadoComponent, AcercaDeComponent, ExperienciaComponent, EducacionComponent, HabilidadesComponent, ProyectosComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
