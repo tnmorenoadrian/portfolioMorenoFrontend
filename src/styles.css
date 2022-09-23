@@ -74,13 +74,16 @@
     color: white !important;
 }
 .mat-card{
-   border-radius: 4px;
    margin: 10px 10px;
    padding: 20px;
-   border-color: #0a66c2;
 }
-.mat-card#first-card{
+.mat-card#encabezado{
+    border-radius: 0px;
     padding: 0%;
+}
+.mat-card#acerca{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 div#profile-background {
     display: flex;
@@ -89,15 +92,18 @@ div#profile-background img{
     position: relative;
     width: 100%;
     border-radius: 0;
-    margin-bottom: 20px;
+    margin-bottom: -11px;
 }
 .profile-image{
     position: absolute;
     border-radius: 50%;
     width: 152px;
     height: 152px;
-    margin-top: -150px;
-    margin-left: 65px;
+    margin-top: -125px;
+     margin-left: 45px;
+}
+div#separador{
+    height: 25px;
 }
 div#info{
     display: flex;
@@ -106,44 +112,46 @@ div#info{
 div#info-img{
   justify-content: center;  
 }
-div#info-img h1{
-  margin: 10px 25px;
-  font-size: 1.3rem;
-  font-weight: 500;
+div#info-img h2{
+  margin: 10px 15px;
+  font-weight: 400;
   line-height: 1.25;
   white-space: nowrap;
 }
-div#acerca{
-    width: 80%;
-    margin: 0px 10px;
-}
 div#info-titulo {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.25;
     text-align: center;
+}
+div#acerca {
+  padding-left: 10px;
 }
 ul.items-list{
   list-style-type: none;
   padding-left: 0px;
 }
+ul.items-list-projet{
+  list-style-type: none;
+  padding-left: 0px;
+}
 ul.items-list li{
-  padding: 10px;
-  overflow: auto;
-}
-h3 {
-    font-size: 1.3rem;
-    font-weight: 500;
-    line-height: 1.25;
-}
-h2 {
-  margin-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 ul.items-list li img{
   float: left;
   margin: 0 15px 0 0;
   height: 150px;
   width: 150px;
+}
+ul.items-list-projet li img{
+  margin: 0 15px 0 0;
+  height: 150px;
+  width: 150px;
+}
+ul.items-list li h2{
+  font-weight: 400;
 }
 div#background-skills{
   height: 70vh;
@@ -157,7 +165,7 @@ div#background-skills{
   margin-bottom: 10px;
 }
 
-.container{
+.cont-skill{
   position: relative;
   max-width: 500px;
   width: 100%;
@@ -166,13 +174,13 @@ div#background-skills{
   padding: 10px 20px;
   border-radius: 7px;
 }
-.container h2{
+.cont-skill h2{
     margin-bottom: 20px;
     letter-spacing: 1px;
     text-align: center;
     font-size: 25px;
 }
-.container .skill-box{
+.cont-skill .skill-box{
   width: 100%;
   margin: 25px 0;
 }
@@ -248,8 +256,10 @@ div#background-skills{
   transform: translateX(-50%) rotate(45deg);
 }
 div#list-projets {
-  padding-left: 10px;
+  padding-left: 20px;
 }
 div#list-education {
   padding-left: 10px;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
