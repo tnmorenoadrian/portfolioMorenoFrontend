@@ -6,29 +6,13 @@
        </div>
        <div>
          <ul class="items-list">
-          <li>
+          <li *ngFor="let experiencia of experienciaList">
             <div class="btn-edit" id="experiencia">
               <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
             </div>
-            <img src="assets/img/armada.png" />
-            <h2>Armada Argentina</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti.</p>
-          </li>
-          <li>
-            <div class="btn-edit" id="experiencia">
-              <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
-            </div>
-            <img src="assets/img/armada.png" />
-            <h2>Armada Argentina</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti.</p>
-          </li>
-          <li>
-            <div class="btn-edit" id="experiencia">
-              <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
-            </div>
-            <img src="assets/img/armada.png" />
-            <h2>Armada Argentina</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti.</p>
+            <img [src]="experiencia.img" />
+            <h2>{{experiencia.name}}</h2>
+            <p>{{experiencia.info}}</p>
           </li>
         </ul>
        </div>

@@ -26,7 +26,7 @@
       </nav>
     </header>
     <!-- imagen background-->
-      <div id="profile-background"><img src="{{miPortfolio.backImage}}">
+      <div id="profile-background"><img *ngIf="miPortfolio" [src]="miPortfolio.backImage"/>
       <div class="btn-edit" id="background-img">
         <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
       </div>

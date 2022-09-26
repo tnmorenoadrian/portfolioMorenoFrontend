@@ -5,34 +5,14 @@
     </div>
     <div id="list-projets">
       <ul class="items-list-projet">
-       <li>
+       <li *ngFor="let proyectos of proyectosList">
         <div class="btn-edit" id="proyectos">
           <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
         </div>           
-         <h2>Portfolio Web</h2>
-         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti.</p>
+         <h2>{{proyectos.name}}</h2>
+         <p>{{proyectos.info}}</p>
          <a href="https://argentinaprograma.inti.gob.ar/">
-           <img alt="Portfolio Web" src="assets/img/AP.png">
-        </a>
-       </li>
-       <li>
-        <div class="btn-edit" id="proyectos">
-          <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
-        </div>            
-         <h2>Portfolio Web</h2>
-         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti.</p>
-         <a href="https://argentinaprograma.inti.gob.ar/">
-           <img alt="Portfolio Web" src="assets/img/AP.png">
-        </a>
-       </li>          
-       <li>
-        <div class="btn-edit" id="proyectos">
-          <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
-        </div>              
-         <h2>Portfolio Web</h2>
-         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti.</p>
-         <a href="https://argentinaprograma.inti.gob.ar/">
-           <img alt="Portfolio Web" src="assets/img/AP.png">
+           <img alt="Portfolio Web" [src]="proyectos.img">
         </a>
        </li>
      </ul>

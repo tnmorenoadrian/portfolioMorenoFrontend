@@ -4,22 +4,63 @@
   "profileImage":"./assets/img/profile.png",
   "titulo":"Full Stack Developer Jr",
   "acercaInfo":"Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti.",
-  "experiencia": {
+  
+  "experiencia": [{
     "name":"Armada Argentina",
     "img":"./assets/img/armada.png",
     "url":"#",
     "info":"Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti."
   },
-  "educacion": {
+  {
+    "name":"Armada Argentina2",
+    "img":"./assets/img/armada.png",
+    "url":"#",
+    "info":"Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti."
+  },
+  {
+    "name":"Armada Argentina3",
+    "img":"./assets/img/armada.png",
+    "url":"#",
+    "info":"Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti."
+  }
+  ],
+
+  "educacion": [{
     "name":"Universidad Tecnologica Nacional",
     "img":"./assets/img/UTN.png",
     "url":"#",
     "info":"Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti."
   },
-  "proyectos": {
+  {
+    "name":"Universidad Tecnologica Nacional2",
+    "img":"./assets/img/UTN.png",
+    "url":"#",
+    "info":"Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti."
+  },
+  {
+    "name":"Universidad Tecnologica Nacional3",
+    "img":"./assets/img/UTN.png",
+    "url":"#",
+    "info":"Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti."
+  }
+],
+  "proyectos": [{
     "name":"Portfolio Web",
     "img":"./assets/img/AP.png",
     "url":"#",
     "info":"Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti."
+  },
+  {
+    "name":"Portfolio Web2",
+    "img":"./assets/img/AP.png",
+    "url":"#",
+    "info":"Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti."
+  },
+  {
+    "name":"Portfolio Web3",
+    "img":"./assets/img/AP.png",
+    "url":"#",
+    "info":"Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti."
   }
+]
 }

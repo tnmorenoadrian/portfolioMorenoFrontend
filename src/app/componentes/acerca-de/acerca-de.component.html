@@ -3,7 +3,7 @@
     <div class="row">
       <!-- imagen profile -->
       <div class="col-md-3" id="info-img">
-         <img class="profile-image" src={{miPortfolio.profileImage}}>
+         <img class="profile-image" *ngIf="miPortfolio" [src]="miPortfolio.profileImage"/>
          <div class="btn-edit" id="profile-img">
           <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
         </div>

@@ -6,29 +6,13 @@
        </div>
        <div id="list-education">
          <ul class="items-list">
-          <li>
+          <li *ngFor="let educacion of educacionList">
             <div class="btn-edit" id="educacion">
               <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
              </div>
-            <img src="assets/img/UTN.png" />
-            <h2>Universidad Tecnologica Nacional</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti.</p>
-          </li>
-          <li>
-            <div class="btn-edit" id="educacion">
-              <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
-             </div>
-            <img src="assets/img/UTN.png" />
-            <h2>Universidad Tecnologica Nacional</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti.</p>
-          </li>
-          <li>
-            <div class="btn-edit" id="educacion">
-              <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
-             </div>
-            <img src="assets/img/UTN.png" />
-            <h2>Universidad Tecnologica Nacional</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti.</p>
+            <img [src]="educacion.img" />
+            <h2>{{educacion.name}}</h2>
+            <p>{{educacion.info}}</p>
           </li>
         </ul>
        </div>
