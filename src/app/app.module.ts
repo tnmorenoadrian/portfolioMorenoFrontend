@@ -10,9 +10,10 @@ import { ExperienciaComponent } from './componentes/experiencia/experiencia.comp
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, AppRoutingModule, MatCardModule ],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule, MatCardModule, HttpClientModule ],
   declarations: [ AppComponent, EncabezadoComponent, AcercaDeComponent, ExperienciaComponent, EducacionComponent, HabilidadesComponent, ProyectosComponent ],
   bootstrap:    [ AppComponent ]
 })

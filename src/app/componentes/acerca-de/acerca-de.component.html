@@ -2,17 +2,26 @@
 <div class="card mat-card" id="acerca">
     <div id="info">
       <!-- imagen profile -->
-       <div id="info-img">
+      <div id="info-img">
          <img class="profile-image" src="assets/img/profile.png">
+         <div class="btn-edit" id="profile-img">
+          <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
+        </div>
          <div id="separador"> </div>
-         <h2>Adrian Fucking Moreno</h2>
-         <div id="info-titulo">Full Stack Developer Jr</div>
-       </div>
+         <div class="btn-edit" id="profile-info">
+          <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
+         </div>
+         <div id="info-titulo"><h2>{{miPortfolio.name}}</h2></div>
+         <div id="info-titulo">{{miPortfolio.titulo}}</div>
+      </div>
        
          <div id="acerca">
           <h1 style="margin-left: 0px;">Acerca de</h1>
+          <div class="btn-edit" id="acerca">
+            <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
+           </div>
           <div>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti.
+            {{miPortfolio.acercaInfo}}
           </div>
          </div>        
     </div>

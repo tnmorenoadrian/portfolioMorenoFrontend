@@ -87,6 +87,50 @@ div#profile-background img{
     border-radius: 0;
     margin-bottom: -12px;
 }
+.btn-edit{
+  text-align: center;
+  padding-top: 3px;
+  padding-left: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: #0a66c2;
+  border-radius: 50%; 
+}
+.btn-edit#background-img{
+  position: absolute;
+  top: 20%;
+  left: 95%;
+}
+.btn-edit#profile-img{
+  position: absolute;
+  top: -17px;
+  left: 115px;
+}
+.btn-edit#profile-info{
+  position: absolute;
+  top: 60px;
+  left: 220px;
+}
+.btn-edit#acerca{
+  position: absolute;
+  top: 20%;
+  left: 95%;
+}
+.btn-edit#experiencia{
+  position: relative;
+  left: 90%;
+}
+.btn-edit#educacion{
+  position: relative;
+  left: 90%;
+}
+.btn-edit#proyectos{
+  position: relative;
+  left: 90%;
+}
+.btn-right{
+  color: white;
+}
 .profile-image{
     position: absolute;
     border-radius: 50%;
