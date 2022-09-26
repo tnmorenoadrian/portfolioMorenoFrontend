@@ -88,6 +88,7 @@ div#profile-background img{
     margin-bottom: -12px;
 }
 .btn-edit{
+  top: 20px;
   text-align: center;
   padding-top: 3px;
   padding-left: 5px;
@@ -103,7 +104,7 @@ div#profile-background img{
 }
 .btn-edit#profile-img{
   position: absolute;
-  top: -17px;
+  top: -40px;
   left: 115px;
 }
 .btn-edit#profile-info{
@@ -143,11 +144,12 @@ div#separador{
     height: 25px;
 }
 div#info{
+    width:100%;
     display: flex;
     padding-top: 20px;
 }
 div#info-img{
-  justify-content: center;  
+  justify-content: center;
 }
 div#info-img h2{
   margin: 10px 15px;
@@ -173,7 +175,6 @@ ul.items-list-projet{
   padding-left: 0px;
 }
 ul.items-list li{
-  padding-top: 20px;
   padding-bottom: 20px;
 }
 ul.items-list li img{

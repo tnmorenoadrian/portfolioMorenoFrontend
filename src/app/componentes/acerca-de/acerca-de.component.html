@@ -1,9 +1,9 @@
 <!--Acerca de-->
 <div class="card mat-card" id="acerca">
-    <div id="info">
+    <div class="row">
       <!-- imagen profile -->
-      <div id="info-img">
-         <img class="profile-image" src="assets/img/profile.png">
+      <div class="col-md-3" id="info-img">
+         <img class="profile-image" src={{miPortfolio.profileImage}}>
          <div class="btn-edit" id="profile-img">
           <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
         </div>
@@ -15,7 +15,7 @@
          <div id="info-titulo">{{miPortfolio.titulo}}</div>
       </div>
        
-         <div id="acerca">
+         <div class="col-md-9" id="acerca">
           <h1 style="margin-left: 0px;">Acerca de</h1>
           <div class="btn-edit" id="acerca">
             <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
