@@ -11,10 +11,26 @@ import { EducacionComponent } from './componentes/educacion/educacion.component'
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { HttpClientModule } from "@angular/common/http";
+import { LoginComponent } from './componentes/login/login.component';
+import { MainComponent } from './componentes/main/main.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, AppRoutingModule, MatCardModule, HttpClientModule ],
-  declarations: [ AppComponent, EncabezadoComponent, AcercaDeComponent, ExperienciaComponent, EducacionComponent, HabilidadesComponent, ProyectosComponent ],
+  imports:      [ BrowserModule,
+                  FormsModule,
+                  AppRoutingModule,
+                  MatCardModule,
+                  HttpClientModule
+                 ],
+  declarations: [ AppComponent,
+                  EncabezadoComponent,
+                  AcercaDeComponent,
+                  ExperienciaComponent,
+                  EducacionComponent,
+                  HabilidadesComponent,
+                  ProyectosComponent,
+                  LoginComponent,
+                  MainComponent 
+                ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
