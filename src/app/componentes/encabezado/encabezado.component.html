@@ -5,7 +5,7 @@
         <a style="color: white ;"><img src="assets/img/APLogo.png" style="height:70px;" class="rounded-pill">
          #YO PROGRAMO   
         </a>
-        <button class="nav-toggle" aria-label="Abrir menú">
+        <button class="nav-toggle" aria-label="">
           <i class="fas fa-bars"></i>
         </button>
         <ul class="nav-menu">
@@ -19,10 +19,10 @@
             <a href="#" class="nav-menu-link nav-link"><i class="fab fa-twitter"></i></a>
           </li>
           <li class="nav-menu-item">
-            <a class="nav-item nav-link" routerLink="/login">Login</a>
+            <a class="nav-item nav-link" routerLink="/login" *ngIf="!authService.logIn">Login</a>
           </li>
           <li class="nav-menu-item">
-            <a class="nav-link" href="#">Logout</a>
+            <a class="nav-item nav-link" (click)="logout()" routerLink="/portfolio" *ngIf="authService.logIn">Logout</a>
           </li>
         </ul>
       </nav>

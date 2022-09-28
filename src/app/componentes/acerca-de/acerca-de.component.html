@@ -11,8 +11,8 @@
          <div class="btn-edit" id="profile-info">
           <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
          </div>
-         <div id="info-titulo"><h2>{{miPortfolio.name}}</h2></div>
-         <div id="info-titulo">{{miPortfolio.titulo}}</div>
+         <div id="info-titulo"><h2>{{miPortfolio&&miPortfolio.name}}</h2></div>
+         <div id="info-titulo">{{miPortfolio&&miPortfolio.titulo}}</div>
       </div>
        
          <div class="col-md-9" id="acerca">
@@ -21,7 +21,7 @@
             <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
            </div>
           <div>
-            {{miPortfolio.acercaInfo}}
+            {{miPortfolio&&miPortfolio.acercaInfo}}
           </div>
          </div>        
     </div>

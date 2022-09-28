@@ -13,13 +13,21 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 import { HttpClientModule } from "@angular/common/http";
 import { LoginComponent } from './componentes/login/login.component';
 import { MainComponent } from './componentes/main/main.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   imports:      [ BrowserModule,
                   FormsModule,
                   AppRoutingModule,
                   MatCardModule,
-                  HttpClientModule
+                  HttpClientModule,
+                  MatButtonModule,
+                  MatIconModule,
+                  MatInputModule,
+                  BrowserAnimationsModule 
                  ],
   declarations: [ AppComponent,
                   EncabezadoComponent,
@@ -29,7 +37,9 @@ import { MainComponent } from './componentes/main/main.component';
                   HabilidadesComponent,
                   ProyectosComponent,
                   LoginComponent,
-                  MainComponent 
+                  MainComponent,
+                ],
+  providers: [    
                 ],
   bootstrap:    [ AppComponent ]
 })

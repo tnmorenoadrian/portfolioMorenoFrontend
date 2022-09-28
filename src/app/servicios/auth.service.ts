@@ -16,8 +16,8 @@ export class AuthService {
   login(email: string, password: string) {
     this.http.post(this.uri + '/authenticate',{email: email, password: password})
     .subscribe((resp: any) => {
-      this.router.navigate(['profile']);
-      localStorage.setItem('auth_token', resp.token);
+      localStorage.setItem('token', resp.token);
+      this.router.navigate(['portfolio']);
     });
   }
 
@@ -27,6 +27,9 @@ export class AuthService {
    
   public get logIn(): boolean {
     return(localStorage.getItem('token') !== null);
+    //const token = localStorage.getItem('token');
+    //console.log(token);
+    //return false;
   }
 
 }
