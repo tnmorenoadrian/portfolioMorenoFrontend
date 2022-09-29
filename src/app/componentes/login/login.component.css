@@ -15,9 +15,8 @@ body{
     margin-top: 2%;
 }
 .form-container{
-    width: 35%;
+    width: 25%;
     margin: auto;
-    padding-bottom: 24px !important;
     display: block;
     background: rgb(253, 253, 253);
 }

@@ -1,10 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+
 .header {
     background-color: #0a66c2;
     height: 70px;
@@ -167,29 +161,40 @@ div#acerca {
   padding-left: 10px;
 }
 ul.items-list{
-  list-style-type: none;
   padding-left: 0px;
 }
 ul.items-list-projet{
-  list-style-type: none;
   padding-left: 0px;
 }
-ul.items-list li{
-  padding-bottom: 20px;
+ul.items-list-projet li{
+  list-style-type: none;
+  padding-left: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
-ul.items-list li img{
-  float: left;
-  margin: 0 15px 0 0;
-  height: 150px;
-  width: 150px;
+ul.items-list li{
+  list-style-type: none;
+  margin-left:0px;
+  padding-left:0px;
+  display: inline-block;
+  border-radius: 2px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+ ul.items-list li img{
+  float:left;
+}
+ul.items-list li h2{
+  text-align: right; 
+  display:inline-block;
+  padding: 0;
+  font-weight: 400;
+}
+ul.items-list li p{
+  padding: 0;
 }
 ul.items-list-projet li img{
   margin: 0 15px 0 0;
   height: 150px;
   width: 150px;
-}
-ul.items-list li h2{
-  font-weight: 400;
 }
 div#background-skills{
   height: 70vh;
