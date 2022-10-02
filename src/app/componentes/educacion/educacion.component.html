@@ -7,9 +7,8 @@
        <div>
          <ul class="items-list">
           <li *ngFor="let educacion of educacionList">
-            <div class="btn-edit" id="educacion">
-              <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
-             </div>
+            <button type="button" class="btn btn-info btn-circle" id="educacion"><i class="fa fa-pen"></i>
+            </button>
             <img [src]="educacion.img" />
             <h2>{{educacion.name}}</h2>
             <p>{{educacion.info}}</p>

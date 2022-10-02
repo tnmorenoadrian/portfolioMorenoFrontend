@@ -71,10 +71,10 @@ body{
     color: #64d8f3 !important;  
 }
 ::ng-deep .mat-input-element {
-    caret-color: #ead743!important;
+    caret-color: #f64eb0!important;
 }
 ::ng-deep .mat-input-element {
-    color: #ead743!important;
+    color: #f64eb0!important;
 }
 
 

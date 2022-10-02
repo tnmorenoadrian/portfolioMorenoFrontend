@@ -65,6 +65,20 @@ body {
 .fab {
     color: #fcfcfc !important;
 }
+.btn-circle {
+  background-color: #f64eb0 !important ;
+  border-color: #f64eb0 !important;
+  color: #fcfcfc !important;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 6px 0px !important;
+  border-radius: 21px !important;
+  text-align: center !important;
+  font-size: 17px !important;
+  line-height: 1.42857 !important;
+
+}
+
 .mat-card{
    margin-left: 30px;
    margin-right: 30px;
@@ -90,46 +104,36 @@ div#profile-background img{
     border-radius: 0;
     margin-bottom: -12px;
 }
-.btn-edit{
-  top: 20px;
-  text-align: center;
-  padding-top: 10px;
-  padding-left: 3px;
-  width: 40px;
-  height: 40px;
-  background-color: #f64eb0;
-  border-radius: 50%; 
-}
-.btn-edit#background-img{
+.btn-circle#background-img{
   position: absolute;
   top: 20%;
   left: 95%;
 }
-.btn-edit#profile-img{
+.btn-circle#profile-img{
   position: absolute;
   top: -58px;
   left: 154px;
 }
-.btn-edit#profile-info{
+.btn-circle#profile-info{
   position: absolute;
   top: 50px;
   left: 264px;
 }
-.btn-edit#acerca{
+.btn-circle#acerca{
   position: absolute;
   top: 10%;
   left: 93%;
 }
-.btn-edit#experiencia{
-  position: relative;
+.btn-circle#experiencia{
+  position: absolute;
   left: 90%;
 }
-.btn-edit#educacion{
-  position: relative;
+.btn-circle#educacion{
+  position: absolute;
   left: 90%;
 }
-.btn-edit#proyectos{
-  position: relative;
+.btn-circle#proyectos{
+  position: absolute;
   left: 90%;
 }
 .btn-right{
@@ -192,6 +196,7 @@ ul.items-list-projet li{
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 ul.items-list-projet li h2{
+  margin-top: 20px;
   color: #64d8f3;
   font-weight: 500;
   font-size: 25px;
@@ -208,8 +213,11 @@ ul.items-list li{
  ul.items-list li img{
   float:left;
   padding-right: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px; 
 }
 ul.items-list li h2{
+  margin-top: 20px;
   color: #64d8f3;
   text-align: right; 
   display:inline-block;
@@ -221,7 +229,7 @@ ul.items-list li p{
   padding: 0;
 }
 ul.items-list-projet li img{
-  margin: 0 15px 0 0;
+  margin-bottom: 20px;
   height: 150px;
   width: 150px;
 }
