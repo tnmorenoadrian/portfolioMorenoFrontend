@@ -17,6 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports:      [ BrowserModule,
@@ -27,7 +28,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
                   MatButtonModule,
                   MatIconModule,
                   MatInputModule,
-                  BrowserAnimationsModule 
+                  BrowserAnimationsModule,
+                  NgbModule 
                  ],
   declarations: [ AppComponent,
                   EncabezadoComponent,
