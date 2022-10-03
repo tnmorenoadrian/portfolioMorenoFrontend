@@ -18,7 +18,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ModalComponent } from './componentes/modal/modal.component';
 
 @NgModule({
   imports:      [ BrowserModule,
@@ -40,8 +39,7 @@ import { ModalComponent } from './componentes/modal/modal.component';
                   HabilidadesComponent,
                   ProyectosComponent,
                   LoginComponent,
-                  MainComponent,
-                  ModalComponent,
+                  MainComponent
                 ],
   providers: [    
                 ],
