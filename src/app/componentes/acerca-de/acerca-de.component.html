@@ -17,9 +17,14 @@
          <div class="col-md-9" id="profile-info">
           <h1>Acerca de</h1>
           <p>{{miPortfolio&&miPortfolio.acercaInfo}}</p>
-          <button type="button" class="btn btn-info btn-circle" id="acerca"><i class="fa fa-pen"></i>
+          <button type="button" class="btn btn-info btn-circle" id="acerca"(click)="setSelectedAcerca(miPortfolio)" ><i class="fa fa-pen"></i>
           </button>
-         </div>        
+         </div>          
 
 </div>
 
+<app-modal
+         *ngIf="selectedAcerca"
+         [data]="selectedAcerca"
+         (closeModal)="setSelectedAcerca(null)"
+></app-modal>

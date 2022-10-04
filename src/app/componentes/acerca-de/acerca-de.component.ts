@@ -8,12 +8,18 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class AcercaDeComponent implements OnInit {
   miPortfolio:any;
+  selectedAcerca = null;
+
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
     this.datosPortfolio.ObtenerDatos().subscribe(data =>{
       this.miPortfolio=data;
       });
+  }
+
+  setSelectedAcerca(item:any) {
+    this.selectedAcerca = item;
   }
 
 }
