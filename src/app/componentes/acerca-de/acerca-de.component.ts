@@ -10,7 +10,6 @@ import {ModalComponent} from '../../componentes/modal/modal.component';
 })
 export class AcercaDeComponent implements OnInit {
   miPortfolio:any;
-  selectedAcerca = null;
 
   constructor(private datosPortfolio:PortfolioService, private modalService: NgbModal) { }
 
@@ -19,7 +18,6 @@ export class AcercaDeComponent implements OnInit {
       this.miPortfolio=data;
       });
   }
-
 
   openModal() {
     const modalRef = this.modalService.open(ModalComponent,
@@ -30,13 +28,11 @@ export class AcercaDeComponent implements OnInit {
         // backdrop: 'static'
       });
 
-    let data = {
-      prop1: 'Some Data',
-      prop2: 'From Parent Component',
-      prop3: 'This Can be anything'
-    }
+    let title = "Acerca de"
+    let data = this.miPortfolio.acercaInfo
 
     modalRef.componentInstance.fromParent = data;
+    modalRef.componentInstance.fromParentTitle = title;
     modalRef.result.then((result) => {
       console.log(result);
     }, (reason) => {

@@ -1,4 +1,13 @@
 
-.modal {
-  display: block;
+.modal-header {
+  color: #222C26;
 }
+.btn-primary{
+  background-color:#f64eb0;
+  border-color: #f64eb0;
+}
+.btn-secondary{
+  background-color:#222C26;
+  border-color: #222C26;
+}
+
