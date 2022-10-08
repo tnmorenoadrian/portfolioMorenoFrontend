@@ -16,7 +16,7 @@ export class AcercaDeComponent implements OnInit {
   ngOnInit(): void {
     this.datosPortfolio.ObtenerDatos().subscribe(data =>{
       this.miPortfolio=data;
-      });
+        });
   }
 
   openModal() {

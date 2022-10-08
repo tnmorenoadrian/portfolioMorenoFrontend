@@ -1,23 +1,30 @@
+
 { 
+  "todos":[],
+
+  "id":"1625831166351",
   "name":"Adrian Moreno",
   "backImage":"./assets/img/background.png",
   "profileImage":"./assets/img/profile.png",
   "titulo":"Full Stack Developer Jr",
   "acercaInfo":"Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti.",
-  
+
   "experiencia": [{
+    "id":"1625831166352",
     "name":"Armada Argentina",
     "img":"./assets/img/armada.png",
     "url":"#",
     "info":"Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti."
   },
   {
+    "id":"1625831166353",
     "name":"Armada Argentina2",
     "img":"./assets/img/armada.png",
     "url":"#",
     "info":"Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti."
   },
   {
+    "id":"1625831166354",
     "name":"Armada Argentina3",
     "img":"./assets/img/armada.png",
     "url":"#",
@@ -26,37 +33,44 @@
   ],
 
   "educacion": [{
+    "id":"1625831166355",
     "name":"Universidad Tecnologica Nacional",
     "img":"./assets/img/UTN.png",
     "url":"#",
     "info":"Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti."
   },
   {
+    "id":"1625831166356",
     "name":"Universidad Tecnologica Nacional2",
     "img":"./assets/img/UTN.png",
     "url":"#",
     "info":"Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti."
   },
   {
+    "id":"1625831166357",
     "name":"Universidad Tecnologica Nacional3",
     "img":"./assets/img/UTN.png",
     "url":"#",
     "info":"Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti."
   }
 ],
+
   "proyectos": [{
+    "id":"1625831166358",
     "name":"Portfolio Web",
     "img":"./assets/img/AP.png",
     "url":"#",
     "info":"Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti."
   },
   {
+    "id":"1625831166359",
     "name":"Portfolio Web2",
     "img":"./assets/img/AP.png",
     "url":"#",
     "info":"Lorem ipsum dolor sit amet consectetur adipiscing elit parturient facilisi vitae convallis, quis nostra vulputate vestibulum maecenas lacus blandit torquent lobortis leo. Ullamcorper dignissim mus class curabitur faucibus ligula rutrum purus, lectus tincidunt fermentum suspendisse nisl mauris primis porttitor, ut nascetur ultrices magna etiam mattis taciti."
   },
   {
+    "id":"1625831166350",
     "name":"Portfolio Web3",
     "img":"./assets/img/AP.png",
     "url":"#",

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-modal',
@@ -13,7 +14,8 @@ export class ModalComponent implements OnInit {
  
 
   constructor(
-    public activeModal: NgbActiveModal
+    public activeModal: NgbActiveModal,
+    private datosPortfolio:PortfolioService
   ) { }
 
   ngOnInit() {
@@ -25,6 +27,14 @@ export class ModalComponent implements OnInit {
 
   closeModal(sendData:any) {
     this.activeModal.close(sendData);
+  }
+
+  actualizar(datosNuevos: any){ 
+    this.datosPortfolio.ActualizarDatos(datosNuevos.id,datosNuevos).subscribe((response)=>{
+      this.fromParent;
+    },(error=>{
+
+    }));
   }
 
 }
