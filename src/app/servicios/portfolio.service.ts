@@ -2,6 +2,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Injectable } from '@angular/core';
 import { catchError } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
+import {Persona} from '../../persona.model'
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +15,13 @@ export class PortfolioService {
 
   constructor(private http:HttpClient) { }
 
-  ObtenerDatos():Observable<any>{
+  /*ObtenerDatos():Observable<any>{
    return this.http.get('./assets/data/data.json')
   }
+  */
+  ObtenerDatos():Observable<any>{
+    return this.http.get('./assets/data/data.json')
+   }
 
   ActualizarDatos(id: any, data: any): Observable<any> {
     let API_URL = `${this.apiUrl}/${id}`;
