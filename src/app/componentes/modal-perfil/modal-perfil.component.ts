@@ -27,6 +27,4 @@ export class ModalPerfilComponent implements OnInit {
     this.activeModal.close(this.fromParentPersona);
     }
 
-
-
 }

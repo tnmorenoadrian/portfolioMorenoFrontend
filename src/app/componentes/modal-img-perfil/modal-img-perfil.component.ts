@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-modal-img-perfil',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalImgPerfilComponent implements OnInit {
 
-  constructor() { }
+  @Input() fromParentTitle:any;
+  @Input() fromParentPersona:any;
+  @Output() datosEdit: EventEmitter<any> = new EventEmitter();
+ 
 
-  ngOnInit(): void {
+  constructor(
+    public activeModal: NgbActiveModal,
+    private datosPortfolio:PortfolioService
+  ) { }
+
+  ngOnInit() {
   }
+  
+  actualizar() {
+    this.datosEdit.emit(this.fromParentPersona); 
+    this.activeModal.close(this.fromParentPersona);
+    }
+
 
 }

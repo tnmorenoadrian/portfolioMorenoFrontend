@@ -3,6 +3,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalAcercaDeComponent } from '../modal-acerca-de/modal-acerca-de.component';
 import { ModalPerfilComponent } from '../modal-perfil/modal-perfil.component';
+import { ModalImgPerfilComponent } from '../modal-img-perfil/modal-img-perfil.component';
 import { Persona } from '../../models/persona.model';
 
 
@@ -46,6 +47,26 @@ export class AcercaDeComponent implements OnInit {
 
   openModalPerfil() {
     const modalRef = this.modalService.open(ModalPerfilComponent,
+      {
+        scrollable: true,
+        windowClass: 'myCustomModalClass',
+        // keyboard: false,
+        // backdrop: 'static'
+      });
+
+    let title = "Información Personal"
+    let datos_persona =this.miPortfolio
+
+    modalRef.componentInstance.fromParentPersona = datos_persona;
+    modalRef.componentInstance.fromParentTitle = title;
+    modalRef.result.then((result) => {
+      this.datosPortfolio.actualizarDatos(result.id, result).subscribe((data) => {
+        this.miPortfolio.id = data.id;});
+    });
+  }
+
+  openModalImgPerfil() {
+    const modalRef = this.modalService.open(ModalImgPerfilComponent,
       {
         scrollable: true,
         windowClass: 'myCustomModalClass',
