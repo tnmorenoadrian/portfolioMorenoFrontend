@@ -1,0 +1,15 @@
+<div class="modal-header">
+    <h2 class="modal-title">{{ fromParentTitle }}</h2>
+  </div>
+  <div class="modal-body">
+    <input type="text" id="perfil" class="form-control" [(ngModel)]="fromParentPersona.nombres"/>
+  </div>
+  <div class="modal-body">
+    <input type="text" id="perfil" class="form-control" [(ngModel)]="fromParentPersona.apellido"/>
+  </div>
+  <div class="modal-body">
+    <input type="text" id="perfil" class="form-control" [(ngModel)]="fromParentPersona.ocupacion"/>
+  </div>
+  <div class="modal-footer">
+    <button type="button" type="submit" class="btn btn-primary" (click)="actualizar()">Save changes</button>
+  </div>

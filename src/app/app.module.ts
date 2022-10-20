@@ -18,7 +18,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ModalComponent } from './componentes/modal/modal.component';
+import { ModalAcercaDeComponent } from './componentes/modal-acerca-de/modal-acerca-de.component';
+import { ModalPerfilComponent } from './componentes/modal-perfil/modal-perfil.component';
+import { ModalImgPerfilComponent } from './componentes/modal-img-perfil/modal-img-perfil.component';
 
 
 @NgModule({
@@ -42,7 +44,9 @@ import { ModalComponent } from './componentes/modal/modal.component';
                   ProyectosComponent,
                   LoginComponent,
                   MainComponent,
-                  ModalComponent
+                  ModalAcercaDeComponent,
+                  ModalPerfilComponent,
+                  ModalImgPerfilComponent
                 ],
   providers: [    
                 ],

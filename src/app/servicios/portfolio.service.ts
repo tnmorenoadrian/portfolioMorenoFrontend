@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Injectable } from '@angular/core';
 import { catchError } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
-import {Persona} from '../../persona.model'
+import {Persona} from '../models/persona.model'
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,7 @@ import {Persona} from '../../persona.model'
 
 export class PortfolioService {
 
-  apiUrl: string = 'http://localhost:3000/todos';
+  apiUrl: string = 'http://localhost:8081';
   headers = new HttpHeaders().set('Content-Type', 'application/json')
 
   constructor(private http:HttpClient) { }
@@ -19,12 +19,12 @@ export class PortfolioService {
    return this.http.get('./assets/data/data.json')
   }
   */
-  ObtenerDatos():Observable<any>{
-    return this.http.get('./assets/data/data.json')
+  obtenerDatos():Observable<Persona[]>{
+    return this.http.get<Persona[]>(`${this.apiUrl}`+"/persona/1")
    }
 
-  ActualizarDatos(id: any, data: any): Observable<any> {
-    let API_URL = `${this.apiUrl}/${id}`;
+  actualizarDatos(id: any, data: any): Observable<any> {
+    let API_URL = `${this.apiUrl}/update/${id}`;
     return this.http.put(API_URL, data, { headers: this.headers }).pipe(
       catchError(this.handleError)
     )

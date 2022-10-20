@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import {ModalComponent} from './componentes/modal/modal.component';
+import {ModalAcercaDeComponent} from './componentes/modal-acerca-de/modal-acerca-de.component';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +16,7 @@ export class AppComponent {
   }
 
   openModal() {
-    const modalRef = this.modalService.open(ModalComponent,
+    const modalRef = this.modalService.open(ModalAcercaDeComponent,
       {
         scrollable: true,
         windowClass: 'myCustomModalClass',

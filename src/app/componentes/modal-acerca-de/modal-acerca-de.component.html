@@ -1,0 +1,9 @@
+<div class="modal-header">
+  <h2 class="modal-title">{{ fromParentTitle}}</h2>
+</div>
+<div class="modal-body">
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="fromParentPersona.sobre_mi">{{ fromParentPersona.sobre_mi}}</textarea>
+</div>
+<div class="modal-footer">
+  <button type="button" type="submit" class="btn btn-primary" (click)="actualizar()">Save changes</button>
+</div>

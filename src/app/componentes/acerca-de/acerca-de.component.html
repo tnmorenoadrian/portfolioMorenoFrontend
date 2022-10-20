@@ -3,20 +3,20 @@
     
       <div class="col-md-3" id="profile-self">
         <a>
-         <img class="profile-image" *ngIf="miPortfolio" [src]="miPortfolio.profileImage"/>
+         <img class="profile-image" *ngIf="miPortfolio" src="{{miPortfolio.image_perfil}}"/>
          <button type="button" class="btn btn-info btn-circle" id="profile-img"><i class="fa fa-pen"></i>
          </button>
-         <h3>{{miPortfolio&&miPortfolio.name}}</h3>
-         <p>{{miPortfolio&&miPortfolio.titulo}}</p>
-         <button type="button" class="btn btn-info btn-circle" id="profile-info"><i class="fa fa-pen"></i>
+         <h3>{{miPortfolio&&miPortfolio.nombres+" "+miPortfolio.apellido}}</h3>
+         <p>{{miPortfolio&&miPortfolio.ocupacion}}</p>
+         <button type="button" class="btn btn-info btn-circle" id="profile-info" (click)="openModalPerfil()"><i class="fa fa-pen"></i>
          </button>     
         </a>
       </div>
        
          <div class="col-md-9" id="profile-info">
           <h1>Acerca de</h1>
-          <p>{{miPortfolio&&miPortfolio.acercaInfo}}</p>
-          <button type="button" class="btn btn-info btn-circle" id="acerca"(click)="openModal()" ><i class="fa fa-pen"></i>
+          <p>{{miPortfolio&&miPortfolio.sobre_mi}}</p>
+          <button type="button" class="btn btn-info btn-circle" id="acerca"(click)="openModalSobreMi()" ><i class="fa fa-pen"></i>
           </button>
          </div>          
 

@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import {ModalComponent} from '../../componentes/modal/modal.component';
+import { ModalAcercaDeComponent } from '../modal-acerca-de/modal-acerca-de.component';
+import { ModalPerfilComponent } from '../modal-perfil/modal-perfil.component';
+import { Persona } from '../../models/persona.model';
+
 
 @Component({
   selector: 'app-acerca-de',
@@ -9,18 +12,20 @@ import {ModalComponent} from '../../componentes/modal/modal.component';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
-  miPortfolio:any;
 
-  constructor(private datosPortfolio:PortfolioService, private modalService: NgbModal) { }
+  miPortfolio: any;
+
+  constructor(private datosPortfolio:PortfolioService, private modalService: NgbModal) { 
+  }
 
   ngOnInit(): void {
-    this.datosPortfolio.ObtenerDatos().subscribe(data =>{
+    this.datosPortfolio.obtenerDatos().subscribe((data: Persona[]) =>{
       this.miPortfolio=data;
         });
   }
 
-  openModal() {
-    const modalRef = this.modalService.open(ModalComponent,
+  openModalSobreMi() {
+    const modalRef = this.modalService.open(ModalAcercaDeComponent,
       {
         scrollable: true,
         windowClass: 'myCustomModalClass',
@@ -28,14 +33,34 @@ export class AcercaDeComponent implements OnInit {
         // backdrop: 'static'
       });
 
-    let title = "Acerca de"
-    let data = this.miPortfolio.acercaInfo
+    let title = "Sobre mi"
+    let datos_persona =this.miPortfolio
 
-    modalRef.componentInstance.fromParent = data;
+    modalRef.componentInstance.fromParentPersona = datos_persona;
     modalRef.componentInstance.fromParentTitle = title;
     modalRef.result.then((result) => {
-      console.log(result);
-    }, (reason) => {
+      this.datosPortfolio.actualizarDatos(result.id, result).subscribe((data) => {
+        this.miPortfolio.id = data.id;});
+    });
+  }
+
+  openModalPerfil() {
+    const modalRef = this.modalService.open(ModalPerfilComponent,
+      {
+        scrollable: true,
+        windowClass: 'myCustomModalClass',
+        // keyboard: false,
+        // backdrop: 'static'
+      });
+
+    let title = "Información Personal"
+    let datos_persona =this.miPortfolio
+
+    modalRef.componentInstance.fromParentPersona = datos_persona;
+    modalRef.componentInstance.fromParentTitle = title;
+    modalRef.result.then((result) => {
+      this.datosPortfolio.actualizarDatos(result.id, result).subscribe((data) => {
+        this.miPortfolio.id = data.id;});
     });
   }
 
