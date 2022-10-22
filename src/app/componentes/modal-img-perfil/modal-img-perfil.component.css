@@ -1,11 +1,42 @@
 .modal-header {
-    color: #222C26;
-  }
-  .btn-primary{
-    background-color:#f64eb0;
-    border-color: #f64eb0;
-  }
-  .btn-secondary{
-    background-color:#222C26;
-    border-color: #222C26;
-  }
+  color: #64D8F3;
+  background-color:#19231D;
+  border-color: #19231D;
+  border-radius: 0px;
+  padding-bottom: 0px;
+  border-bottom-width: 0px;
+}
+.modal-body {
+  color: #64D8F3;
+  background-color:#19231D;
+  text-align: center;
+}
+.modal-footer {
+  color: #64D8F3;
+  background-color:#19231D;
+  border-color: #19231D;
+  border-radius: 0px;
+  justify-content: center;
+}
+.btn-primary{
+  background-color:#64D8F3;
+  border-color: #64D8F3;
+}
+.btn-secondary{
+  background-color:#222C26;
+  border-color: #222C26;
+}
+input#perfil {
+  display: block;
+  color: #64D8F3;
+  background-color: #19231D;
+  border-color: #19231D;
+  text-align: center;
+  margin: auto;
+}
+input#image {
+  color: #64D8F3;
+  background-color: #19231D;
+  border-color: #19231D;
+}
+

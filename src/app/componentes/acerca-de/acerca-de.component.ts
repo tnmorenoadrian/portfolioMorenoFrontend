@@ -15,6 +15,7 @@ import { Persona } from '../../models/persona.model';
 export class AcercaDeComponent implements OnInit {
 
   miPortfolio: any;
+  defaultUserProfileUrl:string = 'assets/images/default_user_profile.png';
 
   constructor(private datosPortfolio:PortfolioService, private modalService: NgbModal) { 
   }
@@ -74,7 +75,7 @@ export class AcercaDeComponent implements OnInit {
         // backdrop: 'static'
       });
 
-    let title = "Información Personal"
+    let title = "Imagen Perfil"
     let datos_persona =this.miPortfolio
 
     modalRef.componentInstance.fromParentPersona = datos_persona;

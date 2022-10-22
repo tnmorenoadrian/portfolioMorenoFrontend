@@ -13,7 +13,6 @@ export class ModalPerfilComponent implements OnInit {
   @Input() fromParentPersona:any;
   @Output() datosEdit: EventEmitter<any> = new EventEmitter();
  
-
   constructor(
     public activeModal: NgbActiveModal,
     private datosPortfolio:PortfolioService

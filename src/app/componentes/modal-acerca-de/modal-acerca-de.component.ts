@@ -12,7 +12,6 @@ export class ModalAcercaDeComponent implements OnInit {
   @Input() fromParentTitle:any;
   @Input() fromParentPersona:any;
   @Output() datosEdit: EventEmitter<any> = new EventEmitter();
- 
 
   constructor(
     public activeModal: NgbActiveModal,
@@ -26,6 +25,4 @@ export class ModalAcercaDeComponent implements OnInit {
     this.datosEdit.emit(this.fromParentPersona); 
     this.activeModal.close(this.fromParentPersona);
     }
-
-
 }

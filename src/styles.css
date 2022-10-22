@@ -79,6 +79,19 @@ body {
 
 }
 
+.modal-content {
+  border-radius: 0px;
+}
+
+.form-control {
+  color:#64D8F3;
+  background-color: #19231D;
+  }
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.1rem #64D8F3;
+}
+
 .mat-card{
    margin-left: 30px;
    margin-right: 30px;
