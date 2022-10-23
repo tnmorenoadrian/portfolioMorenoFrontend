@@ -41,8 +41,10 @@ export class AcercaDeComponent implements OnInit {
     modalRef.componentInstance.fromParentPersona = datos_persona;
     modalRef.componentInstance.fromParentTitle = title;
     modalRef.result.then((result) => {
-      this.datosPortfolio.actualizarDatos(result.id, result).subscribe((data) => {
-        this.miPortfolio.id = data.id;});
+      if(result){
+        this.datosPortfolio.actualizarDatos(result.id, result).subscribe((data) => {
+          this.miPortfolio.id = data.id;});
+        }
     });
   }
 
@@ -61,8 +63,10 @@ export class AcercaDeComponent implements OnInit {
     modalRef.componentInstance.fromParentPersona = datos_persona;
     modalRef.componentInstance.fromParentTitle = title;
     modalRef.result.then((result) => {
-      this.datosPortfolio.actualizarDatos(result.id, result).subscribe((data) => {
-        this.miPortfolio.id = data.id;});
+      if(result){
+        this.datosPortfolio.actualizarDatos(result.id, result).subscribe((data) => {
+          this.miPortfolio.id = data.id;});
+        }
     });
   }
 
@@ -81,9 +85,10 @@ export class AcercaDeComponent implements OnInit {
     modalRef.componentInstance.fromParentPersona = datos_persona;
     modalRef.componentInstance.fromParentTitle = title;
     modalRef.result.then((result) => {
-      console.log(result)
+      if(result){
       this.datosPortfolio.actualizarDatos(result.id, result).subscribe((data) => {
         this.miPortfolio.id = data.id;});
+      }
     });
   }
 
