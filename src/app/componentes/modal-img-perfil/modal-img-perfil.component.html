@@ -1,27 +1,42 @@
 <div class="modal-header">
     <h2 class="modal-title">{{ fromParentTitle }}</h2>
-  </div>
+</div>
 
     <div class="modal-body"> 
-        <div class="file-select" id="src-file" >
-          <input type="file" id="perfil" (change)="onImageUpload($event)">
-         
-          <input type="button" (click)="imageUploadAction()" value="Upload Image" class="btn btn-primary" style="
-          margin-top: 20px; margin-bottom: 20px;"> 
-       </div>
+
+      <div id="img-uploaded" *ngIf=selectImage>
+        <img [src]="selectImage">
+      </div>
+     
       <div>
-        <p>{{fromParentPersona.image_perfil}}</p>
         <output *ngIf=successResponse class="success">{{successResponse}}</output>
       </div>
 
-    </div>
-      <div class="modal-footer">
-          <input type="text" id="image" placeholder="Search Image" [(ngModel)]="image" name="image" />
-          <input type="button" (click)="viewImage()" value="View Image" class="btn btn-primary">
-      <div *ngIf=dbImage>
-          <img [src]="dbImage">
+      <div style="color:red" >
+        <output *ngIf=errorMsg class="success">{{errorMsg}}</output>
       </div>
 
+      <div class="select-img" *ngIf=!selectImage>
+        <div style="padding-bottom: 10px;">
+            La imagen debe ser de 200px de ancho y 200px de alto aproximado
+        </div>
+          <label for="img" class="btn custom-btn">Seleccionar imagen</label>  
+          <input type="file" id="img" style="display:none" (change)="onImageUpload($event)">
+      </div> 
+
+    </div>
+ 
+<div class="modal-footer" *ngIf=selectImage&&!successResponse&&!errorMsg>
+  <input type="button" (click)="imageUploadAction()" value="Subir Imagen" class="btn custom-btn" style="
+    margin-top: 20px; margin-bottom: 20px;"> 
+</div>
+
+<div class="modal-footer" *ngIf=successResponse>
+    <input type="button" (click)="cambiarImagen()" value="Cambiar Imagen" class="btn custom-btn">
+</div>
+
+<div class="modal-footer" *ngIf=errorMsg>
+    <input type="button" (click)="cerrar()" value="Cerrar" class="btn custom-btn">
 </div>
 
 

@@ -30,7 +30,7 @@ export class PortfolioService {
     )
   }
 
-  BorrarDatos(id: any): Observable<any> {
+  borrarDatos(id: any): Observable<any> {
     var API_URL = `${this.apiUrl}/${id}`;
     return this.http.delete(API_URL).pipe(
       catchError(this.handleError)

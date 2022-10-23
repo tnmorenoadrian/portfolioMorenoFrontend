@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-modal-perfil',
@@ -15,7 +14,6 @@ export class ModalPerfilComponent implements OnInit {
  
   constructor(
     public activeModal: NgbActiveModal,
-    private datosPortfolio:PortfolioService
   ) { }
 
   ngOnInit() {

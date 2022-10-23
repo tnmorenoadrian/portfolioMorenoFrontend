@@ -75,12 +75,13 @@ export class AcercaDeComponent implements OnInit {
         // backdrop: 'static'
       });
 
-    let title = "Imagen Perfil"
+    let title = "Imagen de Perfil"
     let datos_persona =this.miPortfolio
 
     modalRef.componentInstance.fromParentPersona = datos_persona;
     modalRef.componentInstance.fromParentTitle = title;
     modalRef.result.then((result) => {
+      console.log(result)
       this.datosPortfolio.actualizarDatos(result.id, result).subscribe((data) => {
         this.miPortfolio.id = data.id;});
     });

@@ -17,13 +17,20 @@
   border-radius: 0px;
   justify-content: center;
 }
-.btn-primary{
-  background-color:#64D8F3;
-  border-color: #64D8F3;
+.btn{
+  padding: 3% !important;
+  font-size: 1.5em;
+  font-weight: 200;
+  margin-top: 18px;
 }
-.btn-secondary{
-  background-color:#222C26;
-  border-color: #222C26;
+.custom-btn{
+  margin-bottom: 15px;
+  background: #64d8f3;
+  color: #fff;
+}
+.custom-btn:hover{
+  background-color: #F64EB0;
+  color: #19231D
 }
 textarea#FormControlTextarea {
   color: #64D8F3;

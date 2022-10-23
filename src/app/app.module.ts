@@ -21,7 +21,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalAcercaDeComponent } from './componentes/modal-acerca-de/modal-acerca-de.component';
 import { ModalPerfilComponent } from './componentes/modal-perfil/modal-perfil.component';
 import { ModalImgPerfilComponent } from './componentes/modal-img-perfil/modal-img-perfil.component';
-import { ProfileImageComponent } from './componentes/profile-image/profile-image.component';
 
 
 @NgModule({
@@ -47,8 +46,7 @@ import { ProfileImageComponent } from './componentes/profile-image/profile-image
                   MainComponent,
                   ModalAcercaDeComponent,
                   ModalPerfilComponent,
-                  ModalImgPerfilComponent,
-                  ProfileImageComponent
+                  ModalImgPerfilComponent
                 ],
   providers: [    
                 ],

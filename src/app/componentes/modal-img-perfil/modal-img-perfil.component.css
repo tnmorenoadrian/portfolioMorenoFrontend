@@ -1,3 +1,4 @@
+
 .modal-header {
   color: #64D8F3;
   background-color:#19231D;
@@ -10,6 +11,8 @@
   color: #64D8F3;
   background-color:#19231D;
   text-align: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 .modal-footer {
   color: #64D8F3;
@@ -18,15 +21,30 @@
   border-radius: 0px;
   justify-content: center;
 }
-.btn-primary{
-  background-color:#64D8F3;
-  border-color: #64D8F3;
+.btn{
+  padding: 3% !important;
+  font-size: 1.5em;
+  font-weight: 200;
+  margin-top: 18px;
+}
+.custom-btn{
+  margin-bottom: 15px;
+  background-color: #64d8f3;
+  color: #fff;
+  
+}
+.custom-btn:hover{
+  background-color: #F64EB0;
+  color: #19231D;
 }
 .btn-secondary{
   background-color:#222C26;
   border-color: #222C26;
 }
-input#perfil {
+div.select-img{
+  position: relative;
+}
+input.file {
   display: block;
   color: #64D8F3;
   background-color: #19231D;
@@ -34,9 +52,8 @@ input#perfil {
   text-align: center;
   margin: auto;
 }
-input#image {
-  color: #64D8F3;
-  background-color: #19231D;
-  border-color: #19231D;
-}
 
+#img-uploaded{
+  text-align: center;
+  padding-bottom: 15px;
+}
