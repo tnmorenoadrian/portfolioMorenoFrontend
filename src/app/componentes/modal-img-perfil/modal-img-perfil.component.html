@@ -1,5 +1,8 @@
 <div class="modal-header">
     <h2 class="modal-title">{{ fromParentTitle }}</h2>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
 </div>
 
     <div class="modal-body"> 
@@ -35,8 +38,6 @@
     <input type="button" (click)="cambiarImagen()" value="Cambiar Imagen" class="btn custom-btn">
 </div>
 
-<div class="modal-footer" *ngIf=errorMsg>
-    <input type="button" (click)="cerrar()" value="Cerrar" class="btn custom-btn">
-</div>
+
 
 

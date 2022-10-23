@@ -1,9 +1,12 @@
 <div class="modal-header">
   <h2 class="modal-title">{{ fromParentTitle}}</h2>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
 </div>
 <div class="modal-body">
   <textarea class="form-control" id="FormControlTextarea" rows="3" [(ngModel)]="fromParentPersona.sobre_mi">{{ fromParentPersona.sobre_mi}}</textarea>
 </div>
-<div class="modal-footer">
+<div class="modal-footer" >
   <button type="button" type="submit" class="btn custom-btn" (click)="actualizar()">Save changes</button>
 </div>
