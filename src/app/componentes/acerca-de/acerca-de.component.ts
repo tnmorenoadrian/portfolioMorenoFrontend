@@ -15,7 +15,6 @@ import { Persona } from '../../models/persona.model';
 export class AcercaDeComponent implements OnInit {
 
   miPortfolio: any;
-  defaultUserProfileUrl:string = 'assets/images/default_user_profile.png';
 
   constructor(private datosPortfolio:PortfolioService, private modalService: NgbModal) { 
   }
@@ -45,7 +44,7 @@ export class AcercaDeComponent implements OnInit {
         this.datosPortfolio.actualizarDatos(result.id, result).subscribe((data) => {
           this.miPortfolio.id = data.id;});
         }
-    });
+      }).catch(() => { /* closed */ });
   }
 
   openModalPerfil() {
@@ -67,7 +66,7 @@ export class AcercaDeComponent implements OnInit {
         this.datosPortfolio.actualizarDatos(result.id, result).subscribe((data) => {
           this.miPortfolio.id = data.id;});
         }
-    });
+      }).catch(() => { /* closed */ });
   }
 
   openModalImgPerfil() {
@@ -89,7 +88,7 @@ export class AcercaDeComponent implements OnInit {
       this.datosPortfolio.actualizarDatos(result.id, result).subscribe((data) => {
         this.miPortfolio.id = data.id;});
       }
-    });
+    }).catch(() => { /* closed */ });
   }
 
 }
