@@ -29,7 +29,7 @@
 .btn{
   padding: 3% !important;
   font-size: 1.5em;
-  font-weight: 200;
+  font-weight: 300;
   margin-top: 18px;
 }
 .custom-btn{
@@ -43,6 +43,7 @@
 }
 textarea#FormControlTextarea {
   color: #cda51d;
+  font-weight: 350;
   background-color: #21303C;
   border-color: #21303C;
 }
