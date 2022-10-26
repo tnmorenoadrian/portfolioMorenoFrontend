@@ -115,6 +115,8 @@ body {
     border-top-right-radius: 0px;
 }
 div#profile-background {
+    position: relative;
+    overflow: visible;
     display: flex;
 }
 div#profile-background img{
@@ -125,35 +127,66 @@ div#profile-background img{
 }
 .btn-circle#background-img{
   position: absolute;
-  top: 20%;
-  left: 95%;
+  right: 30px;
+  top: 15px;
 }
 .btn-circle#profile-img{
   position: absolute;
-  top: -58px;
-  left: 154px;
+  top: -135px;
+  left: 195px;
 }
 .btn-circle#profile-info{
   position: absolute;
-  top: 50px;
-  left: 264px;
+  right: 20px;
+  top: 15px;
 }
-.btn-circle#acerca{
+.btn-circle#acerca-edit{
   position: absolute;
-  top: 10%;
-  left: 93%;
+  right: 30px;
+  top: 20px;
 }
-.btn-circle#experiencia{
+.btn-circle#acerca-trash{
+  background-color: red !important;
+  border-color: red !important;
   position: absolute;
-  left: 90%;
+  right: 5px;
+  top: 20px;
 }
-.btn-circle#educacion{
+.btn-circle#experiencia-edit{
   position: absolute;
-  left: 90%;
+  right: 53px;
+  top: 20px;
 }
-.btn-circle#proyectos{
+.btn-circle#experiencia-trash{
+  background-color: red !important;
+  border-color: red !important;
   position: absolute;
-  left: 90%;
+  right: 5px;
+  top: 20px;
+}
+.btn-circle#educacion-edit{
+  position: absolute;
+  right: 53px;
+  top: 20px;
+}
+.btn-circle#educacion-trash{
+  background-color: red !important;
+  border-color: red !important;
+  position: absolute;
+  right: 5px;
+  top: 20px;
+}
+.btn-circle#proyectos-edit{
+  position: absolute;
+  right: 53px;
+  top: 20px;
+}
+.btn-circle#proyectos-trash{
+  background-color: red !important;
+  border-color: red !important;
+  position: absolute;
+  right: 5px;
+  top: 20px;
 }
 .btn-right{
   color: #fcfcfc;
@@ -175,6 +208,8 @@ div#encabezado{
   margin-right: 30px;
 }
 div#profile-self{
+  position: relative;
+  overflow: visible;
   justify-content: center;
   text-align: center;
 }
@@ -195,6 +230,8 @@ div#profile-self p{
   opacity: 1;
 }
 div#acerca {
+  position: relative;
+  overflow: visible;
   display: flex;
   flex-direction: row;
   color: #cda51d;
@@ -221,6 +258,9 @@ ul.items-list-projet li h2{
   font-size: 25px;
 }
 ul.items-list li{
+  position: relative;
+  overflow: visible;
+  width: 100%;
   color: #fcfcfc;
   list-style-type: none;
   margin-left:0px;

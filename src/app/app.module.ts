@@ -21,6 +21,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalAcercaDeComponent } from './componentes/modal-acerca-de/modal-acerca-de.component';
 import { ModalPerfilComponent } from './componentes/modal-perfil/modal-perfil.component';
 import { ModalImgPerfilComponent } from './componentes/modal-img-perfil/modal-img-perfil.component';
+import { ModalImgFondoComponent } from './componentes/modal-img-fondo/modal-img-fondo.component';
+import { ModalExperienciaComponent } from './componentes/modal-experiencia/modal-experiencia.component';
+import {NgxImageCompressService} from "ngx-image-compress";
 
 
 @NgModule({
@@ -46,9 +49,11 @@ import { ModalImgPerfilComponent } from './componentes/modal-img-perfil/modal-im
                   MainComponent,
                   ModalAcercaDeComponent,
                   ModalPerfilComponent,
-                  ModalImgPerfilComponent
+                  ModalImgPerfilComponent,
+                  ModalImgFondoComponent,
+                  ModalExperienciaComponent
                 ],
-  providers: [    
+  providers: [ NgxImageCompressService   
                 ],
   bootstrap:    [ AppComponent ]
 })

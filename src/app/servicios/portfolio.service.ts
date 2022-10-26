@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { catchError } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 import {Persona} from '../models/persona.model'
+import {Experiencia} from '../models/experiencia.model'
 
 @Injectable({
   providedIn: 'root'
@@ -19,9 +20,13 @@ export class PortfolioService {
    return this.http.get('./assets/data/data.json')
   }
   */
-  obtenerDatos():Observable<Persona[]>{
+  obtenerDatosPersona():Observable<Persona[]>{
     return this.http.get<Persona[]>(`${this.apiUrl}`+"/persona/1")
    }
+
+   obtenerDatosExperiencia():Observable<Experiencia[]>{
+    return this.http.get<Experiencia[]>(`${this.apiUrl}`+"/experiencia/1")
+   } 
 
   actualizarDatos(id: any, data: any): Observable<any> {
     let API_URL = `${this.apiUrl}/update/${id}`;

@@ -6,8 +6,10 @@
     <div id="list-projets">
       <ul class="items-list-projet">
        <li *ngFor="let proyectos of proyectosList">
-        <button type="button" class="btn btn-info btn-circle" id="proyectos"><i class="fa fa-pen"></i>
-        </button>          
+        <button type="button" class="btn btn-info btn-circle" id="proyectos-edit"><i class="fa fa-pen"></i>
+        </button> 
+        <button type="button" class="btn btn-info btn-circle" id="proyectos-trash"><i class="fa fa-trash"></i>
+        </button>        
          <h2>{{proyectos.name}}</h2>
          <p>{{proyectos.info}}</p>
          <a href="https://argentinaprograma.inti.gob.ar/">

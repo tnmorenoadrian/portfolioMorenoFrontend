@@ -20,7 +20,7 @@ export class AcercaDeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe((data: Persona[]) =>{
+    this.datosPortfolio.obtenerDatosPersona().subscribe((data: Persona[]) =>{
       this.miPortfolio=data;
         });
   }

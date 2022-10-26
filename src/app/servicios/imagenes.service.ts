@@ -10,6 +10,7 @@ import { Observable, throwError } from 'rxjs';
 export class ImagenesService {
 
   apiUrl: string = 'http://localhost:8081';
+  urlPrevImg!: string;
   headers = new HttpHeaders().set('Content-Type', 'application/json')
 
   constructor(private http:HttpClient) { }
@@ -22,8 +23,15 @@ export class ImagenesService {
     const formData: FormData = new FormData();
     formData.append('image', file, file.name);
     return this.http.post(`${this.apiUrl}`+"/upload/image/", formData, { observe: 'response' });
-
   }
+
+  verImagen(urlPrevImg): Observable<Blob> {
+    return this.http.get(urlPrevImg, { responseType: 'blob' });
+  }
+
+  buscarImagen(nombre:string):Observable<any>{
+    return this.http.get(`${this.apiUrl}`+"/buscar/image/"+nombre)
+   }
 
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // ver

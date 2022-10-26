@@ -3,12 +3,12 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ImagenesService } from 'src/app/servicios/imagenes.service';
 
 @Component({
-  selector: 'app-modal-img-perfil',
-  templateUrl: './modal-img-perfil.component.html',
-  styleUrls: ['./modal-img-perfil.component.css']
+  selector: 'app-modal-img-fondo',
+  templateUrl: './modal-img-fondo.component.html',
+  styleUrls: ['./modal-img-fondo.component.css']
 })
-export class ModalImgPerfilComponent implements OnInit {
-  
+export class ModalImgFondoComponent implements OnInit {
+
   @Input() fromParentTitle:any;
   @Input() fromParentPersona:any;
 
@@ -39,7 +39,7 @@ export class ModalImgPerfilComponent implements OnInit {
         this.buscarImagen();
   }
 
-   imagePreviaAction() {
+  imagePreviaAction() {
     this.dbImage = true;
       this.httpImagen.verImagen(this.fromParentPersona.image_perfil).subscribe(data => {
         this.createImageFromBlob(data);
@@ -49,7 +49,7 @@ export class ModalImgPerfilComponent implements OnInit {
         console.log(error);
       });
     }
-  
+
     createImageFromBlob(image: Blob) {
       let reader = new FileReader();
       reader.addEventListener("load", () => {
@@ -78,21 +78,21 @@ export class ModalImgPerfilComponent implements OnInit {
 
     });
     }
-
+    
     buscarImagen() {
       this.httpImagen.buscarImagen(this.uploadedImage.name).subscribe(data => {
         console.log(data);
         this.dbImageDuplicada=data;
       })
       }
-    
+
    cambiarImagen() {
-    this.fromParentPersona.image_perfil='http://localhost:8081/get/image/' + this.uploadedImage.name;
+    this.fromParentPersona.image_background='http://localhost:8081/get/image/' + this.uploadedImage.name;
     this.activeModal.close(this.fromParentPersona);
     }
 
     cerrar() {
       this.activeModal.close();
       } 
- 
+
 }

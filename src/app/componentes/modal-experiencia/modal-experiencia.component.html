@@ -10,14 +10,9 @@
       <div id="img-uploaded" *ngIf=selectImage>
         <img [src]="selectImage">
       </div>
-
-      <div id="img-uploaded" *ngIf=ImgPerfilPortfolio&&!selectImage>
-        <img [src]="ImgPerfilPortfolio">
-      </div>
      
       <div>
         <output *ngIf=successResponse class="success">{{successResponse}}</output>
-        <output *ngIf=dbImageDuplicada class="success">La imagen {{uploadedImage.name}} ya existe, puede proseguir..</output>
       </div>
 
       <div style="color:red" >
@@ -34,14 +29,12 @@
 
     </div>
  
-<div class="modal-footer" >
-  <input type="button" *ngIf=selectImage&&!successResponse&&!errorMsg&&!dbImageDuplicada (click)="imageUploadAction()" value="Subir Imagen" class="btn custom-btn" style="
+<div class="modal-footer" *ngIf=selectImage&&!successResponse&&!errorMsg>
+  <input type="button" (click)="imageUploadAction()" value="Subir Imagen" class="btn custom-btn" style="
     margin-top: 20px; margin-bottom: 20px;"> 
-  <input type="button" *ngIf=successResponse||dbImageDuplicada (click)="cambiarImagen()" value="Cambiar Imagen" class="btn custom-btn" style="
-  margin-top: 20px; margin-bottom: 20px;"> 
 </div>
 
-
-
-
+<div class="modal-footer" *ngIf=successResponse>
+    <input type="button" (click)="cambiarImagen()" value="Cambiar Imagen" class="btn custom-btn">
+</div>
 

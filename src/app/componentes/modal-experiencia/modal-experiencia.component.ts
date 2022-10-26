@@ -1,14 +1,15 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClient, HttpResponse, HttpEventType } from '@angular/common/http';
 import { ImagenesService } from 'src/app/servicios/imagenes.service';
 
 @Component({
-  selector: 'app-modal-img-perfil',
-  templateUrl: './modal-img-perfil.component.html',
-  styleUrls: ['./modal-img-perfil.component.css']
+  selector: 'app-modal-experiencia',
+  templateUrl: './modal-experiencia.component.html',
+  styleUrls: ['./modal-experiencia.component.css']
 })
-export class ModalImgPerfilComponent implements OnInit {
-  
+export class ModalExperienciaComponent implements OnInit {
+
   @Input() fromParentTitle:any;
   @Input() fromParentPersona:any;
 
@@ -17,17 +18,15 @@ export class ModalImgPerfilComponent implements OnInit {
   postResponse: any;
   successResponse!: string;
   errorMsg!:string;
-  dbImage: any;
-  ImgPerfilPortfolio: any;
-  dbImageDuplicada:any;
+  //image: any;
 
   constructor(
+    private httpClient: HttpClient, 
     public activeModal: NgbActiveModal,
-    private httpImagen: ImagenesService
+    private subirImagen: ImagenesService
     ) { }
 
   ngOnInit() {
-    this.imagePreviaAction();
   }
 
   public onImageUpload(event) {
@@ -36,33 +35,10 @@ export class ModalImgPerfilComponent implements OnInit {
         const reader = new FileReader();
         reader.onload = e => this.selectImage = reader.result;
         reader.readAsDataURL(file);
-        this.buscarImagen();
   }
-
-   imagePreviaAction() {
-    this.dbImage = true;
-      this.httpImagen.verImagen(this.fromParentPersona.image_perfil).subscribe(data => {
-        this.createImageFromBlob(data);
-        this.dbImage = false;
-      }, error => {
-        this.dbImage = false;
-        console.log(error);
-      });
-    }
-  
-    createImageFromBlob(image: Blob) {
-      let reader = new FileReader();
-      reader.addEventListener("load", () => {
-          this.ImgPerfilPortfolio = reader.result;
-      }, false);
-
-      if (image) {
-          reader.readAsDataURL(image);
-      }
-    }
    
    imageUploadAction() {
-    this.httpImagen.subirImagen(this.uploadedImage).subscribe(
+    this.subirImagen.subirImagen(this.uploadedImage).subscribe(
       response => {
       if (response.status === 200) {
         this.postResponse = response;
@@ -78,13 +54,6 @@ export class ModalImgPerfilComponent implements OnInit {
 
     });
     }
-
-    buscarImagen() {
-      this.httpImagen.buscarImagen(this.uploadedImage.name).subscribe(data => {
-        console.log(data);
-        this.dbImageDuplicada=data;
-      })
-      }
     
    cambiarImagen() {
     this.fromParentPersona.image_perfil='http://localhost:8081/get/image/' + this.uploadedImage.name;
@@ -94,5 +63,5 @@ export class ModalImgPerfilComponent implements OnInit {
     cerrar() {
       this.activeModal.close();
       } 
- 
+
 }
