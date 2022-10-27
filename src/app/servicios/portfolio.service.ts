@@ -20,7 +20,7 @@ export class PortfolioService {
    return this.http.get('./assets/data/data.json')
   }
   */
-  obtenerDatosPersona():Observable<Persona[]>{
+   obtenerDatosPersona():Observable<Persona[]>{
     return this.http.get<Persona[]>(`${this.apiUrl}`+"/persona/1")
    }
 
@@ -30,6 +30,13 @@ export class PortfolioService {
 
   actualizarDatos(id: any, data: any): Observable<any> {
     let API_URL = `${this.apiUrl}/update/${id}`;
+    return this.http.put(API_URL, data, { headers: this.headers }).pipe(
+      catchError(this.handleError)
+    )
+  }
+
+  actualizarDatosExperiencia(id: any, data: any): Observable<any> {
+    let API_URL = `${this.apiUrl}/update/experiencia/${id}`;
     return this.http.put(API_URL, data, { headers: this.headers }).pipe(
       catchError(this.handleError)
     )

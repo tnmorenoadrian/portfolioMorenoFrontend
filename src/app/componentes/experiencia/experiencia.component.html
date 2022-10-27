@@ -7,9 +7,9 @@
        <div>
          <ul class="items-list">
           <li *ngFor="let experiencia of experienciaList">
-            <button type="button" class="btn btn-info btn-circle" id="experiencia-edit" (click)="openModalExperiencia()"><i class="fa fa-pen"></i>
+            <button type="button" class="btn btn-info btn-circle" id="experiencia-edit" (click)="openModalExperiencia(experiencia.id)"><i class="fa fa-pen"></i>
             </button>
-            <button type="button" class="btn btn-info btn-circle" id="experiencia-trash" (click)="openModalExperiencia()"><i class="fa fa-trash"></i>
+            <button type="button" class="btn btn-info btn-circle" id="experiencia-trash" ><i class="fa fa-trash"></i>
             </button>
             <img [src]="experiencia.image_experiencia" />
             <h2>{{experiencia.titulo_experiencia}} id:{{experiencia.id}}</h2>

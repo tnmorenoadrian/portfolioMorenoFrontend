@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { HttpClient, HttpResponse, HttpEventType } from '@angular/common/http';
 import { ImagenesService } from 'src/app/servicios/imagenes.service';
 
 @Component({
@@ -11,22 +10,24 @@ import { ImagenesService } from 'src/app/servicios/imagenes.service';
 export class ModalExperienciaComponent implements OnInit {
 
   @Input() fromParentTitle:any;
-  @Input() fromParentPersona:any;
+  @Input() fromParentExperiencia:any;
 
   uploadedImage!: File;
   selectImage: any;
   postResponse: any;
   successResponse!: string;
   errorMsg!:string;
-  //image: any;
+  dbImage: any;
+  ImgExpPortfolio: any;
+  dbImageDuplicada:any;
 
   constructor(
-    private httpClient: HttpClient, 
     public activeModal: NgbActiveModal,
-    private subirImagen: ImagenesService
+    private httpImagen: ImagenesService
     ) { }
 
   ngOnInit() {
+    this.imagePreviaAction();
   }
 
   public onImageUpload(event) {
@@ -35,10 +36,34 @@ export class ModalExperienciaComponent implements OnInit {
         const reader = new FileReader();
         reader.onload = e => this.selectImage = reader.result;
         reader.readAsDataURL(file);
+        this.buscarImagen();
   }
+
+  imagePreviaAction() {  
+    this.dbImage = true;
+      this.httpImagen.verImagen(this.fromParentExperiencia.image_experiencia).subscribe(data => {      
+        this.createImageFromBlob(data);
+        this.dbImage = false;
+      }, error => {
+        this.dbImage = false;
+        console.log(error);
+      });
+    }
+
+    createImageFromBlob(image: Blob) {
+      let reader = new FileReader();
+      reader.addEventListener("load", () => {
+          this.ImgExpPortfolio = reader.result;
+          
+      }, false);
+
+      if (image) {
+          reader.readAsDataURL(image);
+      }
+    }
    
    imageUploadAction() {
-    this.subirImagen.subirImagen(this.uploadedImage).subscribe(
+    this.httpImagen.subirImagen(this.uploadedImage).subscribe(
       response => {
       if (response.status === 200) {
         this.postResponse = response;
@@ -55,9 +80,15 @@ export class ModalExperienciaComponent implements OnInit {
     });
     }
     
+    buscarImagen() {
+      this.httpImagen.buscarImagen(this.uploadedImage.name).subscribe(data => {
+        this.dbImageDuplicada=data;
+      })
+      }
+
    cambiarImagen() {
-    this.fromParentPersona.image_perfil='http://localhost:8081/get/image/' + this.uploadedImage.name;
-    this.activeModal.close(this.fromParentPersona);
+    this.fromParentExperiencia.image_experiencia='http://localhost:8081/get/image/' + this.uploadedImage.name;
+    this.activeModal.close(this.fromParentExperiencia);
     }
 
     cerrar() {

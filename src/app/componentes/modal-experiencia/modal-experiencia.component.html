@@ -1,40 +1,43 @@
 <div class="modal-header">
-    <h2 class="modal-title">{{ fromParentTitle }}</h2>
-    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
+  <h2 class="modal-title">{{ fromParentTitle }}</h2>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
 </div>
 
-    <div class="modal-body"> 
+  <div class="modal-body"> 
 
-      <div id="img-uploaded" *ngIf=selectImage>
-        <img [src]="selectImage">
-      </div>
-     
-      <div>
-        <output *ngIf=successResponse class="success">{{successResponse}}</output>
-      </div>
-
-      <div style="color:red" >
-        <output *ngIf=errorMsg class="success">{{errorMsg}}</output>
-      </div>
-
-      <div class="select-img" *ngIf=!selectImage>
-        <div style="padding-bottom: 10px;">
-            La imagen de perfil debe ser .PNG de 200px de ancho y 200px de alto aproximado
-        </div>
-          <label for="img" class="btn custom-btn">Seleccionar imagen</label>  
-          <input type="file" id="img" style="display:none" (change)="onImageUpload($event)">
-      </div> 
-
+    <div id="img-uploaded" *ngIf=selectImage>
+      <img [src]="selectImage">
     </div>
- 
-<div class="modal-footer" *ngIf=selectImage&&!successResponse&&!errorMsg>
-  <input type="button" (click)="imageUploadAction()" value="Subir Imagen" class="btn custom-btn" style="
-    margin-top: 20px; margin-bottom: 20px;"> 
-</div>
 
-<div class="modal-footer" *ngIf=successResponse>
-    <input type="button" (click)="cambiarImagen()" value="Cambiar Imagen" class="btn custom-btn">
-</div>
+    <div id="img-uploaded" *ngIf=ImgExpPortfolio&&!selectImage>
+      <img [src]="ImgExpPortfolio">
+    </div>
+   
+    <div>
+      <output *ngIf=successResponse class="success">{{successResponse}}</output>
+      <output *ngIf=dbImageDuplicada class="success">La imagen {{uploadedImage.name}} ya existe, puede continuar..</output>
+    </div>
+
+    <div style="color:red" >
+      <output *ngIf=errorMsg class="success">{{errorMsg}}</output>
+    </div>
+
+    <div class="select-img" *ngIf=!selectImage>
+      <div style="padding-bottom: 10px;">
+          La imagen de perfil debe ser .PNG de 800px de ancho y 300px de alto aproximado
+      </div>
+        <label for="img" class="btn custom-btn">Seleccionar imagen</label>  
+        <input type="file" id="img" style="display:none" (change)="onImageUpload($event)">
+    </div> 
+
+  </div>
+
+  <div class="modal-footer" >
+    <input type="button" *ngIf=selectImage&&!successResponse&&!errorMsg&&!dbImageDuplicada (click)="imageUploadAction()" value="Subir Imagen" class="btn custom-btn" style="
+      margin-top: 20px; margin-bottom: 20px;"> 
+    <input type="button" *ngIf=successResponse||dbImageDuplicada (click)="cambiarImagen()" value="Cambiar Imagen" class="btn custom-btn" style="
+    margin-top: 20px; margin-bottom: 20px;"> 
+  </div>
 

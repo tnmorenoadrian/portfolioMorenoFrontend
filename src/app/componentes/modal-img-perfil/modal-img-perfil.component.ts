@@ -36,6 +36,7 @@ export class ModalImgPerfilComponent implements OnInit {
         const reader = new FileReader();
         reader.onload = e => this.selectImage = reader.result;
         reader.readAsDataURL(file);
+        console.log(this.uploadedImage)
         this.buscarImagen();
   }
 

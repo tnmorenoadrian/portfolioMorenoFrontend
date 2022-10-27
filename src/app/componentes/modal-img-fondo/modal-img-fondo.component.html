@@ -10,10 +10,14 @@
       <div id="img-uploaded" *ngIf=selectImage>
         <img [src]="selectImage">
       </div>
+
+      <div id="img-uploaded" *ngIf=ImgBackPortfolio&&!selectImage>
+        <img [src]="ImgBackPortfolio">
+      </div>
      
       <div>
         <output *ngIf=successResponse class="success">{{successResponse}}</output>
-        <output *ngIf=dbImageDuplicada class="success">La imagen {{uploadedImage.name}} ya existe, puede proseguir..</output>
+        <output *ngIf=dbImageDuplicada class="success">La imagen {{uploadedImage.name}} ya existe, puede continuar..</output>
       </div>
 
       <div style="color:red" >

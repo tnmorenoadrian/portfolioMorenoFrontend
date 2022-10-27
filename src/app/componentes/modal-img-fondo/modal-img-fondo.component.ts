@@ -18,7 +18,7 @@ export class ModalImgFondoComponent implements OnInit {
   successResponse!: string;
   errorMsg!:string;
   dbImage: any;
-  ImgPerfilPortfolio: any;
+  ImgBackPortfolio: any;
   dbImageDuplicada:any;
 
   constructor(
@@ -41,7 +41,7 @@ export class ModalImgFondoComponent implements OnInit {
 
   imagePreviaAction() {
     this.dbImage = true;
-      this.httpImagen.verImagen(this.fromParentPersona.image_perfil).subscribe(data => {
+      this.httpImagen.verImagen(this.fromParentPersona.image_background).subscribe(data => {
         this.createImageFromBlob(data);
         this.dbImage = false;
       }, error => {
@@ -53,7 +53,7 @@ export class ModalImgFondoComponent implements OnInit {
     createImageFromBlob(image: Blob) {
       let reader = new FileReader();
       reader.addEventListener("load", () => {
-          this.ImgPerfilPortfolio = reader.result;
+          this.ImgBackPortfolio = reader.result;
       }, false);
 
       if (image) {

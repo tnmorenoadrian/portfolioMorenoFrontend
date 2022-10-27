@@ -23,7 +23,7 @@ import { ModalPerfilComponent } from './componentes/modal-perfil/modal-perfil.co
 import { ModalImgPerfilComponent } from './componentes/modal-img-perfil/modal-img-perfil.component';
 import { ModalImgFondoComponent } from './componentes/modal-img-fondo/modal-img-fondo.component';
 import { ModalExperienciaComponent } from './componentes/modal-experiencia/modal-experiencia.component';
-import {NgxImageCompressService} from "ngx-image-compress";
+
 
 
 @NgModule({
@@ -53,7 +53,7 @@ import {NgxImageCompressService} from "ngx-image-compress";
                   ModalImgFondoComponent,
                   ModalExperienciaComponent
                 ],
-  providers: [ NgxImageCompressService   
+  providers: [   
                 ],
   bootstrap:    [ AppComponent ]
 })
