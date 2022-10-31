@@ -8,11 +8,11 @@
     <div class="modal-body"> 
 
       <div id="img-uploaded" *ngIf=selectImage>
-        <img [src]="selectImage">
+        <img [src]="selectImage" width="200" height="200">
       </div>
 
       <div id="img-uploaded" *ngIf=ImgPerfilPortfolio&&!selectImage>
-        <img [src]="ImgPerfilPortfolio">
+        <img [src]="ImgPerfilPortfolio" width="200" height="200">
       </div>
      
       <div>

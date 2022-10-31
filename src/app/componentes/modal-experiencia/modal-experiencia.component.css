@@ -1,68 +1,127 @@
+
+.mat-typography h2 {
+  font: 400 20px/32px Roboto, "Helvetica Neue", sans-serif;
+  letter-spacing: normal;
+  margin: 0 0 16px;
+}
 .modal-header {
     color: #fffbfc;
-    background-color:#182834;
-    border-color: #182834;
+    background-color:#091C1B;
+    border-color: #091C1B;
     border-radius: 0px;
     padding-bottom: 0px;
     border-bottom-width: 0px;
   }
   .modal-body {
-    color: #cda51d;
-    background-color:#182834;
-    text-align: center;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    color: #FFFFFF;
+    background-color:#091C1B;
+    padding: 16px;
   }
+
+  .modal-body .img-uploaded{
+    text-align: left;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    display: inline-block;
+  }
+
   .modal-footer {
-    color: #64D8F3;
-    background-color:#182834;
-    border-color: #182834;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    background-color:#091C1B;
+    border-color: #091C1B;
     border-radius: 0px;
     justify-content: center;
   }
   .close{
-    background-color: #182834;
-    border-color: #182834;
+    background-color: #091C1B;
+    border-color: #091C1B;
     color: #fffbfc;
     font-size: 25px;
     border:0px solid #fff;
     outline:none;
     padding-bottom: 20px;
   }
+
+  .btn-square#experiencia-change {
+    background-color:#08C1B8 !important;
+    border-color:#08C1B8 !important;
+    position: absolute;
+    top: 90px;
+    left: 68px;
+}
+
+.btn-square#experiencia-select {
+  background-color:#08C1B8 !important;
+  border-color:#08C1B8 !important;
+  position: absolute;
+  top: 60px;
+  left: -5px;
+}
+
+.btn-square#experiencia-upload {
+  background-color:#08C1B8 !important;
+  border-color:#08C1B8 !important;
+  position: absolute;
+  top: 125px;
+  left: -5px;
+}
+
   .btn{
-    padding: 3% !important;
     font-size: 1.5em;
     font-weight: 300;
-    margin-top: 18px;
   }
   .custom-btn{
     margin-bottom: 15px;
-    background-color: #64d8f3;
+    background-color: #08C1B8;
     color: #fff;
     
   }
   .custom-btn:hover{
-    background-color: #cda51d;
+    background-color: #FFFFFF;
     color: #19231D;
   }
   .btn-secondary{
     background-color:#222C26;
     border-color: #222C26;
   }
-  div.select-img{
+  .select-img{
     position: relative;
+    text-align: center;
   }
-  input.file {
+  .input.file {
     display: block;
-    color: #64D8F3;
+    color: #08C1B8;
     background-color: #19231D;
     border-color: #19231D;
     text-align: center;
     margin: auto;
   }
-  
-  #img-uploaded{
-    text-align: center;
-    padding-bottom: 15px;
+  textarea#FormControlTextarea {
+    color: #FFFFFF;
+    font-weight: 350;
+    background-color: #243534;
+    border-color: #243534;
   }
+  div#text-exp{
+    width: 100%;
+  }
+  input#titulo {
+    color: #FFFFFF;
+    background-color: #243534;
+    border-color: #243534;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  
+  
+  
+
+  
+  
   

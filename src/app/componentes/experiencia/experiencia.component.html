@@ -3,6 +3,8 @@
     <div id="experiencie">
        <div class="card-titles">
          <h1>Experiencia</h1>
+         <button type="button" class="btn btn-info btn-circle" id="experiencia-edit" ><i class="fa fa-pen"></i>
+         </button>
        </div>
        <div>
          <ul class="items-list">
@@ -11,7 +13,7 @@
             </button>
             <button type="button" class="btn btn-info btn-circle" id="experiencia-trash" ><i class="fa fa-trash"></i>
             </button>
-            <img [src]="experiencia.image_experiencia" />
+            <img [src]="experiencia.image_experiencia" width="170" height="200" />
             <h2>{{experiencia.titulo_experiencia}} id:{{experiencia.id}}</h2>
             <p>{{experiencia.info_experiencia}}</p>
           </li>

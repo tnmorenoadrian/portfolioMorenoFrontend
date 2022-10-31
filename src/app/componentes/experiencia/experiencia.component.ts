@@ -28,10 +28,7 @@ export class ExperienciaComponent implements OnInit {
   openModalExperiencia(id_experiencia: string) {
     const modalRef = this.modalService.open(ModalExperienciaComponent,
       {
-        scrollable: true,
-        windowClass: 'myCustomModalClass',
-        // keyboard: false,
-        // backdrop: 'static'
+        windowClass: 'modal-xl'
       });
 
     let title = "Experiencia"
