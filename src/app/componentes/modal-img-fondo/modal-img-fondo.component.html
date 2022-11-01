@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <h2 class="modal-title">{{ fromParentTitle }}</h2>
+    <h2 class="modal-title"><i class="fa fa-image" aria-hidden="true"></i> {{ fromParentTitle }}</h2>
     <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -28,7 +28,7 @@
         <div style="padding-bottom: 10px;">
             La imagen de perfil debe ser .PNG de 800px de ancho y 300px de alto aproximado
         </div>
-          <label for="img" class="btn custom-btn">Seleccionar imagen</label>  
+          <label for="img" class="btn custom-btn">Seleccionar Imagen</label>  
           <input type="file" id="img" style="display:none" (change)="onImageUpload($event)">
       </div> 
 

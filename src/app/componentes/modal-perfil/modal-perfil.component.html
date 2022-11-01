@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <h2 class="modal-title">{{ fromParentTitle }}</h2>
+    <h2 class="modal-title"><i class="fa fa-user" aria-hidden="true"></i> {{ fromParentTitle }}</h2>
     <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -14,5 +14,5 @@
     <input type="text" id="perfil" class="form-control" [(ngModel)]="fromParentPersona.ocupacion"/>
   </div>
   <div class="modal-footer">
-    <button type="button" type="submit" class="btn custom-btn" (click)="actualizar()">Save changes</button>
+    <button type="button" type="submit" class="btn custom-btn" (click)="actualizar()">Guardar Cambios</button>
   </div>

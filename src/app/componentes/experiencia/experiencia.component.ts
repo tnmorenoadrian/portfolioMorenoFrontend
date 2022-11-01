@@ -31,7 +31,7 @@ export class ExperienciaComponent implements OnInit {
         windowClass: 'modal-xl'
       });
 
-    let title = "Experiencia"
+    let title = "EXPERIENCIA"
     this.experienciaSelect =this.experienciaList.find(x => x.id === id_experiencia)
 
     modalRef.componentInstance.fromParentExperiencia = this.experienciaSelect;

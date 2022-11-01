@@ -1,25 +1,25 @@
 .modal-header {
   color: #fffbfc;
-  background-color:#091C1B;
-  border-color: #091C1B;
+  background-color:#222328;
+  border-color: #222328;
   border-radius: 0px;
   padding-bottom: 0px;
   border-bottom-width: 0px;
 }
 .modal-body {
-  color: #08C1B8;
-  background-color:#091C1B;
+  color: #FF0083;
+  background-color:#222328;
 }
 .modal-footer {
-  color: #08C1B8;
-  background-color:#091C1B;
-  border-color: #091C1B;
+  color: #FF0083;
+  background-color:#222328;
+  border-color: #222328;
   border-radius: 0px;
   justify-content: center;
 }
 .close{
-  background-color: #091C1B;
-  border-color: #091C1B;
+  background-color: #222328;
+  border-color: #222328;
   color: #fffbfc;
   font-size: 25px;
   border:0px solid #fff;
@@ -33,8 +33,9 @@
   margin-top: 18px;
 }
 .custom-btn{
+  font-size: 18px;
   margin-bottom: 15px;
-  background: #08C1B8;
+  background: #FF0083;
   color: #fff;
 }
 .custom-btn:hover{
@@ -42,8 +43,10 @@
   color: #19231D
 }
 input#perfil {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 14px !important;
   color: #FFFFFF;
-  background-color: #243534;
-  border-color: #243534;
+  background-color: #343A40;
+  border-color: #343A40;
 }
   

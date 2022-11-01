@@ -59,7 +59,7 @@ body{
   
 ::ng-deep.mat-form-field-underline {
     /*change color of underline*/
-    background-color: #08C1B8 !important;
+    background-color: #FF0083 !important;
   } 
   
 ::ng-deep.mat-form-field-ripple {
@@ -67,7 +67,7 @@ body{
    background-color: #FFFFFF!important;
   }
 ::ng-deep.mat-form-field-appearance-legacy .mat-form-field-label{
-    color: #08C1B8 !important;  
+    color: #FF0083 !important;  
 }
 ::ng-deep .mat-input-element {
     caret-color: #FFFFFF!important;
@@ -126,7 +126,7 @@ body{
 }
 .custom-btn{
     margin-bottom: 15px;
-    background: #08C1B8;
+    background: #FF0083;
     color: #fff;
 }
 .custom-btn:hover{

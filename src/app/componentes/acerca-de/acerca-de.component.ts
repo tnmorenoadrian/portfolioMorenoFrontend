@@ -34,7 +34,7 @@ export class AcercaDeComponent implements OnInit {
         // backdrop: 'static'
       });
 
-    let title = "Sobre mi"
+    let title = "ACERCA DE"
     let datos_persona =this.miPortfolio
 
     modalRef.componentInstance.fromParentPersona = datos_persona;
@@ -56,7 +56,7 @@ export class AcercaDeComponent implements OnInit {
         // backdrop: 'static'
       });
 
-    let title = "Información Personal"
+    let title = "INFORMACION PERSONAL"
     let datos_persona =this.miPortfolio
 
     modalRef.componentInstance.fromParentPersona = datos_persona;
@@ -78,7 +78,7 @@ export class AcercaDeComponent implements OnInit {
         // backdrop: 'static'
       });
 
-    let title = "Imagen de Perfil"
+    let title = "IMAGEN DE PERFIL"
     let datos_persona =this.miPortfolio
 
     modalRef.componentInstance.fromParentPersona = datos_persona;

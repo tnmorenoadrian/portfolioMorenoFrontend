@@ -79,6 +79,8 @@ export class ModalExperienciaComponent implements OnInit {
 
     });
     }
+
+    
     
     buscarImagen() {
       this.httpImagen.buscarImagen(this.uploadedImage.name).subscribe(data => {
