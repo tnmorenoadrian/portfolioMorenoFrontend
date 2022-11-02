@@ -3,6 +3,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalExperienciaComponent } from '../modal-experiencia/modal-experiencia.component';
 import { Experiencia } from '../../models/experiencia.model';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-experiencia',
@@ -14,13 +15,18 @@ export class ExperienciaComponent implements OnInit {
   miPortfolio: any;
   experienciaList:any;
   experienciaSelect: any;
+  private subscription!: Subscription;
 
   constructor(private datosPortfolio:PortfolioService,
     private modalService: NgbModal
     ) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatosExperiencia().subscribe((data: Experiencia[]) =>{
+    this.actualizarExperiencia();
+  }
+
+  actualizarExperiencia(){
+    this.subscription = this.datosPortfolio.obtenerDatosExperiencia().subscribe((data: Experiencia[]) =>{
       this.experienciaList=data;
       });
   }
@@ -39,10 +45,17 @@ export class ExperienciaComponent implements OnInit {
 
     modalRef.result.then((result) => {
       if(result){
-        this.datosPortfolio.actualizarDatosExperiencia(result.id, result).subscribe((data) => {
+        this.datosPortfolio.actualizarDatosExperiencia(result.id, result).subscribe(data => {
           this.experienciaSelect.id = data.id;});
         }
       }).catch(() => { /* closed */ });
   }
 
+  BorrarExperiencia(id_experiencia: string) {
+    this.datosPortfolio.borrarExperiencia(id_experiencia).subscribe(()=>{
+      if(this.subscription) this.subscription.unsubscribe();
+      this.actualizarExperiencia(); 
+  });
+  }
+  
 }

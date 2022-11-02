@@ -18,6 +18,8 @@
     color: #FFFFFF;
     background-color:#222328;
     padding: 16px;
+    padding-bottom: 0px;
+    padding-top: 0px;
   }
 
   .modal-body .img-uploaded{
@@ -50,8 +52,8 @@
     background-color:#FF0083 !important;
     border-color:#FF0083 !important;
     position: absolute;
-    top: 90px;
-    left: 68px;
+    top: 190px;
+    left: 94px;
 }
 
 .btn-square#experiencia-select {
@@ -59,7 +61,7 @@
   border-color:#FF0083 !important;
   position: absolute;
   top: 190px;
-  left: 43px;
+  left: 40px;
 }
 
 .btn-square#experiencia-upload {
@@ -112,6 +114,7 @@
     width: 100%;
   }
   input#titulo {
+    font-family: 'Oswald', sans-serif;
     color: #FF0083;
     background-color: #343A40;
     border-color: #343A40;
@@ -119,6 +122,7 @@
     font-size: 20px;
     font-weight: 300;
   }
+  
 
   
   

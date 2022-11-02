@@ -1,6 +1,5 @@
-import { HttpClient, HttpRequest, HttpHeaders, HttpEvent } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpRequest, HttpHeaders, HttpEvent } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 
 @Injectable({
@@ -19,10 +18,16 @@ export class ImagenesService {
    return this.http.get('./assets/data/data.json')
   }
   */
-   subirImagen(file: File){
+   subirImagen(file: File): Observable<HttpEvent<any>>{
     const formData: FormData = new FormData();
     formData.append('image', file, file.name);
-    return this.http.post(`${this.apiUrl}`+"/upload/image/", formData, { observe: 'response' });
+
+        const options = {
+          reportProgress: true,
+          observe: 'events'
+        };
+    const req = new HttpRequest('POST', `${this.apiUrl}`+"/upload/image/", formData, options);
+    return this.http.request(req);
   }
 
   verImagen(urlPrevImg): Observable<Blob> {
@@ -32,11 +37,6 @@ export class ImagenesService {
   buscarImagen(nombre:string):Observable<any>{
     return this.http.get(`${this.apiUrl}`+"/buscar/image/"+nombre)
    }
-
-  private handleError(error: any): Promise<any> {
-    console.error('An error occurred', error); // ver
-    return Promise.reject(error.message || error);
- }
 
 }
 

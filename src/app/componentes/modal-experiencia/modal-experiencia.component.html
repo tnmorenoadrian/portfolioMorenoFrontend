@@ -9,6 +9,8 @@
  
     <div class="img-uploaded" *ngIf=selectImage>
       <img [src]="selectImage" width="150" height="200">
+      <progress *ngIf=!dbImageDuplicada [value]=progress.loaded  [max]=progress.total style="margin-top: 40px; margin-left: 7px;">
+      </progress>
     </div>
 
     <div class="img-uploaded" *ngIf=ImgExpPortfolio&&!selectImage>
@@ -19,18 +21,13 @@
     <textarea class="form-control" id="FormControlTextarea" rows="3" [(ngModel)]="fromParentExperiencia.info_experiencia">{{ fromParentExperiencia.info_experiencia}}</textarea> 
     </div>
 
-    <div style="color:red" >
-      <output *ngIf=errorMsg class="success">{{errorMsg}}</output>
-    </div> 
-
-    <button *ngIf=successResponse||dbImageDuplicada type="button" class="btn btn-info btn-square" id="experiencia-change" title="Cambiar imagen" (click)="cambiarImagen()"><i class="fa fa-image"></i>
-    </button>
-
-    <button *ngIf=selectImage&&!successResponse&&!errorMsg&&!dbImageDuplicada (click)="imageUploadAction()" type="button" class="btn btn-info btn-square" id="experiencia-upload" title="Subir imagen" ><i class="fa fa-upload"></i>
+    <button *ngIf=selectImage&&!successResponse&&!dbImageDuplicada (click)="imageUploadAction()" type="button" class="btn btn-info btn-square" id="experiencia-upload" title="Subir imagen" ><i class="fa fa-upload"></i>
     </button>
 
     <label for="img" class="btn btn-info btn-square" id="experiencia-select" title="Seleccionar imagen" ><i class="fa fa-folder-open"></i></label>  
     <input type="file" id="img" style="display:none" (change)="onImageUpload($event)">
+
+    
 
   </div>
   
@@ -40,5 +37,6 @@
       <output *ngIf=dbImageDuplicada class="success">La imagen {{uploadedImage.name}} ya existe, puede continuar..</output>
       <output *ngIf=!selectImage>La imagen debe ser .PNG de 150px de ancho y 200px de alto aproximado</output> 
      </div> 
+     <button type="button" type="submit" class="btn custom-btn" (click)="actualizar()">Guardar Cambios</button>
   </div>
 

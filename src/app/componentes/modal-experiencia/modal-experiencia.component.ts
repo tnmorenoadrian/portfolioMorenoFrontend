@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ImagenesService } from 'src/app/servicios/imagenes.service';
 
@@ -11,12 +11,13 @@ export class ModalExperienciaComponent implements OnInit {
 
   @Input() fromParentTitle:any;
   @Input() fromParentExperiencia:any;
-
+  @Output() datosEdit: EventEmitter<any> = new EventEmitter();
+  @ViewChild('selectfile') el!:ElementRef;   //in html we make variable of selectfile
+  
+  progress = { loaded : 0 , total : 0 };
   uploadedImage!: File;
   selectImage: any;
-  postResponse: any;
   successResponse!: string;
-  errorMsg!:string;
   dbImage: any;
   ImgExpPortfolio: any;
   dbImageDuplicada:any;
@@ -64,20 +65,19 @@ export class ModalExperienciaComponent implements OnInit {
    
    imageUploadAction() {
     this.httpImagen.subirImagen(this.uploadedImage).subscribe(
-      response => {
-      if (response.status === 200) {
-        this.postResponse = response;
-        this.successResponse = this.postResponse.body.message;
-      }
-    }, (error)=>{
-      if (error.status === 500) {
-            this.errorMsg="Error 500- Pruebe cambiar el nombre del archivo";
-      }
-      else if (error.status === 404) {
-        this.errorMsg="Error 404- Problema con servidor backend";
-     }
+      (data: any) => { 
+        console.log(data);
+        if(data.type == 1 && data.loaded && data.total){
+          console.log("gaju");
+          this.progress.loaded = data.loaded;
+          this.progress.total = data.total;
+        }
+        else if(data.body){
+          this.successResponse=data.body.message;
+        }
 
-    });
+       },
+      error => console.log(error) );
     }
 
     
@@ -90,8 +90,13 @@ export class ModalExperienciaComponent implements OnInit {
 
    cambiarImagen() {
     this.fromParentExperiencia.image_experiencia='http://localhost:8081/get/image/' + this.uploadedImage.name;
-    this.activeModal.close(this.fromParentExperiencia);
     }
+
+    actualizar() {
+      this.datosEdit.emit(this.fromParentExperiencia);
+      this.fromParentExperiencia.image_experiencia='http://localhost:8081/get/image/' + this.uploadedImage.name; 
+      this.activeModal.close(this.fromParentExperiencia);
+      }
 
     cerrar() {
       this.activeModal.close();

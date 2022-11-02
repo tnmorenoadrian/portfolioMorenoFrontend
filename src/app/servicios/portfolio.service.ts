@@ -42,8 +42,8 @@ export class PortfolioService {
     )
   }
 
-  borrarDatos(id: any): Observable<any> {
-    var API_URL = `${this.apiUrl}/${id}`;
+  borrarExperiencia(id: any): Observable<any> {
+    let API_URL = `${this.apiUrl}/delete/experiencia/${id}`;
     return this.http.delete(API_URL).pipe(
       catchError(this.handleError)
     )

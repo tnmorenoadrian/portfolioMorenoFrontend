@@ -152,11 +152,11 @@ div#profile-background img{
 .btn-circle#profile-img{
   position: absolute;
   top: -85px;
-  left: 105px;
+  left: 137px;
 }
 .btn-circle#profile-info{
   position: absolute;
-  right: 20px;
+  right: 40px;
   top: 15px;
 }
 .btn-circle#acerca-edit{
@@ -220,7 +220,7 @@ div h1{
   font-family: 'Oswald', sans-serif !important;
   color: #FF0083;
   font-size: 24px !important;
-  font-weight: 700 !important;
+  font-weight: 550 !important;
 }
 div h2{
   font-family: 'Oswald', sans-serif !important;
@@ -241,7 +241,7 @@ div#profile-self{
 div#profile-self h3{
   font-family: 'Oswald', sans-serif;
   color: #FF0083;
-  font-weight: 700;
+  font-weight: 550;
   font-size: 24px;
   opacity: 1;
   margin: 0px 0px 10px;
@@ -309,7 +309,7 @@ ul.items-list li h2{
   text-align: right; 
   display:inline-block;
   padding: 0;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   font-size: 22px !important;
 }
 ul.items-list li p{
