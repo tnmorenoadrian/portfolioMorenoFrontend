@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalExperienciaComponent } from '../modal-experiencia/modal-experiencia.component';
+import { ModalExperienciaAddComponent } from '../modal-experiencia-add/modal-experiencia-add.component';
 import { Experiencia } from '../../models/experiencia.model';
+import { Persona } from 'src/app/models/persona.model';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -23,6 +25,13 @@ export class ExperienciaComponent implements OnInit {
 
   ngOnInit(): void {
     this.actualizarExperiencia();
+    this.actualizarPortfolio();
+  }
+
+  actualizarPortfolio(){
+    this.datosPortfolio.obtenerDatosPersona().subscribe((data: Persona[]) =>{
+      this.miPortfolio=data;
+        });
   }
 
   actualizarExperiencia(){
@@ -47,6 +56,36 @@ export class ExperienciaComponent implements OnInit {
       if(result){
         this.datosPortfolio.actualizarDatosExperiencia(result.id, result).subscribe(data => {
           this.experienciaSelect.id = data.id;});
+        }
+      }).catch(() => { /* closed */ });
+  }
+
+  openModalExperienciaAdd() {
+    const modalRef = this.modalService.open(ModalExperienciaAddComponent,
+      {
+        windowClass: 'modal-xl'
+      });
+
+    let title = "EXPERIENCIA"
+    let newExperiencia: Experiencia = {
+      "persona": 1,
+      "image_experiencia":'http://localhost:8081/get/image/default_experiencia.png',
+	    "titulo_experiencia": '',
+	    "info_experiencia": '',
+	    "desde_experiencia": '',
+	    "hasta_experiencia": ''
+    };
+
+    modalRef.componentInstance.fromParentExperiencia = newExperiencia;
+    modalRef.componentInstance.fromParentIdPersona = this.miPortfolio.id;
+    modalRef.componentInstance.fromParentTitle = title;
+    
+    modalRef.result.then((result) => {
+      if (result) {
+        this.datosPortfolio.addExperiencia(result).subscribe(()=>{
+          if(this.subscription) this.subscription.unsubscribe();
+          this.actualizarExperiencia();
+        });
         }
       }).catch(() => { /* closed */ });
   }

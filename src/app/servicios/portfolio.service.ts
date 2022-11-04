@@ -12,7 +12,8 @@ import {Experiencia} from '../models/experiencia.model'
 export class PortfolioService {
 
   apiUrl: string = 'http://localhost:8081';
-  headers = new HttpHeaders().set('Content-Type', 'application/json')
+  headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
 
   constructor(private http:HttpClient) { }
 
@@ -38,6 +39,14 @@ export class PortfolioService {
   actualizarDatosExperiencia(id: any, data: any): Observable<any> {
     let API_URL = `${this.apiUrl}/update/experiencia/${id}`;
     return this.http.put(API_URL, data, { headers: this.headers }).pipe(
+      catchError(this.handleError)
+    )
+  }
+
+  addExperiencia(data: any): Observable<any> {
+    let API_URL = `${this.apiUrl}/new/experiencia`;
+    console.log(data)
+    return this.http.post(API_URL, data, { headers: this.headers }).pipe(
       catchError(this.handleError)
     )
   }

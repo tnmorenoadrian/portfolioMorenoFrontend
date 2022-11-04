@@ -1,0 +1,142 @@
+
+.mat-typography h2 {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: normal;
+    margin: 0 0 16px;
+  }
+  .modal-header {
+      color: #fffbfc;
+      background-color:#222328;
+      border-color: #222328;
+      border-radius: 0px;
+      padding-bottom: 0px;
+      border-bottom-width: 0px;
+    }
+    .modal-body {
+      display: flex;
+      flex-direction: row;
+      color: #FF0083;
+      background-color:#222328;
+      padding: 16px;
+      padding-bottom: 0px;
+      padding-top: 0px;
+    }
+  
+    .modal-body .img-uploaded{
+      text-align: left;
+      padding-bottom: 15px;
+      padding-right: 15px;
+      display: inline-block;
+    }
+  
+    .modal-footer {
+      display: flex;
+      flex-direction: column;
+      color: #FFFFFF;
+      background-color:#222328;
+      border-color: #222328;
+      border-radius: 0px;
+      justify-content: center;
+    }
+    .close{
+      background-color: #222328;
+      border-color: #222328;
+      color: #fffbfc;
+      font-size: 25px;
+      border:0px solid #fff;
+      outline:none;
+      padding-bottom: 20px;
+    }
+  
+    .btn-square#experiencia-change {
+      background-color:#FF0083 !important;
+      border-color:#FF0083 !important;
+      position: absolute;
+      top: 190px;
+      left: 94px;
+  }
+  
+  .btn-square#experiencia-select {
+    background-color:#FF0083 !important;
+    border-color:#FF0083 !important;
+    position: absolute;
+    top: 190px;
+    left: 40px;
+  }
+  
+  .btn-square#experiencia-upload {
+    background-color:#FF0083 !important;
+    border-color:#FF0083 !important;
+    position: absolute;
+    top: 190px;
+    left: 94px;
+  }
+  
+    .btn{
+      font-size: 1.5em;
+      font-weight: 300;
+    }
+    .custom-btn{
+      font-size: 18px;
+      margin-bottom: 15px;
+      background-color: #FF0083;
+      color: #fff;
+      
+    }
+    .custom-btn:hover{
+      background-color: #FFFFFF;
+      color: #19231D;
+    }
+    .btn-secondary{
+      background-color:#222C26;
+      border-color: #222C26;
+    }
+    .select-img{
+      position: relative;
+      text-align: center;
+    }
+    .input.file {
+      display: block;
+      color: #FF0083;
+      background-color: #19231D;
+      border-color: #19231D;
+      text-align: center;
+      margin: auto;
+    }
+    textarea#FormControlTextarea {
+      font-size: 14px;
+      color: #FFFFFF;
+      font-weight: 350;
+      background-color: #343A40;
+      border-color: #343A40;
+      margin-bottom: 15px;
+    }
+    div#title-exp{
+      width: 100%;
+      float: right;
+    }
+    div#info-exp{
+      width: 100%;
+      clear: both;
+    }
+
+    input#titulo {
+      font-family: 'Oswald', sans-serif;
+      color: #FF0083;
+      background-color: #343A40;
+      border-color: #343A40;
+      margin-bottom: 15px;
+      font-size: 20px;
+      font-weight: 300;
+    }
+    
+ 
+    
+  
+    
+    
+    
+  
+    
+    
+    

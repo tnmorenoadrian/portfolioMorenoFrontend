@@ -64,6 +64,7 @@ body {
   
     display: none;
   }
+.cdk-overlay-container{ z-index: 1200 !important; }
 .fab {
     color: #FFFFFF !important;
 }
@@ -169,6 +170,11 @@ div#profile-background img{
   border-color: #3f59ff !important;
   position: absolute;
   right: 5px;
+  top: 20px;
+}
+.btn-circle#experiencia-add{
+  position: absolute;
+  right: 53px;
   top: 20px;
 }
 .btn-circle#experiencia-edit{

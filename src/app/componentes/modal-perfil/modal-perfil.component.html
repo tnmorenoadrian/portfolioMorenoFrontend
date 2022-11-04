@@ -5,13 +5,18 @@
     </button>
   </div>
   <div class="modal-body">
-    <input type="text" id="perfil" class="form-control" [(ngModel)]="fromParentPersona.nombres"/>
-  </div>
-  <div class="modal-body">
-    <input type="text" id="perfil" class="form-control" [(ngModel)]="fromParentPersona.apellido"/>
-  </div>
-  <div class="modal-body">
-    <input type="text" id="perfil" class="form-control" [(ngModel)]="fromParentPersona.ocupacion"/>
+      <div class="form-floating" style="padding-bottom: 15px;">
+        <input type="text" id="perfil" class="form-control" [(ngModel)]="fromParentPersona.nombres"/>
+        <label for="floatingTextarea">Nombres </label>
+      </div>
+      <div class="form-floating" style="padding-bottom: 15px;">
+        <input type="text" id="perfil" class="form-control" [(ngModel)]="fromParentPersona.apellido"/>
+        <label for="floatingTextarea">Apellido </label>
+      </div>
+      <div class="form-floating">
+        <input type="text" id="perfil" class="form-control" [(ngModel)]="fromParentPersona.ocupacion"/>
+        <label for="floatingTextarea">Ocupación </label>
+      </div>
   </div>
   <div class="modal-footer">
     <button type="button" type="submit" class="btn custom-btn" (click)="actualizar()">Guardar Cambios</button>

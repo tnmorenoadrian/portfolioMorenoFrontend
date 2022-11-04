@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
@@ -23,8 +23,10 @@ import { ModalPerfilComponent } from './componentes/modal-perfil/modal-perfil.co
 import { ModalImgPerfilComponent } from './componentes/modal-img-perfil/modal-img-perfil.component';
 import { ModalImgFondoComponent } from './componentes/modal-img-fondo/modal-img-fondo.component';
 import { ModalExperienciaComponent } from './componentes/modal-experiencia/modal-experiencia.component';
-
-
+import { ModalExperienciaAddComponent } from './componentes/modal-experiencia-add/modal-experiencia-add.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   imports:      [ BrowserModule,
@@ -36,7 +38,12 @@ import { ModalExperienciaComponent } from './componentes/modal-experiencia/modal
                   MatIconModule,
                   MatInputModule,
                   BrowserAnimationsModule,
-                  NgbModule 
+                  NgbModule,
+                  MatFormFieldModule,
+                  MatDatepickerModule,
+                  MatNativeDateModule,
+                  ReactiveFormsModule,
+                  MatInputModule 
                  ],
   declarations: [ AppComponent,
                   EncabezadoComponent,
@@ -51,7 +58,8 @@ import { ModalExperienciaComponent } from './componentes/modal-experiencia/modal
                   ModalPerfilComponent,
                   ModalImgPerfilComponent,
                   ModalImgFondoComponent,
-                  ModalExperienciaComponent
+                  ModalExperienciaComponent,
+                  ModalExperienciaAddComponent
                 ],
   providers: [   
                 ],
