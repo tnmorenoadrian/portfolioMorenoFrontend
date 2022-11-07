@@ -24,9 +24,9 @@ export const MY_FORMATS = {
 
 
 @Component({
-  selector: 'app-modal-experiencia-add',
-  templateUrl: './modal-experiencia-add.component.html',
-  styleUrls: ['./modal-experiencia-add.component.css'],
+  selector: 'app-modal-educacion-add',
+  templateUrl: './modal-educacion-add.component.html',
+  styleUrls: ['./modal-educacion-add.component.css'],
   providers: [
     {
       provide: DateAdapter,
@@ -37,10 +37,10 @@ export const MY_FORMATS = {
     {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS},
   ],
 })
-export class ModalExperienciaAddComponent implements OnInit {
+export class ModalEducacionAddComponent implements OnInit {
 
   @Input() fromParentTitle:any;
-  @Input() fromParentExperiencia:any;
+  @Input() fromParentEducacion:any;
   @Input() fromParentIdPersona:any;
 
   @Output() datosAdd: EventEmitter<any> = new EventEmitter();
@@ -51,7 +51,7 @@ export class ModalExperienciaAddComponent implements OnInit {
   selectImage: any;
   successResponse!: string;
   dbImage: any;
-  ImgExpPortfolio: any;
+  ImgEduPortfolio: any;
   dbImageDuplicada:any;
   dateDesde = new FormControl(moments());
   dateHasta = new FormControl(moments());
@@ -99,7 +99,7 @@ export class ModalExperienciaAddComponent implements OnInit {
 
   imagePreviaAction() {  
     this.dbImage = true;
-      this.httpImagen.verImagen(this.fromParentExperiencia.image_experiencia).subscribe(data => {      
+      this.httpImagen.verImagen(this.fromParentEducacion.image_educacion).subscribe(data => {      
         this.createImageFromBlob(data);
         this.dbImage = false;
       }, error => {
@@ -110,7 +110,7 @@ export class ModalExperienciaAddComponent implements OnInit {
     createImageFromBlob(image: Blob) {
       let reader = new FileReader();
       reader.addEventListener("load", () => {
-          this.ImgExpPortfolio = reader.result;
+          this.ImgEduPortfolio = reader.result;
           
       }, false);
 
@@ -144,16 +144,16 @@ export class ModalExperienciaAddComponent implements OnInit {
       }
 
    cambiarImagen() {
-    this.fromParentExperiencia.image_experiencia='http://localhost:8081/get/image/' + this.uploadedImage.name;
+    this.fromParentEducacion.image_educacion='http://localhost:8081/get/image/' + this.uploadedImage.name;
     }
 
     agregar() {
-      this.datosAdd.emit(this.fromParentExperiencia);
-      this.fromParentExperiencia.persona= this.fromParentIdPersona;
-      this.fromParentExperiencia.image_experiencia='http://localhost:8081/get/image/' + this.uploadedImage.name;
-      this.fromParentExperiencia.desde_experiencia=moments(this.ctrlValueDesde).format('MMM, YYYY');
-      this.fromParentExperiencia.hasta_experiencia=moments(this.ctrlValueHasta).format('MMM, YYYY');
-      this.activeModal.close(this.fromParentExperiencia);
+      this.datosAdd.emit(this.fromParentEducacion);
+      this.fromParentEducacion.persona= this.fromParentIdPersona;
+      this.fromParentEducacion.image_educacion='http://localhost:8081/get/image/' + this.uploadedImage.name;
+      this.fromParentEducacion.desde_educacion=moments(this.ctrlValueDesde).format('MMM, YYYY');
+      this.fromParentEducacion.hasta_educacion=moments(this.ctrlValueHasta).format('MMM, YYYY');
+      this.activeModal.close(this.fromParentEducacion);
       }
 
     cerrar() {

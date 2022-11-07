@@ -1,0 +1,42 @@
+<div class="modal-header">
+    <h2 class="modal-title"><i class="fa fa-handshake" aria-hidden="true"></i> {{ fromParentTitle }}</h2>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  
+    <div class="modal-body"> 
+   
+      <div class="img-uploaded" *ngIf=selectImage>
+        <img [src]="selectImage" width="150" height="200">
+        <progress *ngIf=!dbImageDuplicada [value]=progress.loaded  [max]=progress.total style="margin-top: 40px; margin-left: 7px;">
+        </progress>
+      </div>
+  
+      <div class="img-uploaded" *ngIf=ImgExpPortfolio&&!selectImage>
+        <img [src]="ImgExpPortfolio" width="150" height="200">
+      </div>
+      <div id="text-exp">
+      <input type="text" id="titulo" class="form-control" [(ngModel)]="fromParentEducacion.titulo_educacion"/>
+      <textarea class="form-control" id="FormControlTextarea" rows="3" [(ngModel)]="fromParentEducacion.info_educacion">{{ fromParentEducacion.info_educacion}}</textarea> 
+      </div>
+  
+      <button *ngIf=selectImage&&!successResponse&&!dbImageDuplicada (click)="imageUploadAction()" type="button" class="btn btn-info btn-square" id="experiencia-upload" title="Subir imagen" ><i class="fa fa-upload"></i>
+      </button>
+  
+      <label for="img" class="btn btn-info btn-square" id="experiencia-select" title="Seleccionar imagen" ><i class="fa fa-folder-open"></i></label>  
+      <input type="file" id="img" style="display:none" (change)="onImageUpload($event)">
+  
+      
+  
+    </div>
+    
+    <div class="modal-footer" >
+       <div style="padding-bottom: 15px;">
+        <output *ngIf=successResponse class="success">{{successResponse}}</output>
+        <output *ngIf=dbImageDuplicada class="success">La imagen {{uploadedImage.name}} ya existe, puede continuar..</output>
+        <output *ngIf=!selectImage>La imagen debe ser .PNG de 150px de ancho y 200px de alto aproximado</output> 
+       </div> 
+       <button type="button" type="submit" class="btn custom-btn" (click)="actualizar()">Guardar Cambios</button>
+    </div>
+  

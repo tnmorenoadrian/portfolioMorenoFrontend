@@ -69,7 +69,7 @@ export class ExperienciaComponent implements OnInit {
     let title = "EXPERIENCIA"
     let newExperiencia: Experiencia = {
       "persona": 1,
-      "image_experiencia":'http://localhost:8081/get/image/default_experiencia.png',
+      "image_experiencia":'http://localhost:8081/get/image/default.png',
 	    "titulo_experiencia": '',
 	    "info_experiencia": '',
 	    "desde_experiencia": '',
@@ -90,7 +90,7 @@ export class ExperienciaComponent implements OnInit {
       }).catch(() => { /* closed */ });
   }
 
-  BorrarExperiencia(id_experiencia: string) {
+  borrarExperiencia(id_experiencia: string) {
     this.datosPortfolio.borrarExperiencia(id_experiencia).subscribe(()=>{
       if(this.subscription) this.subscription.unsubscribe();
       this.actualizarExperiencia(); 

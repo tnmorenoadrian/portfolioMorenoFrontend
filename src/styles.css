@@ -174,7 +174,7 @@ div#profile-background img{
 }
 .btn-circle#experiencia-add{
   position: absolute;
-  right: 53px;
+  right: 49px;
   top: 20px;
 }
 .btn-circle#experiencia-edit{
@@ -272,8 +272,19 @@ div#acerca {
   margin-right: 30px;
   margin-bottom: 30px;
 }
+div#imagen{
+  float: left;
+}
+div#imagen img{
+  display: block;
+}
+div#contenido{
+  margin-left: 160px;
+}
+
 ul.items-list{
   padding-left: 0px;
+  
 }
 ul.items-list-projet{
   padding-left: 0px;
@@ -293,13 +304,12 @@ ul.items-list-projet li h2{
 ul.items-list li{
   font-family: 'Roboto', sans-serif !important;
   position: relative;
-  overflow: visible;
+  overflow: auto;
   width: 100%;
   color: #FFFFFF;
   list-style-type: none;
   margin-left:0px;
   padding-left:0px;
-  display: inline-block;
   border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }

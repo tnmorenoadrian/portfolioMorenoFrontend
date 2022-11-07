@@ -3,14 +3,14 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ImagenesService } from 'src/app/servicios/imagenes.service';
 
 @Component({
-  selector: 'app-modal-experiencia',
-  templateUrl: './modal-experiencia.component.html',
-  styleUrls: ['./modal-experiencia.component.css']
+  selector: 'app-modal-educacion',
+  templateUrl: './modal-educacion.component.html',
+  styleUrls: ['./modal-educacion.component.css']
 })
-export class ModalExperienciaComponent implements OnInit {
+export class ModalEducacionComponent implements OnInit {
 
   @Input() fromParentTitle:any;
-  @Input() fromParentExperiencia:any;
+  @Input() fromParentEducacion:any;
   @Output() datosEdit: EventEmitter<any> = new EventEmitter();
   @ViewChild('selectfile') el!:ElementRef; 
   
@@ -42,7 +42,7 @@ export class ModalExperienciaComponent implements OnInit {
 
   imagePreviaAction() {  
     this.dbImage = true;
-      this.httpImagen.verImagen(this.fromParentExperiencia.image_experiencia).subscribe(data => {      
+      this.httpImagen.verImagen(this.fromParentEducacion.image_educacion).subscribe(data => {      
         this.createImageFromBlob(data);
         this.dbImage = false;
       }, error => {
@@ -89,15 +89,15 @@ export class ModalExperienciaComponent implements OnInit {
       }
 
    cambiarImagen() {
-    this.fromParentExperiencia.image_experiencia='http://localhost:8081/get/image/' + this.uploadedImage.name;
+    this.fromParentEducacion.image_educacion='http://localhost:8081/get/image/' + this.uploadedImage.name;
     }
 
     actualizar() {
-      this.datosEdit.emit(this.fromParentExperiencia);
+      this.datosEdit.emit(this.fromParentEducacion);
       if(this.uploadedImage!==undefined){
         this.cambiarImagen()
       }
-      this.activeModal.close(this.fromParentExperiencia);
+      this.activeModal.close(this.fromParentEducacion);
       }
 
     cerrar() {
@@ -105,3 +105,4 @@ export class ModalExperienciaComponent implements OnInit {
       } 
 
 }
+

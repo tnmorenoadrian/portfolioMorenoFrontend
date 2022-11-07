@@ -27,6 +27,8 @@ import { ModalExperienciaAddComponent } from './componentes/modal-experiencia-ad
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
+import { ModalEducacionComponent } from './componentes/modal-educacion/modal-educacion.component';
+import { ModalEducacionAddComponent } from './componentes/modal-educacion-add/modal-educacion-add.component';
 
 @NgModule({
   imports:      [ BrowserModule,
@@ -59,7 +61,9 @@ import { MatNativeDateModule } from '@angular/material/core';
                   ModalImgPerfilComponent,
                   ModalImgFondoComponent,
                   ModalExperienciaComponent,
-                  ModalExperienciaAddComponent
+                  ModalExperienciaAddComponent,
+                  ModalEducacionComponent,
+                  ModalEducacionAddComponent
                 ],
   providers: [   
                 ],

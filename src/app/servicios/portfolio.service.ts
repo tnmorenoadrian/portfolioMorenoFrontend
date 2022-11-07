@@ -2,8 +2,9 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Injectable } from '@angular/core';
 import { catchError } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
-import {Persona} from '../models/persona.model'
-import {Experiencia} from '../models/experiencia.model'
+import {Persona} from '../models/persona.model';
+import {Experiencia} from '../models/experiencia.model';
+import {Educacion} from '../models/educacion.model'
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +28,10 @@ export class PortfolioService {
 
    obtenerDatosExperiencia():Observable<Experiencia[]>{
     return this.http.get<Experiencia[]>(`${this.apiUrl}`+"/experiencia/1")
+   }
+   
+   obtenerDatosEducacion():Observable<Educacion[]>{
+    return this.http.get<Educacion[]>(`${this.apiUrl}`+"/educacion/1")
    } 
 
   actualizarDatos(id: any, data: any): Observable<any> {
@@ -43,6 +48,13 @@ export class PortfolioService {
     )
   }
 
+  actualizarDatosEducacion(id: any, data: any): Observable<any> {
+    let API_URL = `${this.apiUrl}/update/educacion/${id}`;
+    return this.http.put(API_URL, data, { headers: this.headers }).pipe(
+      catchError(this.handleError)
+    )
+  }
+
   addExperiencia(data: any): Observable<any> {
     let API_URL = `${this.apiUrl}/new/experiencia`;
     console.log(data)
@@ -51,8 +63,23 @@ export class PortfolioService {
     )
   }
 
+  addEducacion(data: any): Observable<any> {
+    let API_URL = `${this.apiUrl}/new/educacion`;
+    console.log(data)
+    return this.http.post(API_URL, data, { headers: this.headers }).pipe(
+      catchError(this.handleError)
+    )
+  }
+
   borrarExperiencia(id: any): Observable<any> {
     let API_URL = `${this.apiUrl}/delete/experiencia/${id}`;
+    return this.http.delete(API_URL).pipe(
+      catchError(this.handleError)
+    )
+  }
+
+  borrarEducacion(id: any): Observable<any> {
+    let API_URL = `${this.apiUrl}/delete/educacion/${id}`;
     return this.http.delete(API_URL).pipe(
       catchError(this.handleError)
     )

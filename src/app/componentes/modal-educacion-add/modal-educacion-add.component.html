@@ -13,17 +13,17 @@
         </progress>
       </div>
   
-      <div class="img-uploaded" *ngIf=ImgExpPortfolio&&!selectImage>
-        <img [src]="ImgExpPortfolio" width="150" height="200">
+      <div class="img-uploaded" *ngIf=ImgEduPortfolio&&!selectImage>
+        <img [src]="ImgEduPortfolio" width="150" height="200">
       </div>
 
       <div style="width:100%; text-align: center;">
       <div class="form-floating" id="title-exp">
-      <input type="text" id="titulo" class="form-control" [(ngModel)]="fromParentExperiencia.titulo_experiencia"/>
+      <input type="text" id="titulo" class="form-control" [(ngModel)]="fromParentEducacion.titulo_educacion"/>
       <label for="floatingTextarea">Título </label>
       </div>
       <div class="form-floating" id="info-exp">
-      <textarea class="form-control" id="FormControlTextarea" style="height: 100px" [(ngModel)]="fromParentExperiencia.info_experiencia"></textarea>
+      <textarea class="form-control" id="FormControlTextarea" style="height: 100px" [(ngModel)]="fromParentEducacion.info_educacion"></textarea>
       <label for="floatingTextarea">Descripción</label>
       </div>
 
@@ -67,5 +67,3 @@
        </div> 
        <button type="button" type="submit" class="btn custom-btn" (click)="agregar()">Agregar</button>
     </div>
-  
-  

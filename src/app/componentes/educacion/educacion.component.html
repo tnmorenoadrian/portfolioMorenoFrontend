@@ -1,22 +1,31 @@
-<!-- Educacion -->   
-<div class="card mat-card" id="educacion">
-    <div id="education">
-       <div class="card-titles">
-         <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> EDUCACION</h1>
-       </div>
-       <div>
-         <ul class="items-list">
-          <li *ngFor="let educacion of educacionList">
-            <button type="button" class="btn btn-info btn-circle" id="educacion-edit"><i class="fa fa-pen"></i>
-            </button>
-            <button type="button" class="btn btn-info btn-circle" id="educacion-trash"><i class="fa fa-trash"></i>
-            </button>
-            <img [src]="educacion.img" />
-            <h2>{{educacion.name}}</h2>
-            <p>{{educacion.info}}</p>
-          </li>
-        </ul>
-       </div>
-    </div>
-</div>      
+<!-- <!-- Educacion -->
+<div class="card mat-card" id="experiencia">
+  <div id="experiencie">
+     <div class="card-titles">
+       <h1><i class="fa fa-handshake" aria-hidden="true"></i> EDUCACION </h1>
+       <button type="button" class="btn btn-info btn-circle" id="experiencia-add" (click)="openModalEducacionAdd()" ><i class="fa fa-pen"></i>
+       </button>
+     </div>
+     
+       <ul class="items-list">
+        <li *ngFor="let educacion of educacionList">
+          <button type="button" class="btn btn-info btn-circle" id="experiencia-edit" (click)="openModalEducacion(educacion.id)"><i class="fa fa-pen"></i>
+          </button>
+          <button type="button" class="btn btn-info btn-circle" id="experiencia-trash" (click)="borrarEducacion(educacion.id)" ><i class="fa fa-trash"></i>
+          </button>
+          <div id="imagen">
+          <img [src]="educacion.image_educacion" width="170" height="200" />
+          </div>
+          <div id="contenido">
+          <h2>{{educacion.titulo_educacion}}</h2>
+          <p>{{educacion.info_educacion}}</p>
+          <p></p>
+          <p>Desde: {{educacion.desde_educacion}}</p>
+          <p>Hasta: {{educacion.hasta_educacion}}</p>
+          </div>
+        </li>
+      </ul>
+     
+  </div>
+</div>     
 
