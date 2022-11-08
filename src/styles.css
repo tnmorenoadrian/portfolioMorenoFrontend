@@ -281,25 +281,9 @@ div#imagen img{
 div#contenido{
   margin-left: 160px;
 }
-
 ul.items-list{
   padding-left: 0px;
   
-}
-ul.items-list-projet{
-  padding-left: 0px;
-}
-ul.items-list-projet li{
-  color: #FFFFFF;
-  list-style-type: none;
-  padding-left: 20px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-}
-ul.items-list-projet li h2{
-  margin-top: 20px;
-  color: #FF0083;
-  font-weight: 500;
-  font-size: 25px;
 }
 ul.items-list li{
   font-family: 'Roboto', sans-serif !important;
@@ -308,8 +292,25 @@ ul.items-list li{
   width: 100%;
   color: #FFFFFF;
   list-style-type: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
   margin-left:0px;
-  padding-left:0px;
+  padding-left:30px;
+  padding-right: 50px;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+ul.items-list-proyecto li{
+  font-family: 'Roboto', sans-serif !important;
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  color: #FFFFFF;
+  list-style-type: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left:0px;
+  padding-left:10px;
   border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
@@ -330,11 +331,6 @@ ul.items-list li h2{
 }
 ul.items-list li p{
   padding: 0;
-}
-ul.items-list-projet li img{
-  margin-bottom: 20px;
-  height: 150px;
-  width: 150px;
 }
 div#background-skills{
   display: flex;

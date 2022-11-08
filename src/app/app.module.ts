@@ -29,6 +29,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ModalEducacionComponent } from './componentes/modal-educacion/modal-educacion.component';
 import { ModalEducacionAddComponent } from './componentes/modal-educacion-add/modal-educacion-add.component';
+import { ModalProyectosComponent } from './componentes/modal-proyectos/modal-proyectos.component';
+import { ModalProyectosAddComponent } from './componentes/modal-proyectos-add/modal-proyectos-add.component';
 
 @NgModule({
   imports:      [ BrowserModule,
@@ -63,7 +65,9 @@ import { ModalEducacionAddComponent } from './componentes/modal-educacion-add/mo
                   ModalExperienciaComponent,
                   ModalExperienciaAddComponent,
                   ModalEducacionComponent,
-                  ModalEducacionAddComponent
+                  ModalEducacionAddComponent,
+                  ModalProyectosComponent,
+                  ModalProyectosAddComponent
                 ],
   providers: [   
                 ],

@@ -32,6 +32,10 @@ export class PortfolioService {
    
    obtenerDatosEducacion():Observable<Educacion[]>{
     return this.http.get<Educacion[]>(`${this.apiUrl}`+"/educacion/1")
+   }
+   
+   obtenerDatosProyecto():Observable<Educacion[]>{
+    return this.http.get<Educacion[]>(`${this.apiUrl}`+"/proyecto/1")
    } 
 
   actualizarDatos(id: any, data: any): Observable<any> {
@@ -55,9 +59,15 @@ export class PortfolioService {
     )
   }
 
+  actualizarDatosProyecto(id: any, data: any): Observable<any> {
+    let API_URL = `${this.apiUrl}/update/proyecto/${id}`;
+    return this.http.put(API_URL, data, { headers: this.headers }).pipe(
+      catchError(this.handleError)
+    )
+  }
+
   addExperiencia(data: any): Observable<any> {
     let API_URL = `${this.apiUrl}/new/experiencia`;
-    console.log(data)
     return this.http.post(API_URL, data, { headers: this.headers }).pipe(
       catchError(this.handleError)
     )
@@ -65,7 +75,13 @@ export class PortfolioService {
 
   addEducacion(data: any): Observable<any> {
     let API_URL = `${this.apiUrl}/new/educacion`;
-    console.log(data)
+    return this.http.post(API_URL, data, { headers: this.headers }).pipe(
+      catchError(this.handleError)
+    )
+  }
+
+  addProyecto(data: any): Observable<any> {
+    let API_URL = `${this.apiUrl}/new/proyecto`;
     return this.http.post(API_URL, data, { headers: this.headers }).pipe(
       catchError(this.handleError)
     )
@@ -80,6 +96,13 @@ export class PortfolioService {
 
   borrarEducacion(id: any): Observable<any> {
     let API_URL = `${this.apiUrl}/delete/educacion/${id}`;
+    return this.http.delete(API_URL).pipe(
+      catchError(this.handleError)
+    )
+  }
+
+  borrarProyecto(id: any): Observable<any> {
+    let API_URL = `${this.apiUrl}/delete/proyecto/${id}`;
     return this.http.delete(API_URL).pipe(
       catchError(this.handleError)
     )
