@@ -1,12 +1,42 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ImagenesService } from 'src/app/servicios/imagenes.service';
+import {MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS} from '@angular/material-moment-adapter';
+import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
+import {MatDatepicker} from '@angular/material/datepicker';
+import _moment from 'moment';
+import {default as _rollupMoment, Moment} from 'moment';
+import { FormControl } from '@angular/forms';
+
+const moments = _rollupMoment || _moment;
+
+export const MY_FORMATS = {
+  parse: {
+    dateInput: 'MM/YYYY',
+  },
+  display: {
+    dateInput: 'MM/YYYY',
+    monthYearLabel: 'MMM YYYY',
+    dateA11yLabel: 'LL',
+    monthYearA11yLabel: 'MMMM YYYY',
+  },
+};
 
 @Component({
   selector: 'app-modal-educacion',
   templateUrl: './modal-educacion.component.html',
-  styleUrls: ['./modal-educacion.component.css']
+  styleUrls: ['./modal-educacion.component.css'],
+  providers: [
+    {
+      provide: DateAdapter,
+      useClass: MomentDateAdapter,
+      deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS],
+    },
+
+    {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS},
+  ],
 })
+
 export class ModalEducacionComponent implements OnInit {
 
   @Input() fromParentTitle:any;
@@ -19,8 +49,12 @@ export class ModalEducacionComponent implements OnInit {
   selectImage: any;
   successResponse!: string;
   dbImage: any;
-  ImgExpPortfolio: any;
+  ImgEduPortfolio: any;
   dbImageDuplicada:any;
+  dateDesde = new FormControl(moments());
+  dateHasta = new FormControl(moments());
+  ctrlValueDesde: any;
+  ctrlValueHasta: any;
 
   constructor(
     public activeModal: NgbActiveModal,
@@ -29,6 +63,25 @@ export class ModalEducacionComponent implements OnInit {
 
   ngOnInit() {
     this.imagePreviaAction();
+  }
+
+  setMonthAndYearDesde(normalizedMonthAndYear: Moment, datepicker: MatDatepicker<Moment>) {
+    this.ctrlValueDesde = this.dateDesde.value!;
+    this.ctrlValueDesde.month(normalizedMonthAndYear.month());
+    this.ctrlValueDesde.year(normalizedMonthAndYear.year());
+    this.dateDesde.setValue(this.ctrlValueDesde);
+    datepicker.close();
+    console.log(moments(this.ctrlValueDesde).format('MMM, YYYY'))
+  }
+
+
+  setMonthAndYearHasta(normalizedMonthAndYear: Moment, datepicker: MatDatepicker<Moment>) {
+    this.ctrlValueHasta = this.dateHasta.value!;
+    this.ctrlValueHasta.month(normalizedMonthAndYear.month());
+    this.ctrlValueHasta.year(normalizedMonthAndYear.year());
+    this.dateHasta.setValue(this.ctrlValueHasta);
+    datepicker.close();
+    console.log(moments(this.ctrlValueHasta).format('MMM, YYYY'))
   }
 
   public onImageUpload(event) {
@@ -54,7 +107,7 @@ export class ModalEducacionComponent implements OnInit {
     createImageFromBlob(image: Blob) {
       let reader = new FileReader();
       reader.addEventListener("load", () => {
-          this.ImgExpPortfolio = reader.result;
+          this.ImgEduPortfolio = reader.result;
           
       }, false);
 
@@ -94,6 +147,8 @@ export class ModalEducacionComponent implements OnInit {
 
     actualizar() {
       this.datosEdit.emit(this.fromParentEducacion);
+      this.fromParentEducacion.desde_educacion=moments(this.ctrlValueDesde).format('MMM, YYYY');
+      this.fromParentEducacion.hasta_educacion=moments(this.ctrlValueHasta).format('MMM, YYYY');
       if(this.uploadedImage!==undefined){
         this.cambiarImagen()
       }
@@ -106,3 +161,6 @@ export class ModalEducacionComponent implements OnInit {
 
 }
 
+function moment(): any {
+  throw new Error('Function not implemented.');
+}

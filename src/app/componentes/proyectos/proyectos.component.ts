@@ -16,7 +16,7 @@ export class ProyectosComponent implements OnInit {
 
   miPortfolio: any;
   proyectosList:any;
-  proyectosSelect: any;
+  proyectoSelect: any;
   private subscription!: Subscription;
 
   constructor(private datosPortfolio:PortfolioService,
@@ -47,15 +47,15 @@ export class ProyectosComponent implements OnInit {
       });
 
     let title = "PROYECTOS"
-    this.proyectosSelect =this.proyectosList.find(x => x.id === id_proyecto)
+    this.proyectoSelect =this.proyectosList.find(x => x.id === id_proyecto)
 
-    modalRef.componentInstance.fromParentProyectos = this.proyectosSelect;
+    modalRef.componentInstance.fromParentProyecto = this.proyectoSelect;
     modalRef.componentInstance.fromParentTitle = title;
 
     modalRef.result.then((result) => {
       if(result){
         this.datosPortfolio.actualizarDatosExperiencia(result.id, result).subscribe(data => {
-          this.proyectosSelect.id = data.id;});
+          this.proyectoSelect.id = data.id;});
         }
       }).catch(() => { /* closed */ });
   }
@@ -67,7 +67,7 @@ export class ProyectosComponent implements OnInit {
       });
 
     let title = "PROYECTOS"
-    let newProyectos: Proyecto = {
+    let newProyecto: Proyecto = {
       "persona": 1,
       "image_proyecto":'http://localhost:8081/get/image/default.png',
 	    "titulo_proyecto": '',
@@ -76,7 +76,7 @@ export class ProyectosComponent implements OnInit {
 	    "hasta_proyecto": ''
     };
 
-    modalRef.componentInstance.fromParentProyectos = newProyectos;
+    modalRef.componentInstance.fromParentProyecto = newProyecto;
     modalRef.componentInstance.fromParentIdPersona = this.miPortfolio.id;
     modalRef.componentInstance.fromParentTitle = title;
     

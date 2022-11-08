@@ -8,11 +8,11 @@
   border-bottom-width: 0px;
 }
 .modal-body {
-  color: #FF0083;
+  color: #54c4f8;
   background-color:#222328;
 }
 .modal-footer {
-  color: #FF0083;
+  color: #54c4f8;
   background-color:#222328;
   border-color: #222328;
   border-radius: 0px;
@@ -36,7 +36,7 @@
 .custom-btn{
   font-size: 18px;
   margin-bottom: 15px;
-  background: #FF0083;
+  background: #54c4f8;
   color: #fff;
 }
 .custom-btn:hover{

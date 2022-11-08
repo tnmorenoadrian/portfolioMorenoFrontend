@@ -16,18 +16,42 @@
     <div class="img-uploaded" *ngIf=ImgExpPortfolio&&!selectImage>
       <img [src]="ImgExpPortfolio" width="150" height="200">
     </div>
-    <div id="text-exp">
-    <input type="text" id="titulo" class="form-control" [(ngModel)]="fromParentExperiencia.titulo_experiencia"/>
-    <textarea class="form-control" id="FormControlTextarea" rows="3" [(ngModel)]="fromParentExperiencia.info_experiencia">{{ fromParentExperiencia.info_experiencia}}</textarea> 
-    </div>
+
+    <div style="width:100%; text-align: center;">
+      <div class="form-floating" id="title-exp">
+      <input type="text" id="titulo" class="form-control" [(ngModel)]="fromParentExperiencia.titulo_experiencia"/>
+      </div>
+      <div class="form-floating" id="info-exp">
+      <textarea class="form-control" id="FormControlTextarea" style="height: 100px" [(ngModel)]="fromParentExperiencia.info_experiencia"></textarea>
+      </div>
+
+      <mat-form-field style="padding-right: 30px;">
+        <mat-label>Desde</mat-label>
+        <input matInput [matDatepicker]="dpDesde" [formControl]="dateDesde" placeholder="Desde" > 
+        <mat-datepicker-toggle matSuffix [for]="dpDesde"></mat-datepicker-toggle>
+        <mat-datepicker #dpDesde
+                        startView="multi-year"
+                        (monthSelected)="setMonthAndYearDesde($event, dpDesde)"
+                        panelClass="example-month-picker"></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field style="padding-right: 30px;">
+        <mat-label>Hasta</mat-label>
+        <input matInput [matDatepicker]="dpHasta" [formControl]="dateHasta" placeholder="Hasta">
+        <mat-datepicker-toggle matSuffix [for]="dpHasta"></mat-datepicker-toggle>
+        <mat-datepicker #dpHasta
+                        startView="multi-year"
+                        (monthSelected)="setMonthAndYearHasta($event, dpHasta)"
+                        panelClass="example-month-picker"></mat-datepicker>  
+      </mat-form-field>
+
+      </div>
 
     <button *ngIf=selectImage&&!successResponse&&!dbImageDuplicada (click)="imageUploadAction()" type="button" class="btn btn-info btn-square" id="experiencia-upload" title="Subir imagen" ><i class="fa fa-upload"></i>
     </button>
 
     <label for="img" class="btn btn-info btn-square" id="experiencia-select" title="Seleccionar imagen" ><i class="fa fa-folder-open"></i></label>  
-    <input type="file" id="img" style="display:none" (change)="onImageUpload($event)">
-
-    
+    <input type="file" id="img" style="display:none" (change)="onImageUpload($event)">  
 
   </div>
   

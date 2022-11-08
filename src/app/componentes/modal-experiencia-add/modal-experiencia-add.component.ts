@@ -42,7 +42,6 @@ export class ModalExperienciaAddComponent implements OnInit {
   @Input() fromParentTitle:any;
   @Input() fromParentExperiencia:any;
   @Input() fromParentIdPersona:any;
-
   @Output() datosAdd: EventEmitter<any> = new EventEmitter();
   @ViewChild('selectfile') el!:ElementRef;  
   

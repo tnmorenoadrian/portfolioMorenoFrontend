@@ -1,1 +1,70 @@
-<p>modal-proyectos-add works!</p>
+<div class="modal-header">
+    <h2 class="modal-title"><i class="fa fa-handshake" aria-hidden="true"></i>  {{ fromParentTitle }}</h2>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  
+    <div class="modal-body"> 
+   
+      <div class="img-uploaded" *ngIf=selectImage>
+        <img [src]="selectImage" width="150" height="200">
+        <progress *ngIf=!dbImageDuplicada [value]=progress.loaded  [max]=progress.total style="margin-top: 40px; margin-left: 7px;">
+        </progress>
+      </div>
+  
+      <div class="img-uploaded" *ngIf=ImgExpPortfolio&&!selectImage>
+        <img [src]="ImgExpPortfolio" width="150" height="200">
+      </div>
+
+      <div style="width:100%; text-align: center;">
+      <div class="form-floating" id="title-exp">
+      <input type="text" id="titulo" class="form-control" [(ngModel)]="fromParentProyecto.titulo_proyecto"/>
+      <label for="floatingTextarea">Título </label>
+      </div>
+      <div class="form-floating" id="info-exp">
+      <textarea class="form-control" id="FormControlTextarea" style="height: 100px" [(ngModel)]="fromParentProyecto.info_proyecto"></textarea>
+      <label for="floatingTextarea">Descripción</label>
+      </div>
+
+      <mat-form-field style="padding-right: 30px;">
+        <mat-label>Desde</mat-label>
+        <input matInput [matDatepicker]="dpDesde" [formControl]="dateDesde" placeholder="Desde" > 
+        <mat-datepicker-toggle matSuffix [for]="dpDesde"></mat-datepicker-toggle>
+        <mat-datepicker #dpDesde
+                        startView="multi-year"
+                        (monthSelected)="setMonthAndYearDesde($event, dpDesde)"
+                        panelClass="example-month-picker"></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field style="padding-right: 30px;">
+        <mat-label>Hasta</mat-label>
+        <input matInput [matDatepicker]="dpHasta" [formControl]="dateHasta" placeholder="Hasta">
+        <mat-datepicker-toggle matSuffix [for]="dpHasta"></mat-datepicker-toggle>
+        <mat-datepicker #dpHasta
+                        startView="multi-year"
+                        (monthSelected)="setMonthAndYearHasta($event, dpHasta)"
+                        panelClass="example-month-picker"></mat-datepicker>  
+      </mat-form-field>
+
+      </div>
+      
+      <button *ngIf=selectImage&&!successResponse&&!dbImageDuplicada (click)="imageUploadAction()" type="button" class="btn btn-info btn-square" id="experiencia-upload" title="Subir imagen" ><i class="fa fa-upload"></i>
+      </button>
+  
+      <label for="img" class="btn btn-info btn-square" id="experiencia-select" title="Seleccionar imagen" ><i class="fa fa-folder-open"></i></label>  
+      <input type="file" id="img" style="display:none" (change)="onImageUpload($event)">
+  
+      
+  
+    </div>
+    
+    <div class="modal-footer" >
+       <div style="padding-bottom: 15px;">
+        <output *ngIf=successResponse class="success">{{successResponse}}</output>
+        <output *ngIf=dbImageDuplicada class="success">La imagen {{uploadedImage.name}} ya existe, puede continuar..</output>
+        <output *ngIf=!selectImage>La imagen debe ser .PNG de 150px de ancho y 200px de alto aproximado</output> 
+       </div> 
+       <button type="button" type="submit" class="btn custom-btn" (click)="agregar()">Agregar</button>
+    </div>
+  

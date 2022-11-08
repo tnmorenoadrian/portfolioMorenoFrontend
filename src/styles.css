@@ -69,8 +69,8 @@ body {
     color: #FFFFFF !important;
 }
 .btn-circle {
-  background-color: #FF0083 !important ;
-  border-color: #FF0083 !important;
+  background-color: #54c4f8 !important ;
+  border-color: #54c4f8 !important;
   color: #FFFFFF !important;
   width: 40px !important;
   height: 40px !important;
@@ -82,8 +82,8 @@ body {
 }
 
 .btn-square {
-  background-color: #FF0083 !important ;
-  border-color: #FF0083 !important;
+  background-color: #54c4f8 !important ;
+  border-color: #54c4f8 !important;
   color: #FFFFFF !important;
   width: 45px !important;
   height: 45px !important;
@@ -105,12 +105,12 @@ body {
 }
 
 .form-control {
-  color:#FF0083;
+  color:#54c4f8;
   background-color: #19231D;
   }
 
 .form-control:focus {
-  box-shadow: 0 0 0 0.1rem #FF0083;
+  box-shadow: 0 0 0 0.1rem #54c4f8;
 }
 
 .mat-body, .mat-body-1, .mat-typography .mat-body, .mat-typography .mat-body-1, .mat-typography {
@@ -166,8 +166,8 @@ div#profile-background img{
   top: 20px;
 }
 .btn-circle#acerca-trash{
-  background-color: #3f59ff !important;
-  border-color: #3f59ff !important;
+  background-color: #FF0083 !important;
+  border-color: #FF0083 !important;
   position: absolute;
   right: 5px;
   top: 20px;
@@ -183,8 +183,8 @@ div#profile-background img{
   top: 20px;
 }
 .btn-circle#experiencia-trash{
-  background-color:#3f59ff !important;
-  border-color: #3f59ff !important;
+  background-color:#FF0083 !important;
+  border-color: #FF0083 !important;
   position: absolute;
   right: 5px;
   top: 20px;
@@ -195,8 +195,8 @@ div#profile-background img{
   top: 20px;
 }
 .btn-circle#educacion-trash{
-  background-color: #3f59ff !important;
-  border-color: #3f59ff !important;
+  background-color: #FF0083 !important;
+  border-color: #FF0083 !important;
   position: absolute;
   right: 5px;
   top: 20px;
@@ -207,8 +207,8 @@ div#profile-background img{
   top: 20px;
 }
 .btn-circle#proyectos-trash{
-  background-color: #3f59ff !important;
-  border-color: #3f59ff !important;
+  background-color: #FF0083 !important;
+  border-color: #FF0083 !important;
   position: absolute;
   right: 5px;
   top: 20px;
@@ -224,14 +224,14 @@ div#profile-background img{
 }
 div h1{
   font-family: 'Oswald', sans-serif !important;
-  color: #FF0083;
+  color: #54c4f8;
   font-size: 24px !important;
   font-weight: 550 !important;
 }
 div h2{
   font-family: 'Oswald', sans-serif !important;
   font-size: 20px !important;
-  color: #FF0083;
+  color: #54c4f8;
 }
 div#encabezado{
   margin-left: 30px;
@@ -246,7 +246,7 @@ div#profile-self{
 }
 div#profile-self h3{
   font-family: 'Oswald', sans-serif;
-  color: #FF0083;
+  color: #54c4f8;
   font-weight: 550;
   font-size: 24px;
   opacity: 1;
@@ -310,7 +310,7 @@ ul.items-list-proyecto li{
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left:0px;
-  padding-left:10px;
+  padding-left:20px;
   border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
@@ -322,7 +322,7 @@ ul.items-list-proyecto li{
 }
 ul.items-list li h2{
   margin-top: 20px;
-  color: #FF0083;
+  color: #54c4f8;
   text-align: right; 
   display:inline-block;
   padding: 0;
@@ -334,7 +334,7 @@ ul.items-list li p{
 }
 div#background-skills{
   display: flex;
-  background: #FF0083;
+  background: #54c4f8;
   align-items: flex-start;
   justify-content: center;
   margin-top: 10px;
@@ -379,7 +379,7 @@ div#background-skills{
   height: 100%;
   width: 90%;
   border-radius: 6px;
-  background: #FF0083;
+  background: #54c4f8;
   animation: progress 0.4s ease-in-out forwards;
   opacity: 0;
 }
@@ -417,7 +417,7 @@ div#background-skills{
   color: #FFFFFF;
   padding: 2px 6px;
   border-radius: 3px;
-  background: #FF0083;
+  background: #54c4f8;
   z-index: 1;
 }
 .tooltipo::before{
@@ -428,7 +428,7 @@ div#background-skills{
   height: 10px;
   width: 10px;
   z-index: -1;
-  background-color: #FF0083;
+  background-color: #54c4f8;
   transform: translateX(-50%) rotate(45deg);
 }
 div#list-projets {

@@ -1,7 +1,7 @@
 <!-- Proyectos-->
 <div class="card mat-card" id="proyectos">
     <div class="card-titles">
-      <h1><i class="fa fa-cog" aria-hidden="true"></i>  PROYECTOS</h1>
+      <h1><i class="fa-solid fa-puzzle-piece"></i>  PROYECTOS</h1>
       <button type="button" class="btn btn-info btn-circle" id="experiencia-add" (click)="openModalProyectoAdd()" ><i class="fa fa-pen"></i>
       </button>
     </div>
@@ -14,9 +14,20 @@
         </button>        
          <h2>{{proyecto.titulo_proyecto}}</h2>
          <p>{{proyecto.info_proyecto}}</p>
-         <a href="https://argentinaprograma.inti.gob.ar/">
+         <div style="width: 100%; overflow:hidden;">
+         <div style="width:15%; float:left; padding-bottom: 20px;">
+         <a>
           <img [src]="proyecto.image_proyecto" width="170" height="200" />
-        </a>
+         </a>
+         </div>
+         <div>
+         <p></p>
+            <p>Desde: {{proyecto.desde_proyecto}}</p>
+            <p>Hasta: {{proyecto.hasta_proyecto}}</p>
+         <p></p>
+         <a href={{proyecto.link_proyecto}}>{{proyecto.link_proyecto}}</a>
+         </div>
+        </div>
        </li>
      </ul>
     </div>
