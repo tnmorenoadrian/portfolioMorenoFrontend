@@ -8,13 +8,13 @@
     <div class="modal-body"> 
    
       <div class="img-uploaded" *ngIf=selectImage>
-        <img [src]="selectImage" width="150" height="200">
+        <img [src]="selectImage" width="150" height="200" style="margin-top: 60px;">
         <progress *ngIf=!dbImageDuplicada [value]=progress.loaded  [max]=progress.total style="margin-top: 40px; margin-left: 7px;">
         </progress>
       </div>
   
       <div class="img-uploaded" *ngIf=ImgExpPortfolio&&!selectImage>
-        <img [src]="ImgExpPortfolio" width="150" height="200">
+        <img [src]="ImgExpPortfolio" width="150" height="200" style="margin-top: 60px;">
       </div>
 
       <div style="width:100%; text-align: center;">
@@ -27,25 +27,32 @@
       <label for="floatingTextarea">Descripción</label>
       </div>
 
-      <mat-form-field style="padding-right: 30px;">
-        <mat-label>Desde</mat-label>
-        <input matInput [matDatepicker]="dpDesde" [formControl]="dateDesde" placeholder="Desde" > 
-        <mat-datepicker-toggle matSuffix [for]="dpDesde"></mat-datepicker-toggle>
-        <mat-datepicker #dpDesde
-                        startView="multi-year"
-                        (monthSelected)="setMonthAndYearDesde($event, dpDesde)"
-                        panelClass="example-month-picker"></mat-datepicker>
-      </mat-form-field>
+      <div>
+        <mat-form-field style="margin-right: 30px;">
+          <mat-label>Desde</mat-label>
+          <input matInput [matDatepicker]="dpDesde" [formControl]="dateDesde" placeholder="Desde" > 
+          <mat-datepicker-toggle matSuffix [for]="dpDesde"></mat-datepicker-toggle>
+          <mat-datepicker #dpDesde
+                          startView="multi-year"
+                          (monthSelected)="setMonthAndYearDesde($event, dpDesde)"
+                          panelClass="example-month-picker"></mat-datepicker>
+        </mat-form-field>
+  
+        <mat-form-field>
+          <mat-label>Hasta</mat-label>
+          <input matInput [matDatepicker]="dpHasta" [formControl]="dateHasta" placeholder="Hasta">
+          <mat-datepicker-toggle matSuffix [for]="dpHasta"></mat-datepicker-toggle>
+          <mat-datepicker #dpHasta
+                          startView="multi-year"
+                          (monthSelected)="setMonthAndYearHasta($event, dpHasta)"
+                          panelClass="example-month-picker"></mat-datepicker>  
+        </mat-form-field>
+        </div>
 
-      <mat-form-field style="padding-right: 30px;">
-        <mat-label>Hasta</mat-label>
-        <input matInput [matDatepicker]="dpHasta" [formControl]="dateHasta" placeholder="Hasta">
-        <mat-datepicker-toggle matSuffix [for]="dpHasta"></mat-datepicker-toggle>
-        <mat-datepicker #dpHasta
-                        startView="multi-year"
-                        (monthSelected)="setMonthAndYearHasta($event, dpHasta)"
-                        panelClass="example-month-picker"></mat-datepicker>  
-      </mat-form-field>
+      <div class="form-floating">
+        <input type="text" id="link" class="form-control" [(ngModel)]="fromParentProyecto.link_proyecto"/>
+        <label for="floatingTextarea">Link del proyecto</label>
+      </div>
 
       </div>
       
@@ -53,18 +60,17 @@
       </button>
   
       <label for="img" class="btn btn-info btn-square" id="experiencia-select" title="Seleccionar imagen" ><i class="fa fa-folder-open"></i></label>  
-      <input type="file" id="img" style="display:none" (change)="onImageUpload($event)">
-  
-      
+      <input type="file" id="img" style="display:none" (change)="onImageUpload($event)">  
   
     </div>
     
     <div class="modal-footer" >
+      <p></p>
        <div style="padding-bottom: 15px;">
         <output *ngIf=successResponse class="success">{{successResponse}}</output>
         <output *ngIf=dbImageDuplicada class="success">La imagen {{uploadedImage.name}} ya existe, puede continuar..</output>
         <output *ngIf=!selectImage>La imagen debe ser .PNG de 150px de ancho y 200px de alto aproximado</output> 
        </div> 
-       <button type="button" type="submit" class="btn custom-btn" (click)="agregar()">Agregar</button>
+       <button *ngIf=selectImage||successResponse||dbImageDuplicada type="button" type="submit" class="btn custom-btn" (click)="agregar()">Agregar</button>
     </div>
   

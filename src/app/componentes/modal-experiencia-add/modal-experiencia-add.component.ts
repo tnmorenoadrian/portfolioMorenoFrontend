@@ -161,7 +161,4 @@ export class ModalExperienciaAddComponent implements OnInit {
 
 }
 
-function moment(): any {
-  throw new Error('Function not implemented.');
-}
 

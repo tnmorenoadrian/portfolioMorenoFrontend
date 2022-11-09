@@ -106,7 +106,7 @@ body {
 
 .form-control {
   color:#54c4f8;
-  background-color: #19231D;
+  background-color: #343A40;
   }
 
 .form-control:focus {
@@ -282,9 +282,12 @@ div#contenido{
   margin-left: 160px;
 }
 ul.items-list{
-  padding-left: 0px;
-  
+  padding-left: 0px;  
 }
+ul.items-list-proyecto{
+  padding-left: 15px;  
+}
+
 ul.items-list li{
   font-family: 'Roboto', sans-serif !important;
   position: relative;
@@ -436,6 +439,13 @@ div#list-projets {
 }
 div#list-education {
   padding-left: 0px;
+}
+output{
+  font-size: 11px;
+  color: #54c4f8;
+}
+a{
+  color:#FF0083;
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, sans-serif; }

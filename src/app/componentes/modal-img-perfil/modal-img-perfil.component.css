@@ -45,7 +45,7 @@
 }
 .custom-btn:hover{
   background-color: #FFFFFF;
-  color: #19231D;
+  color: #343A40;
 }
 .btn-secondary{
   background-color:#222C26;
@@ -57,8 +57,8 @@
 input#file {
   display: block;
   color: #54c4f8;
-  background-color: #19231D;
-  border-color: #19231D;
+  background-color: #343A40;
+  border-color: #343A40;
   text-align: center;
   margin: auto;
 }

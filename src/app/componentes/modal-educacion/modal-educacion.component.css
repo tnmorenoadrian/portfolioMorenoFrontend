@@ -48,27 +48,19 @@
     padding-bottom: 20px;
   }
 
-  .btn-square#experiencia-change {
-    background-color:#54c4f8 !important;
-    border-color:#54c4f8 !important;
-    position: absolute;
-    top: 190px;
-    left: 94px;
-}
-
-.btn-square#experiencia-select {
+.btn-square#educacion-select {
   background-color:#54c4f8 !important;
   border-color:#54c4f8 !important;
   position: absolute;
-  top: 190px;
+  top: 181px;
   left: 40px;
 }
 
-.btn-square#experiencia-upload {
+.btn-square#educacion-upload {
   background-color:#54c4f8 !important;
   border-color:#54c4f8 !important;
   position: absolute;
-  top: 190px;
+  top: 181px;
   left: 94px;
 }
 
@@ -85,7 +77,7 @@
   }
   .custom-btn:hover{
     background-color: #FFFFFF;
-    color: #19231D;
+    color: #343A40;
   }
   .btn-secondary{
     background-color:#222C26;
@@ -98,8 +90,8 @@
   .input.file {
     display: block;
     color: #54c4f8;
-    background-color: #19231D;
-    border-color: #19231D;
+    background-color: #343A40;
+    border-color: #343A40;
     text-align: center;
     margin: auto;
   }
@@ -191,7 +183,18 @@
     color: #54c4f8!important;
 }
 
+.form-floating>.form-control, .form-floating>.form-control-plaintext {
+  padding: 1rem 0.75rem;
+  padding-top: 1rem;
+  padding-right: 0.75rem;
+  padding-bottom: 1rem;
+  padding-left: 0.75rem;
+}
 
+.form-floating>.form-control, .form-floating>.form-control-plaintext, .form-floating>.form-select {
+  height: calc(2.5rem + 2px);
+  line-height: 1.25;
+}
 
   
 

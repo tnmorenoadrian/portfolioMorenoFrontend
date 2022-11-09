@@ -25,25 +25,27 @@
       <textarea class="form-control" id="FormControlTextarea" style="height: 100px" [(ngModel)]="fromParentExperiencia.info_experiencia"></textarea>
       </div>
 
-      <mat-form-field style="padding-right: 30px;">
-        <mat-label>Desde</mat-label>
-        <input matInput [matDatepicker]="dpDesde" [formControl]="dateDesde" placeholder="Desde" > 
-        <mat-datepicker-toggle matSuffix [for]="dpDesde"></mat-datepicker-toggle>
-        <mat-datepicker #dpDesde
-                        startView="multi-year"
-                        (monthSelected)="setMonthAndYearDesde($event, dpDesde)"
-                        panelClass="example-month-picker"></mat-datepicker>
-      </mat-form-field>
-
-      <mat-form-field style="padding-right: 30px;">
-        <mat-label>Hasta</mat-label>
-        <input matInput [matDatepicker]="dpHasta" [formControl]="dateHasta" placeholder="Hasta">
-        <mat-datepicker-toggle matSuffix [for]="dpHasta"></mat-datepicker-toggle>
-        <mat-datepicker #dpHasta
-                        startView="multi-year"
-                        (monthSelected)="setMonthAndYearHasta($event, dpHasta)"
-                        panelClass="example-month-picker"></mat-datepicker>  
-      </mat-form-field>
+      <div>
+        <mat-form-field style="margin-right: 30px;">
+          <mat-label>Desde</mat-label>
+          <input matInput [matDatepicker]="dpDesde" [formControl]="dateDesde" placeholder="Desde" > 
+          <mat-datepicker-toggle matSuffix [for]="dpDesde"></mat-datepicker-toggle>
+          <mat-datepicker #dpDesde
+                          startView="multi-year"
+                          (monthSelected)="setMonthAndYearDesde($event, dpDesde)"
+                          panelClass="example-month-picker"></mat-datepicker>
+        </mat-form-field>
+  
+        <mat-form-field>
+          <mat-label>Hasta</mat-label>
+          <input matInput [matDatepicker]="dpHasta" [formControl]="dateHasta" placeholder="Hasta">
+          <mat-datepicker-toggle matSuffix [for]="dpHasta"></mat-datepicker-toggle>
+          <mat-datepicker #dpHasta
+                          startView="multi-year"
+                          (monthSelected)="setMonthAndYearHasta($event, dpHasta)"
+                          panelClass="example-month-picker"></mat-datepicker>  
+        </mat-form-field>
+        </div>
 
       </div>
 

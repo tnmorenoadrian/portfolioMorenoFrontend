@@ -17,7 +17,7 @@ body{
     width: 25%;
     margin: auto;
     display: block;
-    background: #19231D;
+    background: #343A40;
 }
 .card {
     border-radius: 2px;
@@ -131,7 +131,7 @@ body{
 }
 .custom-btn:hover{
     background-color: #FFFFFF;
-    color: #19231D
+    color: #343A40
 }
 ;
 .google-icon{

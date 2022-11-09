@@ -54,7 +54,7 @@ export class ProyectosComponent implements OnInit {
 
     modalRef.result.then((result) => {
       if(result){
-        this.datosPortfolio.actualizarDatosExperiencia(result.id, result).subscribe(data => {
+        this.datosPortfolio.actualizarDatosProyecto(result.id, result).subscribe(data => {
           this.proyectoSelect.id = data.id;});
         }
       }).catch(() => { /* closed */ });
