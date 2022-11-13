@@ -4,11 +4,11 @@
       <div class="col-md-3" id="profile-self">
         <a>
          <img class="profile-image" *ngIf="miPortfolio" src="{{miPortfolio.image_perfil}}"/>
-         <button type="button" class="btn btn-info btn-circle" id="profile-img" (click)="openModalImgPerfil()"><i class="fa fa-pen"></i>
+         <button type="button" class="btn btn-info btn-circle" id="profile-img" *ngIf="authService.isLoggedIn" (click)="openModalImgPerfil()"><i class="fa fa-pen"></i>
          </button>
          <h3>{{miPortfolio&&miPortfolio.nombres+" "+miPortfolio.apellido}}</h3>
          <p>{{miPortfolio&&miPortfolio.ocupacion}}</p>
-         <button type="button" class="btn btn-info btn-circle" id="profile-info" (click)="openModalPerfil()"><i class="fa fa-pen"></i>
+         <button type="button" class="btn btn-info btn-circle" id="profile-info" *ngIf="authService.isLoggedIn" (click)="openModalPerfil()"><i class="fa fa-pen"></i>
          </button>     
         </a>
       </div>
@@ -17,7 +17,7 @@
           
           <h1><i class="fa fa-user" aria-hidden="true"></i>  ACERCA DE</h1>
           <p>{{miPortfolio&&miPortfolio.sobre_mi}}</p>
-          <button type="button" class="btn btn-info btn-circle" id="acerca-edit"(click)="openModalSobreMi()" ><i class="fa fa-pen"></i>
+          <button type="button" class="btn btn-info btn-circle" id="acerca-edit" *ngIf="authService.isLoggedIn" (click)="openModalSobreMi()" ><i class="fa fa-pen"></i>
           </button>
          </div>          
 

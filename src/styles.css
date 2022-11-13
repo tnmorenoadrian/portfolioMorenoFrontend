@@ -118,6 +118,10 @@ body {
   letter-spacing: normal;
 }
 
+.card{
+  --bs-card-border-radius: 0;
+}
+
 .mat-card{
    margin-left: 30px;
    margin-right: 30px;
@@ -227,6 +231,7 @@ div h1{
   color: #54c4f8;
   font-size: 24px !important;
   font-weight: 550 !important;
+  margin-bottom: 0px !important;
 }
 div h2{
   font-family: 'Oswald', sans-serif !important;

@@ -19,17 +19,27 @@
             <a href="#" class="nav-menu-link nav-link"><i class="fab fa-twitter"></i></a>
           </li>
           <li class="nav-menu-item">
-            <a class="nav-item nav-link" routerLink="/login" *ngIf="!authService.logIn">Login</a>
+            <!--
+            <a class="nav-item nav-link" (click)="openModalLogin()" *ngIf="!authService.logIn">Login</a>  
+            -->
+          <button mat-raised-button class="btn custom-btn" type="submit" *ngIf="!authService.isLoggedIn" (click)="openModalLogin()"> 
+              <mat-icon>input</mat-icon> Login
+          </button>
           </li>
           <li class="nav-menu-item">
-            <a class="nav-item nav-link" (click)="logout()" routerLink="/portfolio" *ngIf="authService.logIn">Logout</a>
+            <!--
+            <a class="nav-item nav-link" (click)="logout()" routerLink="/portfolio" *ngIf="authService.isLoggedIn">Logout</a>
+            -->
+            <button mat-raised-button class="btn custom-btn" type="submit" *ngIf="authService.isLoggedIn" (click)="logout()"> 
+              <mat-icon>output</mat-icon> Logout
+          </button>
           </li>
         </ul>
       </nav>
     </header>
     <!-- imagen background-->
       <div id="profile-background"><img *ngIf="miPortfolio" src="{{miPortfolio.image_background}}"/>
-        <button type="button" class="btn btn-info btn-circle" id="background-img" (click)="openModalImgFondo()"> <i class="fa fa-pen"></i>
+        <button type="button" class="btn btn-info btn-circle" id="background-img" *ngIf="authService.isLoggedIn" (click)="openModalImgFondo()"> <i class="fa fa-pen"></i>
         </button>
       </div>
   </div>

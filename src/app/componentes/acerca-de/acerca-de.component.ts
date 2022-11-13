@@ -5,6 +5,7 @@ import { ModalAcercaDeComponent } from '../modal-acerca-de/modal-acerca-de.compo
 import { ModalPerfilComponent } from '../modal-perfil/modal-perfil.component';
 import { ModalImgPerfilComponent } from '../modal-img-perfil/modal-img-perfil.component';
 import { Persona } from '../../models/persona.model';
+import { AuthService } from 'src/app/servicios/auth.service';
 
 
 @Component({
@@ -16,7 +17,9 @@ export class AcercaDeComponent implements OnInit {
 
   miPortfolio: any;
 
-  constructor(private datosPortfolio:PortfolioService, private modalService: NgbModal) { 
+  constructor(private datosPortfolio:PortfolioService,
+     private modalService: NgbModal,
+     public authService: AuthService) { 
   }
 
   ngOnInit(): void {

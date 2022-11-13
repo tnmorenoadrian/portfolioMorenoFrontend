@@ -3,15 +3,15 @@
     <div id="experiencie">
        <div class="card-titles">
          <h1><i class="fa fa-handshake" aria-hidden="true"></i>  EXPERIENCIA</h1>
-         <button type="button" class="btn btn-info btn-circle" id="experiencia-add" (click)="openModalExperienciaAdd()" ><i class="fa fa-pen"></i>
+         <button type="button" class="btn btn-info btn-circle" id="experiencia-add" *ngIf="authService.isLoggedIn" (click)="openModalExperienciaAdd()" ><i class="fa fa-pen"></i>
          </button>
        </div>
        
          <ul class="items-list">
           <li *ngFor="let experiencia of experienciaList">
-            <button type="button" class="btn btn-info btn-circle" id="experiencia-edit" (click)="openModalExperiencia(experiencia.id)"><i class="fa fa-pen"></i>
+            <button type="button" class="btn btn-info btn-circle" id="experiencia-edit" *ngIf="authService.isLoggedIn" (click)="openModalExperiencia(experiencia.id)"><i class="fa fa-pen"></i>
             </button>
-            <button type="button" class="btn btn-info btn-circle" id="experiencia-trash" (click)="borrarExperiencia(experiencia.id)" ><i class="fa fa-trash"></i>
+            <button type="button" class="btn btn-info btn-circle" id="experiencia-trash" *ngIf="authService.isLoggedIn" (click)="borrarExperiencia(experiencia.id)" ><i class="fa fa-trash"></i>
             </button>
             <div id="imagen">
             <img [src]="experiencia.image_experiencia" width="170" height="200" />

@@ -6,6 +6,7 @@ import { ModalEducacionAddComponent } from '../modal-educacion-add/modal-educaci
 import { Educacion } from '../../models/educacion.model';
 import { Persona } from '../../models/persona.model';
 import { Subscription } from 'rxjs';
+import { AuthService } from 'src/app/servicios/auth.service';
 
 @Component({
   selector: 'app-educacion',
@@ -20,7 +21,8 @@ export class EducacionComponent implements OnInit {
   private subscription!: Subscription;
 
   constructor(private datosPortfolio:PortfolioService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    public authService: AuthService
     ) { }
 
   ngOnInit(): void {

@@ -2,15 +2,15 @@
 <div class="card mat-card" id="proyectos">
     <div class="card-titles">
       <h1><i class="fa-solid fa-puzzle-piece"></i>  PROYECTOS</h1>
-      <button type="button" class="btn btn-info btn-circle" id="experiencia-add" (click)="openModalProyectoAdd()" ><i class="fa fa-pen"></i>
+      <button type="button" class="btn btn-info btn-circle" id="experiencia-add" *ngIf="authService.isLoggedIn" (click)="openModalProyectoAdd()" ><i class="fa fa-pen"></i>
       </button>
     </div>
     <div id="list-projets">
       <ul class="items-list-proyecto">
        <li *ngFor="let proyecto of proyectosList">
-        <button type="button" class="btn btn-info btn-circle" id="experiencia-edit" (click)="openModalProyecto(proyecto.id)"><i class="fa fa-pen"></i>
+        <button type="button" class="btn btn-info btn-circle" id="experiencia-edit" *ngIf="authService.isLoggedIn" (click)="openModalProyecto(proyecto.id)"><i class="fa fa-pen"></i>
         </button> 
-        <button type="button" class="btn btn-info btn-circle" id="experiencia-trash" (click)="borrarProyecto(proyecto.id)"><i class="fa fa-trash"></i>
+        <button type="button" class="btn btn-info btn-circle" id="experiencia-trash" *ngIf="authService.isLoggedIn" (click)="borrarProyecto(proyecto.id)"><i class="fa fa-trash"></i>
         </button>        
          <h2>{{proyecto.titulo_proyecto}}</h2>
          <p>{{proyecto.info_proyecto}}</p>

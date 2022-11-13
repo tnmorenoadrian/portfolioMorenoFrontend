@@ -4,6 +4,7 @@ import { AuthService } from '../../servicios/auth.service';
 import {Persona} from '../../models/persona.model'
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalImgFondoComponent } from '../modal-img-fondo/modal-img-fondo.component';
+import { ModalLoginComponent } from '../modal-login/modal-login.component';
 
 @Component({
   selector: 'app-encabezado',
@@ -27,7 +28,7 @@ export class EncabezadoComponent implements OnInit {
    
   logout() {
     console.log("you are logout")
-    this.authService.logout() 
+    this.authService.logOut() 
     }
 
     openModalImgFondo() {
@@ -50,6 +51,17 @@ export class EncabezadoComponent implements OnInit {
           this.miPortfolio.id = data.id;});
         }
       }).catch(() => { /* closed */ });
+    }
+
+    openModalLogin() {
+      const modalRef = this.modalService.open(ModalLoginComponent,
+        {
+          scrollable: true,
+          windowClass: 'myCustomModalClass',
+          size: 'sm',
+          // keyboard: false,
+          // backdrop: 'static'
+        });
     }
 
 }

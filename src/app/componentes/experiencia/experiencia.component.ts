@@ -6,6 +6,7 @@ import { ModalExperienciaAddComponent } from '../modal-experiencia-add/modal-exp
 import { Experiencia } from '../../models/experiencia.model';
 import { Persona } from 'src/app/models/persona.model';
 import { Subscription } from 'rxjs';
+import { AuthService } from 'src/app/servicios/auth.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -20,7 +21,8 @@ export class ExperienciaComponent implements OnInit {
   private subscription!: Subscription;
 
   constructor(private datosPortfolio:PortfolioService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    public authService: AuthService
     ) { }
 
   ngOnInit(): void {

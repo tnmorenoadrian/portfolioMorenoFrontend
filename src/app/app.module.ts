@@ -31,6 +31,7 @@ import { ModalEducacionComponent } from './componentes/modal-educacion/modal-edu
 import { ModalEducacionAddComponent } from './componentes/modal-educacion-add/modal-educacion-add.component';
 import { ModalProyectosComponent } from './componentes/modal-proyectos/modal-proyectos.component';
 import { ModalProyectosAddComponent } from './componentes/modal-proyectos-add/modal-proyectos-add.component';
+import { ModalLoginComponent } from './componentes/modal-login/modal-login.component';
 
 @NgModule({
   imports:      [ BrowserModule,
@@ -67,7 +68,8 @@ import { ModalProyectosAddComponent } from './componentes/modal-proyectos-add/mo
                   ModalEducacionComponent,
                   ModalEducacionAddComponent,
                   ModalProyectosComponent,
-                  ModalProyectosAddComponent
+                  ModalProyectosAddComponent,
+                  ModalLoginComponent
                 ],
   providers: [   
                 ],

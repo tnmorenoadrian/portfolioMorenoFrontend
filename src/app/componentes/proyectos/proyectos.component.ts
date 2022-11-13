@@ -6,6 +6,7 @@ import { ModalProyectosAddComponent } from '../modal-proyectos-add/modal-proyect
 import { Proyecto } from '../../models/proyecto.model';
 import { Persona } from '../../models/persona.model';
 import { Subscription } from 'rxjs';
+import { AuthService } from 'src/app/servicios/auth.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -20,7 +21,8 @@ export class ProyectosComponent implements OnInit {
   private subscription!: Subscription;
 
   constructor(private datosPortfolio:PortfolioService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    public authService: AuthService
     ) { }
 
   ngOnInit(): void {
