@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Router } from "@angular/router";
+import { map } from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -14,12 +15,17 @@ export class AuthService {
 
   constructor(private http: HttpClient, private router: Router) { }
 
-  logIn(credenciales) {
-    return this.http.post(this.uri + '/authenticate', JSON.stringify( credenciales ), { headers: this.headers })
-    .subscribe((resp: any) => {
-      localStorage.setItem('token', resp.jwt);
+  logIn(credenciales)  {
+    return this.http.post<any>(this.uri + '/authenticate', JSON.stringify( credenciales ), { headers: this.headers })
+    .pipe(
+      map(resp => {
+      localStorage.setItem('username', credenciales.username);
+      let tokenStr = "Bearer " + resp.jwt;
+      localStorage.setItem('token', tokenStr);
       this.router.navigate(['portfolio']);
-    });
+      console.log(localStorage.getItem('token'))
+    })
+    );
   }
 
   getToken() {

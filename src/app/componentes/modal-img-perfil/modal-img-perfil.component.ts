@@ -63,9 +63,7 @@ export class ModalImgPerfilComponent implements OnInit {
    imageUploadAction() {
     this.httpImagen.subirImagen(this.uploadedImage).subscribe(
       (data: any) => { 
-        console.log(data);
         if(data.type == 1 && data.loaded && data.total){
-          console.log("gaju");
           this.progress.loaded = data.loaded;
           this.progress.total = data.total;
         }

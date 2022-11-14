@@ -11,6 +11,9 @@
         <mat-form-field class="justifier">
             <input matInput placeholder="Password" text="password" class="form-input" [(ngModel)]="password">
         </mat-form-field>
+        <p style="color: red; text-align: center;" *ngIf="error" class="error">
+          {{ error }}
+      </p>
       </div>
   
       <div class="form-footer">
