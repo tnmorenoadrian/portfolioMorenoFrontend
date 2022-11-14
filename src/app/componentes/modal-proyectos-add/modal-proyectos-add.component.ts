@@ -74,7 +74,7 @@ export class ModalProyectosAddComponent implements OnInit {
     this.ctrlValueDesde.year(normalizedMonthAndYear.year());
     this.dateDesde.setValue(this.ctrlValueDesde);
     datepicker.close();
-    console.log(moments(this.ctrlValueDesde).format('MMM, YYYY'))
+    
   }
 
 
@@ -84,7 +84,7 @@ export class ModalProyectosAddComponent implements OnInit {
     this.ctrlValueHasta.year(normalizedMonthAndYear.year());
     this.dateHasta.setValue(this.ctrlValueHasta);
     datepicker.close();
-    console.log(moments(this.ctrlValueHasta).format('MMM, YYYY'))
+    
   }
 
 

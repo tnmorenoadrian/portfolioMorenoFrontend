@@ -23,7 +23,6 @@ export class AuthService {
       let tokenStr = "Bearer " + resp.jwt;
       localStorage.setItem('token', tokenStr);
       this.router.navigate(['portfolio']);
-      console.log(localStorage.getItem('token'))
     })
     );
   }

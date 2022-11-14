@@ -70,7 +70,6 @@ export class ModalExperienciaComponent implements OnInit {
     this.ctrlValueDesde.year(normalizedMonthAndYear.year());
     this.dateDesde.setValue(this.ctrlValueDesde);
     datepicker.close();
-    console.log(moments(this.ctrlValueDesde).format('MMM, YYYY'))
   }
 
 
@@ -80,7 +79,6 @@ export class ModalExperienciaComponent implements OnInit {
     this.ctrlValueHasta.year(normalizedMonthAndYear.year());
     this.dateHasta.setValue(this.ctrlValueHasta);
     datepicker.close();
-    console.log(moments(this.ctrlValueHasta).format('MMM, YYYY'))
   }
 
 
@@ -100,7 +98,6 @@ export class ModalExperienciaComponent implements OnInit {
         this.dbImage = false;
       }, error => {
         this.dbImage = false;
-        console.log(error);
       });
     }
 
@@ -119,9 +116,7 @@ export class ModalExperienciaComponent implements OnInit {
    imageUploadAction() {
     this.httpImagen.subirImagen(this.uploadedImage).subscribe(
       (data: any) => { 
-        console.log(data);
         if(data.type == 1 && data.loaded && data.total){
-          console.log("gaju");
           this.progress.loaded = data.loaded;
           this.progress.total = data.total;
         }

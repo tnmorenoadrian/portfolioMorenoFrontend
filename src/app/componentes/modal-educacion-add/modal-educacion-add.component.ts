@@ -74,7 +74,6 @@ export class ModalEducacionAddComponent implements OnInit {
     this.ctrlValueDesde.year(normalizedMonthAndYear.year());
     this.dateDesde.setValue(this.ctrlValueDesde);
     datepicker.close();
-    console.log(moments(this.ctrlValueDesde).format('MMM, YYYY'))
   }
 
 
@@ -84,7 +83,6 @@ export class ModalEducacionAddComponent implements OnInit {
     this.ctrlValueHasta.year(normalizedMonthAndYear.year());
     this.dateHasta.setValue(this.ctrlValueHasta);
     datepicker.close();
-    console.log(moments(this.ctrlValueHasta).format('MMM, YYYY'))
   }
 
 
@@ -122,7 +120,6 @@ export class ModalEducacionAddComponent implements OnInit {
    imageUploadAction() {
     this.httpImagen.subirImagen(this.uploadedImage).subscribe(
       (data: any) => { 
-        console.log(data);
         if(data.type == 1 && data.loaded && data.total){
           this.progress.loaded = data.loaded;
           this.progress.total = data.total;

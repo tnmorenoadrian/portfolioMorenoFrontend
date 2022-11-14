@@ -45,7 +45,6 @@ export class ModalImgFondoComponent implements OnInit {
         this.dbImage = false;
       }, error => {
         this.dbImage = false;
-        console.log(error);
       });
     }
 
@@ -77,7 +76,6 @@ export class ModalImgFondoComponent implements OnInit {
     
     buscarImagen() {
       this.httpImagen.buscarImagen(this.uploadedImage.name).subscribe(data => {
-        console.log(data);
         this.dbImageDuplicada=data;
       })
       }
