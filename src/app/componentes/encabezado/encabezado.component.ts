@@ -40,7 +40,7 @@ export class EncabezadoComponent implements OnInit {
           // backdrop: 'static'
         });
   
-      let title = "IMAGEN DE FONDO"
+      let title = "Imagen de fondo"
       let datos_persona =this.miPortfolio
   
       modalRef.componentInstance.fromParentPersona = datos_persona;

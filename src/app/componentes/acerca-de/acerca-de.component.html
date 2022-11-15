@@ -15,7 +15,8 @@
        
          <div class="col-md-9" id="profile-info">
           
-          <h1><i class="fa fa-user" aria-hidden="true"></i>  ACERCA DE</h1>
+          <h1>Acerca de</h1>
+          <p></p>
           <p>{{miPortfolio&&miPortfolio.sobre_mi}}</p>
           <button type="button" class="btn btn-info btn-circle" id="acerca-edit" *ngIf="authService.isLoggedIn" (click)="openModalSobreMi()" ><i class="fa fa-pen"></i>
           </button>

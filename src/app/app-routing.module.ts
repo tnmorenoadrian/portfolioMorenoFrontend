@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './componentes/login/login.component';
+import { ModalLoginComponent } from './componentes/modal-login/modal-login.component';
 import { MainComponent } from './componentes/main/main.component';
 
 const routes: Routes = [
-  {path: 'login', component: LoginComponent},
-  {path: '', component: MainComponent,
-    children: [
-      { path: 'portfolio', component: MainComponent }
-  ]}];
+  
+{path: '', redirectTo: 'portfolio', pathMatch: 'full'},  
+{path: 'portfolio', component: MainComponent},
+{path: 'portfolio-edit', component: MainComponent}
+
+];
  
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

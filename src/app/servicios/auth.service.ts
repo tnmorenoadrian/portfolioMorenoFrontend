@@ -22,7 +22,7 @@ export class AuthService {
       localStorage.setItem('username', credenciales.username);
       let tokenStr = "Bearer " + resp.jwt;
       localStorage.setItem('token', tokenStr);
-      this.router.navigate(['portfolio']);
+      this.router.navigate(['portfolio-edit']);
     })
     );
   }

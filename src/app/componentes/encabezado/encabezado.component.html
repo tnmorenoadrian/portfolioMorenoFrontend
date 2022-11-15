@@ -30,7 +30,7 @@
             <!--
             <a class="nav-item nav-link" (click)="logout()" routerLink="/portfolio" *ngIf="authService.isLoggedIn">Logout</a>
             -->
-            <button mat-raised-button class="btn custom-btn" type="submit" *ngIf="authService.isLoggedIn" (click)="logout()"> 
+            <button mat-raised-button class="btn custom-btn" type="submit" *ngIf="authService.isLoggedIn" routerLink="/portfolio" (click)="logout()"> 
               <mat-icon>output</mat-icon> Logout
           </button>
           </li>

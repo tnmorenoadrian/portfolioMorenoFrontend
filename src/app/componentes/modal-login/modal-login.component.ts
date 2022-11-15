@@ -31,7 +31,7 @@ export class ModalLoginComponent implements OnInit {
   };
   this.authService.logIn(newLogin).subscribe(
     data => {
-      this.router.navigate(['']);
+      //this.router.navigate(['portfolio-edit']);
       this.invalidLogin = false;
       this.activeModal.close();
     },
