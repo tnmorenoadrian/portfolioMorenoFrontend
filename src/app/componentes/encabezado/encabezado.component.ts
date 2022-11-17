@@ -26,9 +26,10 @@ export class EncabezadoComponent implements OnInit {
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatosPersona().subscribe((data: Persona[]) =>{
     this.miPortfolio=data;
-    this.showImgBack();
-    AOS.init();
+    this.showImgBack(); 
     });
+    AOS.init();
+    
   }
 
   showImgBack(){
