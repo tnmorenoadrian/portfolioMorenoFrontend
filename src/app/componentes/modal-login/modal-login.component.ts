@@ -36,8 +36,10 @@ export class ModalLoginComponent implements OnInit {
       this.activeModal.close();
     },
     error => {
-      this.invalidLogin = true
-      this.error = JSON. stringify(error.error.message) 
+      this.invalidLogin = true;
+      let mensaje = JSON. stringify(error.error.message);
+      this.error = JSON. parse(mensaje)
+
     }
   );
   

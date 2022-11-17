@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
+
+@font-face {font-family:"RamaBold";
+    src:
+    url("assets/fonts/RamaBold.ttf") format("truetype");
+    font-weight:normal;font-style:normal;}
 
 body {
   background-color: #343A40 !important;
@@ -123,10 +127,12 @@ body {
 }
 
 .mat-card{
-   margin-left: 30px;
-   margin-right: 30px;
-   margin-bottom: 10px;
+   margin-left: 0px;
+   margin-right: 0px;
+   margin-bottom: 0px;
    padding: 20px;
+   border-top: #222328;
+   border-bottom: 1px solid #54c4f8;
    background-color: #222328 !important;
 }
 .mat-card#encabezado{
@@ -138,17 +144,7 @@ body {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
 }
-div#profile-background {
-    position: relative;
-    overflow: visible;
-    display: flex;
-}
-div#profile-background img{
-    position: relative;
-    width: 100%;
-    border-radius: 0;
-    margin-bottom: -12px;
-}
+
 .btn-circle#background-img{
   position: absolute;
   right: 30px;
@@ -221,26 +217,34 @@ div#profile-background img{
   color: #fcfcfc;
 }
 .profile-image{
-  width: 180px;
-  border-radius: 50%;
-  margin-top: -150px;
+  width: 210px;
+  border-radius: 2%;
+  margin-top: -173px;
   margin-bottom: 5px;
 }
 div h1{
-  font-family: 'Oswald', sans-serif !important;
-  color: #54c4f8;
+  font-family: 'RamaBold', sans-serif !important;
+  color: #FFFFFF;
   font-size: 26px !important;
   font-weight: 550 !important;
   margin-bottom: 0px !important;
 }
 div h2{
-  font-family: 'Oswald', sans-serif !important;
-  font-size: 20px !important;
-  color: #54c4f8;
+  font-family: 'RamaBold', sans-serif !important;
+  font-size: 24px !important;
+  color: #ffffff;
+}
+div#letras-show{
+  font-family: RamaBold;
+  font-size:70px;
+  color:#ffff;
+  position: absolute;
+  z-index:1000;
+  top: 200px;
 }
 div#encabezado{
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 div#profile-self{
   position: relative;
@@ -250,18 +254,17 @@ div#profile-self{
   margin-right: 20px;
 }
 div#profile-self h3{
-  font-family: 'Oswald', sans-serif;
+  font-family: 'RamaBold', sans-serif;
   color: #54c4f8;
   font-weight: 550;
   font-size: 24px;
-  opacity: 1;
   margin: 0px 0px 10px;
 }
 div#profile-self p{
-  font-family: 'Oswald', sans-serif;
+  font-family: 'RamaBold', sans-serif;
   display: inline;
   vertical-align: middle;
-  color: #888888;
+  color: #CCD6F6;
   font-weight: 300;
   font-size: 17px;
   opacity: 1;
@@ -272,10 +275,10 @@ div#acerca {
   overflow: visible;
   display: flex;
   flex-direction: row;
-  color: #FFFFFF;
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-bottom: 10px;
+  color: #CCD6F6;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
 }
 div#imagen{
   float: left;
@@ -298,7 +301,7 @@ ul.items-list li{
   position: relative;
   overflow: auto;
   width: 100%;
-  color: #FFFFFF;
+  color: #CCD6F6;
   list-style-type: none;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -313,7 +316,7 @@ ul.items-list-proyecto li{
   position: relative;
   overflow: auto;
   width: 100%;
-  color: #FFFFFF;
+  color: #CCD6F6;
   list-style-type: none;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -330,12 +333,9 @@ ul.items-list-proyecto li{
 }
 ul.items-list li h2{
   margin-top: 20px;
-  color: #54c4f8;
   text-align: right; 
   display:inline-block;
   padding: 0;
-  font-weight: 500 !important;
-  font-size: 22px !important;
 }
 ul.items-list li p{
   padding: 0;

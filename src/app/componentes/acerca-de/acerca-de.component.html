@@ -1,7 +1,7 @@
 <!--Acerca de-->
-<div class="card mat-card" id="acerca">
+<div class="card mat-card" id="acerca" >
     
-      <div class="col-md-3" id="profile-self">
+      <div class="col-md-3" id="profile-self" data-aos="fade-right"  data-aos-anchor="#profile-info" data-aos-duration="700">
         <a>
          <img class="profile-image" *ngIf="miPortfolio" src="{{miPortfolio.image_perfil}}"/>
          <button type="button" class="btn btn-info btn-circle" id="profile-img" *ngIf="authService.isLoggedIn" (click)="openModalImgPerfil()"><i class="fa fa-pen"></i>
@@ -13,9 +13,9 @@
         </a>
       </div>
        
-         <div class="col-md-9" id="profile-info">
+         <div class="col-md-9" id="profile-info" data-aos="fade-left"  data-aos-anchor="#profile-info" data-aos-duration="700">
           
-          <h1>Acerca de</h1>
+          <h1>ACERCA DE</h1>
           <p></p>
           <p>{{miPortfolio&&miPortfolio.sobre_mi}}</p>
           <button type="button" class="btn btn-info btn-circle" id="acerca-edit" *ngIf="authService.isLoggedIn" (click)="openModalSobreMi()" ><i class="fa fa-pen"></i>

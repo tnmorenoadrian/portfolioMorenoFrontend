@@ -68,7 +68,7 @@ export class EducacionComponent implements OnInit {
         windowClass: 'modal-xl'
       });
 
-    let title = "Educación"
+    let title = "EDUCACION"
     let newEducacion: Educacion = {
       "persona": 1,
       "image_educacion":'http://localhost:8081/get/image/default.png',

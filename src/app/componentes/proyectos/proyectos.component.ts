@@ -48,7 +48,7 @@ export class ProyectosComponent implements OnInit {
         windowClass: 'modal-xl'
       });
 
-    let title = "Proyectos"
+    let title = "PROYECTOS"
     this.proyectoSelect =this.proyectosList.find(x => x.id === id_proyecto)
 
     modalRef.componentInstance.fromParentProyecto = this.proyectoSelect;

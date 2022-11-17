@@ -5,6 +5,8 @@ import {Persona} from '../../models/persona.model'
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalImgFondoComponent } from '../modal-img-fondo/modal-img-fondo.component';
 import { ModalLoginComponent } from '../modal-login/modal-login.component';
+import AOS from "aos";
+
 
 @Component({
   selector: 'app-encabezado',
@@ -13,6 +15,7 @@ import { ModalLoginComponent } from '../modal-login/modal-login.component';
 })
 export class EncabezadoComponent implements OnInit {
   miPortfolio: any;
+  styles: any;
 
   constructor(private datosPortfolio:PortfolioService,
               public authService: AuthService,
@@ -23,7 +26,16 @@ export class EncabezadoComponent implements OnInit {
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatosPersona().subscribe((data: Persona[]) =>{
     this.miPortfolio=data;
-    }); 
+    this.showImgBack();
+    AOS.init();
+    });
+  }
+
+  showImgBack(){
+    const bgImageUrl = this.miPortfolio.image_background;
+    this.styles = {
+    backgroundImage: `url(${bgImageUrl})`
+       };  
   }
    
   logout() {
@@ -48,7 +60,9 @@ export class EncabezadoComponent implements OnInit {
       modalRef.result.then((result) => {
         if(result){
         this.datosPortfolio.actualizarDatos(result.id, result).subscribe((data) => {
-          this.miPortfolio.id = data.id;});
+          this.miPortfolio.id = data.id;
+          this.showImgBack(); 
+        });
         }
       }).catch(() => { /* closed */ });
     }

@@ -11,7 +11,6 @@ import { EducacionComponent } from './componentes/educacion/educacion.component'
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { HttpClientModule } from "@angular/common/http";
-import { LoginComponent } from './componentes/login/login.component';
 import { MainComponent } from './componentes/main/main.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -57,7 +56,6 @@ import { ModalLoginComponent } from './componentes/modal-login/modal-login.compo
                   EducacionComponent,
                   HabilidadesComponent,
                   ProyectosComponent,
-                  LoginComponent,
                   MainComponent,
                   ModalAcercaDeComponent,
                   ModalPerfilComponent,
