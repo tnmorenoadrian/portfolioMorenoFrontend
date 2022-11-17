@@ -31,6 +31,7 @@ import { ModalEducacionAddComponent } from './componentes/modal-educacion-add/mo
 import { ModalProyectosComponent } from './componentes/modal-proyectos/modal-proyectos.component';
 import { ModalProyectosAddComponent } from './componentes/modal-proyectos-add/modal-proyectos-add.component';
 import { ModalLoginComponent } from './componentes/modal-login/modal-login.component';
+import {NgxTypedJsModule} from 'ngx-typed-js';
 
 @NgModule({
   imports:      [ BrowserModule,
@@ -47,7 +48,8 @@ import { ModalLoginComponent } from './componentes/modal-login/modal-login.compo
                   MatDatepickerModule,
                   MatNativeDateModule,
                   ReactiveFormsModule,
-                  MatInputModule 
+                  MatInputModule,
+                  NgxTypedJsModule
                  ],
   declarations: [ AppComponent,
                   EncabezadoComponent,

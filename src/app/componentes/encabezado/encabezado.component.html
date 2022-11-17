@@ -45,7 +45,9 @@
         <button type="button" class="btn btn-info btn-circle" id="background-img" *ngIf="authService.isLoggedIn" (click)="openModalImgFondo()"> <i class="fa fa-pen"></i>
         </button>
         <div id=letras-show  data-aos="zoom-in" data-aos-duration="2000">
-          <p>ARGENTINA PROGRAMA</p>
+          <ngx-typed-js [strings]="['YO PROGRAMO', 'Argentina programa', 'Portolio Web']" [loop]="true"  [typeSpeed]="40">
+           #<span class="typing"></span>
+          </ngx-typed-js>
         </div>
       </div>
   </div>

@@ -29,6 +29,7 @@
     "moment": "^2.29.4",
     "ngx-bootstrap": "^9.0.0",
     "ngx-image-compress": "^13.1.13",
+    "ngx-typed-js": "^2.1.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.4.1",
     "typed.js": "^2.0.12",
