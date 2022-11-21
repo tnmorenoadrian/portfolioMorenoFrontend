@@ -1,29 +1,29 @@
 
 .modal-header {
   color: #fffbfc;
-  background-color:#222328;
-  border-color: #222328;
+  background-color:#0A192F;
+  border-color: #0A192F;
   border-radius: 0px;
   padding-bottom: 0px;
   border-bottom-width: 0px;
 }
 .modal-body {
-  color: #FFFFFF;
-  background-color:#222328;
+  color: #CCD6F6;
+  background-color:#0A192F;
   text-align: center;
   padding-top: 0px;
   padding-bottom: 0px;
 }
 .modal-footer {
-  color: #54c4f8;
-  background-color:#222328;
-  border-color: #222328;
+  color: #F2B53A;
+  background-color:#0A192F;
+  border-color: #0A192F;
   border-radius: 0px;
   justify-content: center;
 }
 .close{
-  background-color: #222328;
-  border-color: #222328;
+  background-color: #0A192F;
+  border-color: #0A192F;
   color: #fffbfc;
   font-size: 25px;
   border:0px solid #fff;
@@ -39,13 +39,13 @@
 .custom-btn{
   font-size: 18px;
   margin-bottom: 15px;
-  background-color: #54c4f8;
+  background-color: #F2B53A;
   color: #fff;
   
 }
 .custom-btn:hover{
-  background-color: #FFFFFF;
-  color: #343A40;
+  background-color: #CCD6F6;
+  color: #112240;
 }
 .btn-secondary{
   background-color:#222C26;
@@ -56,9 +56,9 @@
 }
 input#file {
   display: block;
-  color: #54c4f8;
-  background-color: #343A40;
-  border-color: #343A40;
+  color: #F2B53A;
+  background-color: #112240;
+  border-color: #112240;
   text-align: center;
   margin: auto;
 }

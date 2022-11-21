@@ -6,8 +6,8 @@
   }
   .modal-header {
       color: #fffbfc;
-      background-color:#222328;
-      border-color: #222328;
+      background-color:#0A192F;
+      border-color: #0A192F;
       border-radius: 0px;
       padding-bottom: 0px;
       border-bottom-width: 0px;
@@ -15,8 +15,8 @@
     .modal-body {
       display: flex;
       flex-direction: row;
-      color: #54c4f8;
-      background-color:#222328;
+      color: #F2B53A;
+      background-color:#0A192F;
       padding: 16px;
       padding-bottom: 0px;
       padding-top: 0px;
@@ -32,15 +32,15 @@
     .modal-footer {
       display: flex;
       flex-direction: column;
-      color: #FFFFFF;
-      background-color:#222328;
-      border-color: #222328;
+      color: #CCD6F6;
+      background-color:#0A192F;
+      border-color: #0A192F;
       border-radius: 0px;
       justify-content: center;
     }
     .close{
-      background-color: #222328;
-      border-color: #222328;
+      background-color: #0A192F;
+      border-color: #0A192F;
       color: #fffbfc;
       font-size: 25px;
       border:0px solid #fff;
@@ -49,16 +49,16 @@
     }
   
   .btn-square#experiencia-select {
-    background-color:#54c4f8 !important;
-    border-color:#54c4f8 !important;
+    background-color:#F2B53A !important;
+    border-color:#F2B53A !important;
     position: absolute;
     top: 240px;
     left: 40px;
   }
   
   .btn-square#experiencia-upload {
-    background-color:#54c4f8 !important;
-    border-color:#54c4f8 !important;
+    background-color:#F2B53A !important;
+    border-color:#F2B53A !important;
     position: absolute;
     top: 240px;
     left: 94px;
@@ -71,13 +71,13 @@
     .custom-btn{
       font-size: 18px;
       margin-bottom: 15px;
-      background-color: #54c4f8;
+      background-color: #F2B53A;
       color: #fff;
       
     }
     .custom-btn:hover{
-      background-color: #FFFFFF;
-      color: #343A40;
+      background-color: #CCD6F6;
+      color: #112240;
     }
     .btn-secondary{
       background-color:#222C26;
@@ -89,18 +89,18 @@
     }
     .input.file {
       display: block;
-      color: #54c4f8;
-      background-color: #343A40;
-      border-color: #343A40;
+      color: #F2B53A;
+      background-color: #112240;
+      border-color: #112240;
       text-align: center;
       margin: auto;
     }
     textarea#FormControlTextarea {
       font-size: 14px;
-      color: #FFFFFF;
+      color: #CCD6F6;
       font-weight: 350;
-      background-color: #343A40;
-      border-color: #343A40;
+      background-color: #112240;
+      border-color: #112240;
       margin-bottom: 15px;
     }
     div#title-exp{
@@ -114,9 +114,9 @@
 
     input#titulo {
       font-family: 'RamaBold', sans-serif;
-      color: #54c4f8;
-      background-color: #343A40;
-      border-color: #343A40;
+      color: #CCD6F6;
+      background-color: #112240;
+      border-color: #112240;
       margin-bottom: 15px;
       font-size: 20px;
       font-weight: 300;
@@ -125,60 +125,60 @@
     input#link {
       font-family: 'Roboto', sans-serif !important;
       font-size: 14px !important;
-      color: #FFFFFF;
-      background-color: #343A40;
-      border-color: #343A40;
+      color: #CCD6F6;
+      background-color: #112240;
+      border-color: #112240;
     }
 
     ::ng-deep .mat-focused .mat-form-field-label {
       /*change color of label*/
-      color: #FFFFFF !important;
+      color: #CCD6F6 !important;
      }
     
   ::ng-deep.mat-form-field-underline {
       /*change color of underline*/
-      background-color: #54c4f8 !important;
+      background-color: #F2B53A !important;
     } 
     
   ::ng-deep.mat-form-field-ripple {
      /*change color of underline when focused*/
-     background-color: #FFFFFF!important;
+     background-color: #CCD6F6!important;
     }
   ::ng-deep.mat-form-field-appearance-legacy .mat-form-field-label{
-      color: #54c4f8 !important;  
+      color: #F2B53A !important;  
   }
   ::ng-deep .mat-input-element {
-      caret-color: #FFFFFF!important;
+      caret-color: #CCD6F6!important;
   }
   ::ng-deep .mat-input-element {
-      color: #FFFFFF!important;
+      color: #CCD6F6!important;
   }
   
   
   ::ng-deep .mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
-      background-color: #54c4f8!important;
+      background-color: #F2B53A!important;
   }
   
   
   ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-      color: #54c4f8!important;
+      color: #F2B53A!important;
       opacity: 1!important;
   }
   
   
   ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-      color: #54c4f8!important;
+      color: #F2B53A!important;
   }
   
   
   ::ng-deep .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick{
-      color: #54c4f8!important;
+      color: #F2B53A!important;
       opacity: 0.8!important;
   }
   
   
   ::ng-deep .mat-form-field-invalid .mat-input-element, .mat-warn .mat-input-element {
-      caret-color: #54c4f8!important;
+      caret-color: #F2B53A!important;
   }
   
   
@@ -188,7 +188,7 @@
   }
   
   ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
-      color: #54c4f8!important;
+      color: #F2B53A!important;
   }
 
 

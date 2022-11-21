@@ -6,7 +6,6 @@ import { ModalPerfilComponent } from '../modal-perfil/modal-perfil.component';
 import { ModalImgPerfilComponent } from '../modal-img-perfil/modal-img-perfil.component';
 import { Persona } from '../../models/persona.model';
 import { AuthService } from 'src/app/servicios/auth.service';
-import AOS from "aos";
 
 
 @Component({
@@ -26,7 +25,7 @@ export class AcercaDeComponent implements OnInit {
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatosPersona().subscribe((data: Persona[]) =>{
       this.miPortfolio=data;
-    AOS.init();  
+    
         });
   }
 

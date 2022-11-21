@@ -14,7 +14,8 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "allowedCommonJsDependencies": [
-              "moment"
+              "moment",
+              "aos"
            ],
             "outputPath": "dist/portfolio-moreno-frontend",
             "index": "src/index.html",

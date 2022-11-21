@@ -5,7 +5,6 @@ import {Persona} from '../../models/persona.model'
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalImgFondoComponent } from '../modal-img-fondo/modal-img-fondo.component';
 import { ModalLoginComponent } from '../modal-login/modal-login.component';
-import AOS from "aos";
 
 
 @Component({
@@ -28,14 +27,14 @@ export class EncabezadoComponent implements OnInit {
     this.miPortfolio=data;
     this.showImgBack(); 
     });
-    AOS.init();
     
   }
 
   showImgBack(){
     const bgImageUrl = this.miPortfolio.image_background;
     this.styles = {
-    backgroundImage: `url(${bgImageUrl})`
+    backgroundImage: `url(${bgImageUrl})`,
+    
        };  
   }
    
