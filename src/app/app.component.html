@@ -1,3 +1,7 @@
-
-    <router-outlet></router-outlet>
+<div class="bg" [ngStyle]="styles">
+<button type="button" class="btn btn-info btn-circle" id="background-img" *ngIf="authService.isLoggedIn" (click)="openModalImgFondo()"> <i class="fa fa-pen"></i>
+</button>
+  
+<router-outlet></router-outlet>
  
+</div>

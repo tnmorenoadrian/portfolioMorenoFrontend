@@ -5,24 +5,21 @@
     url("assets/fonts/RamaBold.ttf") format("truetype");
     font-weight:normal;font-style:normal;}
 
-body {
-  background-color: #112240 !important;
-}
+
 
 .header {
-    background-color: #0a0d16;
+    background-color: rgba(0, 0, 0, 0)!important;
     height: 70px;
     position: relative;
     width: 100%;
-    top: 0;
-    left: 0;
+    margin-bottom: -70px;
+    z-index: 1001;
   }
   
   .nav {
     display: flex;
     justify-content: space-between;
     height: 70px;
-    background-color: #0A192F;
   }
   
   .nav-link {
@@ -126,29 +123,32 @@ body {
   --bs-card-border-radius: 0;
 }
 
+body{
+  --bs-body-bg: rgba(0, 0, 0, 0)!important;
+}
+
 .mat-card{
    margin-left: 0px;
    margin-right: 0px;
    margin-bottom: 0px;
    padding: 20px;
-   border-top: #0A192F;
+   border-top: none;
    border-bottom: 1px solid #F2B53A;
-   background-color: #0A192F !important;
+   background: rgba(0, 0, 0, 0)!important; 
 }
 .mat-card#encabezado{
     border-radius: 0px;
     padding: 0%;
     margin-bottom: -40px;
+    border-bottom-style: hidden;
 }
-.mat-card#acerca{
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-}
+
 
 .btn-circle#background-img{
   position: absolute;
   right: 30px;
-  top: 15px;
+  top: 90px;
+  z-index: 1002;
 }
 .btn-circle#profile-img{
   position: absolute;
@@ -258,7 +258,6 @@ body {
 
 
 .hero__scroll_bar .chevron {
-  margin-top: 20px;
   display: block;
   -webkit-animation: pulse 2s infinite;
   animation: pulse 2s infinite;
@@ -296,13 +295,14 @@ div h2{
   color: #CCD6F6;
 }
 div#letras-show{
+  width: 100%;
   position: absolute;
   font-family: RamaBold;
   font-size:70px;
   color:#ffff;
-  position: absolute;
   z-index:1000;
-  top: 120px;
+  top: 250px;
+  text-align: center;
 }
 div#encabezado{
   margin-left: 0px;
@@ -514,5 +514,4 @@ output{
 a{
   color:#CCD6F6 !important;
 }
-html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, sans-serif; }

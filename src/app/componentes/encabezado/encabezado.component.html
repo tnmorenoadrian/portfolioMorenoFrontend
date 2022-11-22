@@ -1,9 +1,8 @@
-<div class="card mat-card" id="encabezado">
+
     <!-- barra nav -->
     <header class="header">
       <nav class="nav">
-        <a style="color: white ;"><img src="assets/img/APLogoCustom.png" style="height:70px;" class="rounded-pill">
-         #YO PROGRAMO   
+        <a><img src="assets/img/APLogoCustom.png" class="rounded-pill">
         </a>
         <button class="nav-toggle" aria-label="">
           <i class="fas fa-bars"></i>
@@ -38,28 +37,25 @@
       </nav>
     </header>
     <!-- imagen background-->
-      <div id="profile-background" [ngStyle]="styles">
+      <div id="background">
         <!--imagen de fondo
         <img *ngIf="miPortfolio" src="{{miPortfolio.image_background}}"/>
         -->
-        <button type="button" class="btn btn-info btn-circle" id="background-img" *ngIf="authService.isLoggedIn" (click)="openModalImgFondo()"> <i class="fa fa-pen"></i>
-        </button>
+      </div>
+        
         <div id=letras-show  data-aos="flip-up" data-aos-duration="4000">
           <ngx-typed-js [strings]="['YO PROGRAMO', 'Argentina programa', 'Portfolio Web']" [loop]="true"  [typeSpeed]="40">
            #<span class="typing"></span>
           </ngx-typed-js>    
         </div>
-        <span style="padding-right: 120px; padding-bottom: 60px;" class="hero__scroll_code" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800">
-        <br>
-        <br>
-          <img src="assets/img/CodigoAP.png">
-        </span> 
-        <span style="padding-bottom: 0px;" class="hero__scroll_bar" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800"> 
+        
+        <span style="padding-bottom: 0px;" class="hero__scroll_bar" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800">
+          <img src="assets/img/CodigoAP.png" style="padding-right: 50px;"> 
           <i class="chevron bottom" onClick="document.getElementById('profile-info').scrollIntoView({behavior: 'smooth'});"><img src="assets/img/BarraScrollDown.png"></i>
             <br>
             Desplazarse abajo
           </span> 
-      </div>
-  </div>
+      
+  
   
   
