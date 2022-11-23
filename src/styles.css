@@ -128,13 +128,13 @@ body{
 }
 
 .mat-card{
-   margin-left: 0px;
-   margin-right: 0px;
+   margin-left: 60px;
+   margin-right: 60px;
    margin-bottom: 0px;
    padding: 20px;
-   border-top: none;
-   border-bottom: 1px solid #F2B53A;
+   border: none;
    background: rgba(0, 0, 0, 0)!important; 
+   box-shadow:none !important;
 }
 .mat-card#encabezado{
     border-radius: 0px;
@@ -152,13 +152,13 @@ body{
 }
 .btn-circle#profile-img{
   position: absolute;
-  top: -85px;
-  left: 137px;
+  top: -127px;
+  left: 195px;
 }
 .btn-circle#profile-info{
   position: absolute;
-  right: 40px;
-  top: 15px;
+  right: 23px;
+  top: 80px;
 }
 .btn-circle#acerca-edit{
   position: absolute;
@@ -220,7 +220,37 @@ body{
   width: 210px;
   border-radius: 2%;
   margin-top: -130px;
-  margin-bottom: 5px;
+  margin-bottom: 22px;
+}
+
+h1 {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  margin: 10px 0px 40px;
+  width: 100%;
+  white-space: nowrap;
+  font-family: 'RamaBold', sans-serif !important;
+  color: #CCD6F6; 
+  font-size: 32px !important;
+  font-weight: 550 !important;
+}
+h1::before {
+  position: relative;
+  counter-increment: section;
+  content: "0" counter(section) ".";
+  margin-right: 10px;
+  color: #F2B53A;
+}
+h1::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 1px;
+  margin-left: 18px;
+  background-color: #F2B53A;
 }
 
 .hero__scroll_code {
@@ -282,23 +312,20 @@ box-sizing: border-box;
   transform: translate(0, 0);
 }
 }
-div h1{
-  font-family: 'RamaBold', sans-serif !important;
-  color: #CCD6F6;
-  font-size: 26px !important;
-  font-weight: 550 !important;
-  margin-bottom: 0px !important;
-}
+
 div h2{
   font-family: 'RamaBold', sans-serif !important;
   font-size: 24px !important;
   color: #CCD6F6;
 }
+p{
+  font-size:18px!important;
+}
 div#letras-show{
   width: 100%;
   position: absolute;
   font-family: RamaBold;
-  font-size:70px;
+  font-size:80px;
   color:#ffff;
   z-index:1000;
   top: 250px;
@@ -319,7 +346,7 @@ div#profile-self h3{
   font-family: 'RamaBold', sans-serif;
   color: #F2B53A;
   font-weight: 550;
-  font-size: 24px;
+  font-size: 32px;
   margin: 0px 0px 10px;
 }
 div#profile-self p{
@@ -328,7 +355,7 @@ div#profile-self p{
   vertical-align: middle;
   color: #CCD6F6;
   font-weight: 300;
-  font-size: 17px;
+  font-size: 28px !important;
   opacity: 1;
 }
 div#acerca {
@@ -341,6 +368,7 @@ div#acerca {
   margin-left: 0px;
   margin-right: 0px;
   margin-bottom: 0px;
+  padding-bottom: 100px;
 }
 div#imagen{
   float: left;
@@ -514,4 +542,4 @@ output{
 a{
   color:#CCD6F6 !important;
 }
-body { margin: 0; font-family: Roboto, sans-serif; }
+body { margin: 0; font-family: Roboto, sans-serif; counter-reset: section;}

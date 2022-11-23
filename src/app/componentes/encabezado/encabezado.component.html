@@ -44,14 +44,14 @@
       </div>
         
         <div id=letras-show  data-aos="flip-up" data-aos-duration="4000">
-          <ngx-typed-js [strings]="['YO PROGRAMO', 'Argentina programa', 'Portfolio Web']" [loop]="true"  [typeSpeed]="40">
+          <ngx-typed-js [strings]="['YO PROGRAMO', 'Argentina programa', 'Portfolio Web']" [loop]="true"  [typeSpeed]="30">
            #<span class="typing"></span>
           </ngx-typed-js>    
         </div>
         
         <span style="padding-bottom: 0px;" class="hero__scroll_bar" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800">
           <img src="assets/img/CodigoAP.png" style="padding-right: 50px;"> 
-          <i class="chevron bottom" onClick="document.getElementById('profile-info').scrollIntoView({behavior: 'smooth'});"><img src="assets/img/BarraScrollDown.png"></i>
+          <i id="jump-one" class="chevron bottom" onClick="document.getElementById('jump-one').scrollIntoView({behavior: 'smooth'});"><img src="assets/img/BarraScrollDown.png"></i>
             <br>
             Desplazarse abajo
           </span> 

@@ -99,4 +99,10 @@ export class ExperienciaComponent implements OnInit {
   });
   }
   
+  property:number = 500;
+  
+  increment_property(): void{
+    this.property=this.property+500;
+  }
+
 }

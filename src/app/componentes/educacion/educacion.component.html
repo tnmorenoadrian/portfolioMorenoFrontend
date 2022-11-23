@@ -1,13 +1,16 @@
 <!-- Educacion -->
-<div class="card mat-card" id="experiencia">
-  <div id="experiencie">
+<div class="card mat-card" id="educacion">
+  <div id="education">
      <div class="card-titles">
        <h1><i class="fa-solid fa-graduation-cap"></i>  EDUCACION</h1>
        <button type="button" class="btn btn-info btn-circle" id="experiencia-add" *ngIf="authService.isLoggedIn" (click)="openModalEducacionAdd()" ><i class="fa fa-pen"></i>
        </button>
      </div>
      
-       <ul class="items-list">
+       <ul class="items-list" data-aos="zoom-in-down"
+       data-aos-anchor="#educacion"
+       data-aos-offset="200"
+       data-aos-duration="500">
         <li *ngFor="let educacion of educacionList">
           <button type="button" class="btn btn-info btn-circle" id="experiencia-edit" *ngIf="authService.isLoggedIn" (click)="openModalEducacion(educacion.id)"><i class="fa fa-pen"></i>
           </button>
