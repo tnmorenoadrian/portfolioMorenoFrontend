@@ -23,19 +23,19 @@ export class PortfolioService {
   }
   */
    obtenerDatosPersona():Observable<Persona[]>{
-    return this.http.get<Persona[]>(`${this.apiUrl}`+"/persona/1")
+    return this.http.get<Persona[]>(`${this.apiUrl}`+"/open/persona/1")
    }
 
    obtenerDatosExperiencia():Observable<Experiencia[]>{
-    return this.http.get<Experiencia[]>(`${this.apiUrl}`+"/experiencia/1")
+    return this.http.get<Experiencia[]>(`${this.apiUrl}`+"/open/experiencia/1")
    }
    
    obtenerDatosEducacion():Observable<Educacion[]>{
-    return this.http.get<Educacion[]>(`${this.apiUrl}`+"/educacion/1")
+    return this.http.get<Educacion[]>(`${this.apiUrl}`+"/open/educacion/1")
    }
    
    obtenerDatosProyecto():Observable<Educacion[]>{
-    return this.http.get<Educacion[]>(`${this.apiUrl}`+"/proyecto/1")
+    return this.http.get<Educacion[]>(`${this.apiUrl}`+"/open/proyecto/1")
    } 
 
   actualizarDatos(id: any, data: any): Observable<any> {
