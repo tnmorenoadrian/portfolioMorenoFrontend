@@ -15,21 +15,24 @@ export class AuthService {
 
   constructor(private http: HttpClient, private router: Router) { }
 
-  logIn(credenciales)  {
-    return this.http.post<any>(this.uri + '/login', JSON.stringify( credenciales ), { headers: this.headers })
-    .pipe(
-      map(resp => {
-      localStorage.setItem('username', credenciales.username);
-      let tokenStr = "Bearer " + resp.jwt;
-      localStorage.setItem('token', tokenStr);
-      this.router.navigate(['portfolio-edit']);
-    })
-    );
+  logIn(credenciales:any)  {
+    console.log(JSON.stringify( credenciales ))
+    return this.http.post<any>(this.uri + '/login', JSON.stringify( credenciales ),{ observe: 'response'})
+    .pipe(map((response) => {
+        console.log(response.headers.get("Authorization"));
+        localStorage.setItem('username', credenciales.username);
+        this.token = response.headers.get("Authorization");
+        localStorage.setItem('token', this.token);
+        this.router.navigate(['portfolio-edit']);
+      }));
   }
+
+
 
   getToken() {
     return localStorage.getItem('token');
   }
+
   public get isLoggedIn(): boolean {
     let authToken = localStorage.getItem('token');
     return authToken !== null ? true : false;

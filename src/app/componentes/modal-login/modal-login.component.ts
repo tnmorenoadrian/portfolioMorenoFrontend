@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class ModalLoginComponent implements OnInit {
 
-  username = '';
+  email = '';
   password = '';
   invalidLogin = false
   
@@ -26,10 +26,11 @@ export class ModalLoginComponent implements OnInit {
   }
   login() {
   let newLogin: LoginViewModel = {
-    "username": this.username,
+    "email": this.email,
     "password": this.password
   };
-  this.authService.logIn(newLogin).subscribe(
+  this.authService.logIn(newLogin)
+  .subscribe(
     data => {
       //this.router.navigate(['portfolio-edit']);
       this.invalidLogin = false;
