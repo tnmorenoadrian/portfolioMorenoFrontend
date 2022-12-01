@@ -5,7 +5,7 @@ export class Persona {
     apellido?: string;
     fecha_nacimiento?: string;
     nacionalidad?: string;
-    correo?: string;
+    email?: string;
     sobre_mi?: string;
     ocupacion?: string;
     image_background?: string;

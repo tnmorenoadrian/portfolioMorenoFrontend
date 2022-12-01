@@ -5,6 +5,7 @@ import { Observable, throwError } from 'rxjs';
 import {Persona} from '../models/persona.model';
 import {Experiencia} from '../models/experiencia.model';
 import {Educacion} from '../models/educacion.model'
+import { skipApiKey } from './http.context';
 
 @Injectable({
   providedIn: 'root'
@@ -23,19 +24,19 @@ export class PortfolioService {
   }
   */
    obtenerDatosPersona():Observable<Persona[]>{
-    return this.http.get<Persona[]>(`${this.apiUrl}`+"/open/persona/1")
+    return this.http.get<Persona[]>(`${this.apiUrl}`+"/open/persona/1", { context: skipApiKey() });
    }
 
    obtenerDatosExperiencia():Observable<Experiencia[]>{
-    return this.http.get<Experiencia[]>(`${this.apiUrl}`+"/open/experiencia/1")
+    return this.http.get<Experiencia[]>(`${this.apiUrl}`+"/open/experiencia/1", { context: skipApiKey() });
    }
    
    obtenerDatosEducacion():Observable<Educacion[]>{
-    return this.http.get<Educacion[]>(`${this.apiUrl}`+"/open/educacion/1")
+    return this.http.get<Educacion[]>(`${this.apiUrl}`+"/open/educacion/1", { context: skipApiKey() });
    }
    
    obtenerDatosProyecto():Observable<Educacion[]>{
-    return this.http.get<Educacion[]>(`${this.apiUrl}`+"/open/proyecto/1")
+    return this.http.get<Educacion[]>(`${this.apiUrl}`+"/open/proyecto/1", { context: skipApiKey() });
    } 
 
   actualizarDatos(id: any, data: any): Observable<any> {

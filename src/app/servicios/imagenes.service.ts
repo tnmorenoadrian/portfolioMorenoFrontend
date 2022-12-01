@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams, HttpRequest, HttpHeaders, HttpEvent } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
+import { skipApiKey } from './http.context';
 
 @Injectable({
   providedIn: 'root'
@@ -31,7 +32,7 @@ export class ImagenesService {
   }
 
   verImagen(urlPrevImg): Observable<Blob> {
-    return this.http.get(urlPrevImg, { responseType: 'blob' });
+    return this.http.get(urlPrevImg, { responseType: 'blob', context: skipApiKey() });
   }
 
   buscarImagen(nombre:string):Observable<any>{

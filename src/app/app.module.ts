@@ -10,7 +10,7 @@ import { ExperienciaComponent } from './componentes/experiencia/experiencia.comp
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { MainComponent } from './componentes/main/main.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -32,6 +32,7 @@ import { ModalProyectosComponent } from './componentes/modal-proyectos/modal-pro
 import { ModalProyectosAddComponent } from './componentes/modal-proyectos-add/modal-proyectos-add.component';
 import { ModalLoginComponent } from './componentes/modal-login/modal-login.component';
 import {NgxTypedJsModule} from 'ngx-typed-js';
+import { AuthInterceptor } from './servicios/auth.interceptor';
 
 @NgModule({
   imports:      [ BrowserModule,
@@ -71,7 +72,9 @@ import {NgxTypedJsModule} from 'ngx-typed-js';
                   ModalProyectosAddComponent,
                   ModalLoginComponent
                 ],
-  providers: [   
+  providers: [ 
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi:
+    true }  
                 ],
   bootstrap:    [ AppComponent ]
 })
