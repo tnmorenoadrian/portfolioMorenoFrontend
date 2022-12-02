@@ -15,7 +15,6 @@ export class AuthInterceptor implements HttpInterceptor {
   constructor(private authService: AuthService) {}
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const token = localStorage.getItem('token');
 
     // Here we can find out if the Http Call triggered wanted to skip the interceptor or not
     if (request.context.get(NO_API_KEY)) {
@@ -23,8 +22,12 @@ export class AuthInterceptor implements HttpInterceptor {
         return next.handle(request);
     }
 
-    const requestApiKey = request.clone({ setHeaders: { Authorization: `${token}` } });
+    const requestApiKey = request.clone({
+       setHeaders: {
+         Authorization: `Bearer ${localStorage.getItem('token')}`
+         } 
+        });
     return next.handle(requestApiKey);
-}
+ }
   
 }
