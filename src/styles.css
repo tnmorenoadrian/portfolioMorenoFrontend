@@ -152,13 +152,13 @@ body{
 }
 .btn-circle#profile-img{
   position: absolute;
-  top: -127px;
-  left: 195px;
+  top: -7px;
+  left: 207px;
 }
 .btn-circle#profile-info{
   position: absolute;
   right: 23px;
-  top: 80px;
+  top: 170px;
 }
 .btn-circle#acerca-edit{
   position: absolute;
@@ -219,7 +219,7 @@ body{
 .profile-image{
   width: 210px;
   border-radius: 2%;
-  margin-top: -130px;
+  margin-top: -7px;
   margin-bottom: 22px;
 }
 
@@ -366,7 +366,10 @@ div#acerca {
   flex-direction: row;
   color: #A8B2D1;
   margin-bottom: 0px;
-  padding-bottom: 100px;
+  padding-bottom: 170px;
+}
+div#profile-info{
+  padding-top: 50px;
 }
 div#imagen{
   float: left;
@@ -430,7 +433,7 @@ ul.items-list li p{
 }
 div#background-skills{
   display: flex;
-  background: #F2B53A;
+  background: rgba(0, 0, 0, 0)!important;
   align-items: flex-start;
   justify-content: center;
   margin-top: 10px;
@@ -451,6 +454,7 @@ div#background-skills{
     letter-spacing: 1px;
     text-align: center;
     font-size: 25px;
+    color: #333333;
 }
 .cont-skill .skill-box{
   width: 100%;

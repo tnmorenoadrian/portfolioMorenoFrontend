@@ -5,7 +5,7 @@ import { AuthGuard } from './servicios/auth.guard';
 
 const routes: Routes = [
   
-{path: '', redirectTo: 'portfolio', pathMatch: 'full'},  
+{path: '', redirectTo: '/portfolio', pathMatch: 'full'},  
 {path: 'portfolio', component: MainComponent},
 {path: 'portfolio-edit', component: MainComponent, canActivate: [AuthGuard]}
 

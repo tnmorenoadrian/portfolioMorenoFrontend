@@ -48,7 +48,7 @@ export class ExperienciaComponent implements OnInit {
         windowClass: 'modal-xl'
       });
 
-    let title = "EXPERIENCIA"
+    let title = "Experiencia"
     this.experienciaSelect =this.experienciaList.find(x => x.id === id_experiencia)
 
     modalRef.componentInstance.fromParentExperiencia = this.experienciaSelect;
@@ -68,7 +68,7 @@ export class ExperienciaComponent implements OnInit {
         windowClass: 'modal-xl'
       });
 
-    let title = "EXPERIENCIA"
+    let title = "Experiencia"
     let newExperiencia: Experiencia = {
       "persona": 1,
       "image_experiencia":'http://localhost:8081/get/image/default.png',

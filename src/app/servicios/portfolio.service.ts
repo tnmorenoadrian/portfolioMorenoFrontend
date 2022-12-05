@@ -4,7 +4,9 @@ import { catchError } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 import {Persona} from '../models/persona.model';
 import {Experiencia} from '../models/experiencia.model';
-import {Educacion} from '../models/educacion.model'
+import {Educacion} from '../models/educacion.model';
+import {Proyecto} from '../models/proyecto.model';
+import {Habilidad} from '../models/habilidad.model'
 import { skipApiKey } from './http.context';
 
 @Injectable({
@@ -28,15 +30,19 @@ export class PortfolioService {
    }
 
    obtenerDatosExperiencia():Observable<Experiencia[]>{
-    return this.http.get<Experiencia[]>(`${this.apiUrl}`+"/open/experiencia/1", { context: skipApiKey() });
+    return this.http.get<Experiencia[]>(`${this.apiUrl}`+"/open/experiencias/1", { context: skipApiKey() });
    }
    
    obtenerDatosEducacion():Observable<Educacion[]>{
     return this.http.get<Educacion[]>(`${this.apiUrl}`+"/open/educacion/1", { context: skipApiKey() });
    }
+
+   obtenerDatosHabilidades():Observable<Educacion[]>{
+    return this.http.get<Habilidad[]>(`${this.apiUrl}`+"/open/habilidades/1", { context: skipApiKey() });
+   }
    
    obtenerDatosProyecto():Observable<Educacion[]>{
-    return this.http.get<Educacion[]>(`${this.apiUrl}`+"/open/proyecto/1", { context: skipApiKey() });
+    return this.http.get<Proyecto[]>(`${this.apiUrl}`+"/open/proyectos/1", { context: skipApiKey() });
    } 
 
   actualizarDatos(id: any, data: any): Observable<any> {
@@ -55,6 +61,13 @@ export class PortfolioService {
 
   actualizarDatosEducacion(id: any, data: any): Observable<any> {
     let API_URL = `${this.apiUrl}/update/educacion/${id}`;
+    return this.http.put(API_URL, data, { headers: this.headers }).pipe(
+      catchError(this.handleError)
+    )
+  }
+
+  actualizarDatosHabilidades(id: any, data: any): Observable<any> {
+    let API_URL = `${this.apiUrl}/update/habilidad/${id}`;
     return this.http.put(API_URL, data, { headers: this.headers }).pipe(
       catchError(this.handleError)
     )
@@ -97,6 +110,13 @@ export class PortfolioService {
 
   borrarEducacion(id: any): Observable<any> {
     let API_URL = `${this.apiUrl}/delete/educacion/${id}`;
+    return this.http.delete(API_URL).pipe(
+      catchError(this.handleError)
+    )
+  }
+
+  borrarHabilidad(id: any): Observable<any> {
+    let API_URL = `${this.apiUrl}/delete/habilidad/${id}`;
     return this.http.delete(API_URL).pipe(
       catchError(this.handleError)
     )

@@ -33,6 +33,7 @@ import { ModalProyectosAddComponent } from './componentes/modal-proyectos-add/mo
 import { ModalLoginComponent } from './componentes/modal-login/modal-login.component';
 import {NgxTypedJsModule} from 'ngx-typed-js';
 import { AuthInterceptor } from './servicios/auth.interceptor';
+import { ModalHabilidadesComponent } from './componentes/modal-habilidades/modal-habilidades.component';
 
 @NgModule({
   imports:      [ BrowserModule,
@@ -70,7 +71,8 @@ import { AuthInterceptor } from './servicios/auth.interceptor';
                   ModalEducacionAddComponent,
                   ModalProyectosComponent,
                   ModalProyectosAddComponent,
-                  ModalLoginComponent
+                  ModalLoginComponent,
+                  ModalHabilidadesComponent
                 ],
   providers: [ 
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi:
