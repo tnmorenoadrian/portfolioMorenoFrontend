@@ -15,14 +15,14 @@ export class EncabezadoComponent implements OnInit {
   miPortfolio: any;
   styles: any;
 
-  constructor(private datosPortfolio:PortfolioService,
+  constructor(private servicePortfolio:PortfolioService,
               public authService: AuthService,
               private modalService: NgbModal
               )
              {}            
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatosPersona().subscribe((data: Persona[]) =>{
+    this.servicePortfolio.obtenerDatosPersona().subscribe((data: Persona[]) =>{
     this.miPortfolio=data
     });  
   }

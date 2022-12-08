@@ -17,13 +17,13 @@ export class AcercaDeComponent implements OnInit {
 
   miPortfolio: any;
 
-  constructor(private datosPortfolio:PortfolioService,
+  constructor(private servicePortfolio:PortfolioService,
      private modalService: NgbModal,
      public authService: AuthService) { 
   }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatosPersona().subscribe((data: Persona[]) =>{
+    this.servicePortfolio.obtenerDatosPersona().subscribe((data: Persona[]) =>{
       this.miPortfolio=data;
     
         });
@@ -45,7 +45,7 @@ export class AcercaDeComponent implements OnInit {
     modalRef.componentInstance.fromParentTitle = title;
     modalRef.result.then((result) => {
       if(result){
-        this.datosPortfolio.actualizarDatos(result.id, result).subscribe((data) => {
+        this.servicePortfolio.actualizarDatos(result.id, result).subscribe((data) => {
           this.miPortfolio.id = data.id;});
         }
       }).catch(() => { /* closed */ });
@@ -67,7 +67,7 @@ export class AcercaDeComponent implements OnInit {
     modalRef.componentInstance.fromParentTitle = title;
     modalRef.result.then((result) => {
       if(result){
-        this.datosPortfolio.actualizarDatos(result.id, result).subscribe((data) => {
+        this.servicePortfolio.actualizarDatos(result.id, result).subscribe((data) => {
           this.miPortfolio.id = data.id;});
         }
       }).catch(() => { /* closed */ });
@@ -89,7 +89,7 @@ export class AcercaDeComponent implements OnInit {
     modalRef.componentInstance.fromParentTitle = title;
     modalRef.result.then((result) => {
       if(result){
-      this.datosPortfolio.actualizarDatos(result.id, result).subscribe((data) => {
+      this.servicePortfolio.actualizarDatos(result.id, result).subscribe((data) => {
         this.miPortfolio.id = data.id;});
       }
     }).catch(() => { /* closed */ });

@@ -1,1 +1,57 @@
-<p>modal-habilidades works!</p>
+<div class="modal-header">
+    <h2 class="modal-title">{{ fromParentTitle }}</h2>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+</div>
+
+<div class="modal-body" id="habilidades">
+    
+    <div id="background-skills">
+      
+      <div class="cont-skill">
+        <h2>Programacion</h2>
+        <ul class="items-list" >
+          <li *ngFor="let habilidadesPro of fromParentHabilidades; let i = index" >
+            <div class="skill-box" *ngIf="habilidadesPro.programacion_habilidad">          
+              <button type="button" class="btn btn-info btn-circle" id="habilidad-trash" (click)="borrarHabilidad(habilidadesPro.id)" ><i class="fa fa-trash"></i>
+              </button>
+              <div class="form-floating" style="padding-bottom: 15px;">
+                <input type="text" id="perfil" class="form-control" [(ngModel)]="habilidadesPro.programacion_habilidad" (ngModelChange)="onChange(habilidadesPro.id)"/>
+              </div>
+              
+              <div class="skill-bar">
+                  <span class="skill-per html" [ngStyle]="{'width': habilidadesPro.nivel_habilidad + '%','animation-delay': i/5 + 's'}">
+                      <span class="tooltipo">{{habilidadesPro.nivel_habilidad}}%</span>
+                  </span>
+              </div>
+            </div>          
+          </li>
+        </ul>
+      </div>
+        
+      <div class="cont-skill">
+        <h2>Idiomas</h2>
+        <ul class="items-list" >
+          <li *ngFor="let habilidadesIdi of fromParentHabilidades; let i = index" >
+            <div class="skill-box" *ngIf="habilidadesIdi.idioma_habilidad">
+              <button type="button" class="btn btn-info btn-circle" id="habilidad-trash" (click)="borrarHabilidad(habilidadesIdi.id)" ><i class="fa fa-trash"></i>
+              </button>
+             <div class="form-floating" style="padding-bottom: 15px;">
+              <input type="text" id="perfil" class="form-control" [(ngModel)]="habilidadesIdi.idioma_habilidad" (ngModelChange)="onChange(habilidadesIdi.id)"/>
+            </div>
+              <div class="skill-bar">
+                  <span class="skill-per html" [ngStyle]="{'width': habilidadesIdi.nivel_habilidad + '%','animation-delay': i/5 + 's'}">
+                      <span class="tooltipo">{{habilidadesIdi.nivel_habilidad}}%</span>
+                  </span>
+              </div>
+            </div>          
+          </li>
+        </ul>
+      </div>        
+        
+      </div>
+</div> 
+<div class="modal-footer">
+  
+</div>

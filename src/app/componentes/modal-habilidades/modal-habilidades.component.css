@@ -1,0 +1,203 @@
+.mat-typography h2 {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: normal;
+    margin: 0 0 16px;
+  }
+  .modal-header {
+      color: #fffbfc;
+      background-color:#0A192F;
+      border-color: #0A192F;
+      border-radius: 0px;
+      padding-bottom: 0px;
+      border-bottom-width: 0px;
+    }
+    .modal-body {
+      color: #F2B53A;
+      background-color:#0A192F;
+      padding: 16px;
+      padding-bottom: 0px;
+      padding-top: 0px;
+    }
+  
+    .modal-body .img-uploaded{
+      text-align: left;
+      padding-bottom: 15px;
+      padding-right: 15px;
+      display: inline-block;
+    }
+  
+    .modal-footer {
+      display: flex;
+      flex-direction: column;
+      color: #CCD6F6;
+      background-color:#0A192F;
+      border-color: #0A192F;
+      border-radius: 0px;
+      justify-content: center;
+    }
+    .close{
+      background-color: #0A192F;
+      border-color: #0A192F;
+      color: #fffbfc;
+      font-size: 25px;
+      border:0px solid #fff;
+      outline:none;
+      padding-bottom: 20px;
+    }
+  
+    .btn-square#habilidad-change {
+      background-color:#F2B53A !important;
+      border-color:#F2B53A !important;
+      position: absolute;
+      top: 181px;
+      left: 94px;
+  }
+  
+  .btn-square#habilidad-select {
+    background-color:#F2B53A !important;
+    border-color:#F2B53A !important;
+    position: absolute;
+    top: 181px;
+    left: 40px;
+  }
+  
+  .btn-square#habilidad-upload {
+    background-color:#F2B53A !important;
+    border-color:#F2B53A !important;
+    position: absolute;
+    top: 181px;
+    left: 94px;
+  }
+  
+    .btn{
+      font-size: 1.5em;
+      font-weight: 300;
+    }
+    .custom-btn{
+      font-size: 18px;
+      margin-bottom: 15px;
+      background-color: #F2B53A;
+      color: #fff;
+      
+    }
+    .custom-btn:hover{
+      background-color: #CCD6F6;
+      color: #112240;
+    }
+    .btn-secondary{
+      background-color:#222C26;
+      border-color: #222C26;
+    }
+    .select-img{
+      position: relative;
+      text-align: center;
+    }
+    .input.file {
+      display: block;
+      color: #F2B53A;
+      background-color: #112240;
+      border-color: #112240;
+      text-align: center;
+      margin: auto;
+    }
+    textarea#FormControlTextarea {
+      font-size: 14px;
+      color: #CCD6F6;
+      font-weight: 350;
+      background-color: #112240;
+      border-color: #112240;
+      margin-bottom: 19px;
+    }
+    div#title-exp{
+      width: 100%;
+      float: right;
+    }
+    div#info-exp{
+      width: 100%;
+      clear: both;
+    }
+  
+    input#titulo {
+      font-family: 'RamaBold', sans-serif;
+      color: #CCD6F6;
+      background-color: #112240;
+      border-color: #112240;
+      margin-bottom: 15px;
+      font-size: 20px;
+      font-weight: 300;
+    }
+  
+    ::ng-deep .mat-focused .mat-form-field-label {
+      /*change color of label*/
+      color: #CCD6F6 !important;
+     }
+    
+  ::ng-deep.mat-form-field-underline {
+      /*change color of underline*/
+      background-color: #F2B53A !important;
+    } 
+    
+  ::ng-deep.mat-form-field-ripple {
+     /*change color of underline when focused*/
+     background-color: #CCD6F6!important;
+    }
+  ::ng-deep.mat-form-field-appearance-legacy .mat-form-field-label{
+      color: #F2B53A !important;  
+  }
+  ::ng-deep .mat-input-element {
+      caret-color: #CCD6F6!important;
+  }
+  ::ng-deep .mat-input-element {
+      color: #CCD6F6!important;
+  }
+  
+  
+  ::ng-deep .mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+      background-color: #F2B53A!important;
+  }
+  
+  
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+      color: #F2B53A!important;
+      opacity: 1!important;
+  }
+  
+  
+  ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+      color: #F2B53A!important;
+  }
+  
+  
+  ::ng-deep .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick{
+      color: #F2B53A!important;
+      opacity: 0.8!important;
+  }
+  
+  
+  ::ng-deep .mat-form-field-invalid .mat-input-element, .mat-warn .mat-input-element {
+      caret-color: #F2B53A!important;
+  }
+  
+  
+  ::ng-deep .mat-form-field-label {
+      color: rgba(0,0,0,.6)!important;
+  
+  }
+  
+  ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+      color: #F2B53A!important;
+  }
+  
+  .form-floating>.form-control, .form-floating>.form-control-plaintext {
+    padding: 1rem 0.75rem;
+    padding-top: 1rem;
+    padding-right: 0.75rem;
+    padding-bottom: 1rem;
+    padding-left: 0.75rem;
+  }
+  
+  .form-floating>.form-control, .form-floating>.form-control-plaintext, .form-floating>.form-select {
+    height: calc(2.5rem + 2px);
+    line-height: 1.25;
+  }
+  

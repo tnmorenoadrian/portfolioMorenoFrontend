@@ -20,7 +20,7 @@ export class ProyectosComponent implements OnInit {
   proyectoSelect: any;
   private subscription!: Subscription;
 
-  constructor(private datosPortfolio:PortfolioService,
+  constructor(private servicePortfolio:PortfolioService,
     private modalService: NgbModal,
     public authService: AuthService
     ) { }
@@ -31,13 +31,13 @@ export class ProyectosComponent implements OnInit {
   }
 
   actualizarPortfolio(){
-    this.datosPortfolio.obtenerDatosPersona().subscribe((data: Persona[]) =>{
+    this.servicePortfolio.obtenerDatosPersona().subscribe((data: Persona[]) =>{
       this.miPortfolio=data;
         });
   }
 
   actualizarProyectos(){
-    this.subscription = this.datosPortfolio.obtenerDatosProyecto().subscribe((data: Proyecto[]) =>{
+    this.subscription = this.servicePortfolio.obtenerDatosProyecto().subscribe((data: Proyecto[]) =>{
       this.proyectosList=data;
       });
   }
@@ -56,7 +56,7 @@ export class ProyectosComponent implements OnInit {
 
     modalRef.result.then((result) => {
       if(result){
-        this.datosPortfolio.actualizarDatosProyecto(result.id, result).subscribe(data => {
+        this.servicePortfolio.actualizarDatosProyecto(result.id, result).subscribe(data => {
           this.proyectoSelect.id = data.id;});
         }
       }).catch(() => { /* closed */ });
@@ -84,7 +84,7 @@ export class ProyectosComponent implements OnInit {
     
     modalRef.result.then((result) => {
       if (result) {
-        this.datosPortfolio.addProyecto(result).subscribe(()=>{
+        this.servicePortfolio.addProyecto(result).subscribe(()=>{
           if(this.subscription) this.subscription.unsubscribe();
           this.actualizarProyectos();
         });
@@ -93,7 +93,7 @@ export class ProyectosComponent implements OnInit {
   }
 
   borrarProyecto(id_proyecto: string) {
-    this.datosPortfolio.borrarProyecto(id_proyecto).subscribe(()=>{
+    this.servicePortfolio.borrarProyecto(id_proyecto).subscribe(()=>{
       if(this.subscription) this.subscription.unsubscribe();
       this.actualizarProyectos(); 
   });

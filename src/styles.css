@@ -80,6 +80,7 @@
   text-align: center !important;
   font-size: 17px !important;
   line-height: 1.42857 !important;
+  z-index: 1010;
 }
 
 .btn-square {
@@ -183,6 +184,23 @@ body{
   top: 20px;
 }
 .btn-circle#experiencia-trash{
+  background-color:#FF0083 !important;
+  border-color: #FF0083 !important;
+  position: absolute;
+  right: 5px;
+  top: 20px;
+}
+.btn-circle#habilidad-add{
+  position: absolute;
+  right: 49px;
+  top: 20px;
+}
+.btn-circle#habilidad-edit{
+  position: absolute;
+  right: 53px;
+  top: 20px;
+}
+.btn-circle#habilidad-trash{
   background-color:#FF0083 !important;
   border-color: #FF0083 !important;
   position: absolute;
@@ -313,7 +331,7 @@ box-sizing: border-box;
 }
 }
 
-div h2{
+h2{
   font-family: 'RamaBold', sans-serif !important;
   font-size: 24px !important;
   color: #CCD6F6;
@@ -436,8 +454,7 @@ div#background-skills{
   background: rgba(0, 0, 0, 0)!important;
   align-items: flex-start;
   justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+
 }
 
 .cont-skill{
@@ -477,7 +494,7 @@ div#background-skills{
   position: relative;
   display: block;
   height: 100%;
-  width: 90%;
+
   border-radius: 6px;
   background: #F2B53A;
   animation: progress 0.4s ease-in-out forwards;

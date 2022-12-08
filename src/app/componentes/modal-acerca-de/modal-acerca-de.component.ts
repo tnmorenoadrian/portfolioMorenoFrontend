@@ -15,7 +15,7 @@ export class ModalAcercaDeComponent implements OnInit {
 
   constructor(
     public activeModal: NgbActiveModal,
-    private datosPortfolio:PortfolioService
+    private servicePortfolio:PortfolioService
   ) { }
 
   ngOnInit() {

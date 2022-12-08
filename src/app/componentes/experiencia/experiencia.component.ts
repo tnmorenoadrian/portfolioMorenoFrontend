@@ -20,24 +20,24 @@ export class ExperienciaComponent implements OnInit {
   experienciaSelect: any;
   private subscription!: Subscription;
 
-  constructor(private datosPortfolio:PortfolioService,
+  constructor(private servicePortfolio:PortfolioService,
     private modalService: NgbModal,
     public authService: AuthService
     ) { }
 
   ngOnInit(): void {
-    this.actualizarExperiencia();
-    this.actualizarPortfolio();
+    this.obtenerExperiencia();
+    this.obtenerPortfolio();
   }
 
-  actualizarPortfolio(){
-    this.datosPortfolio.obtenerDatosPersona().subscribe((data: Persona[]) =>{
+  obtenerPortfolio(){
+    this.servicePortfolio.obtenerDatosPersona().subscribe((data: Persona[]) =>{
       this.miPortfolio=data;
         });
   }
 
-  actualizarExperiencia(){
-    this.subscription = this.datosPortfolio.obtenerDatosExperiencia().subscribe((data: Experiencia[]) =>{
+  obtenerExperiencia(){
+    this.subscription = this.servicePortfolio.obtenerDatosExperiencia().subscribe((data: Experiencia[]) =>{
       this.experienciaList=data;
       });
   }
@@ -56,7 +56,7 @@ export class ExperienciaComponent implements OnInit {
 
     modalRef.result.then((result) => {
       if(result){
-        this.datosPortfolio.actualizarDatosExperiencia(result.id, result).subscribe(data => {
+        this.servicePortfolio.actualizarDatosExperiencia(result.id, result).subscribe(data => {
           this.experienciaSelect.id = data.id;});
         }
       }).catch(() => { /* closed */ });
@@ -84,18 +84,18 @@ export class ExperienciaComponent implements OnInit {
     
     modalRef.result.then((result) => {
       if (result) {
-        this.datosPortfolio.addExperiencia(result).subscribe(()=>{
+        this.servicePortfolio.addExperiencia(result).subscribe(()=>{
           if(this.subscription) this.subscription.unsubscribe();
-          this.actualizarExperiencia();
+          this.obtenerExperiencia();
         });
         }
       }).catch(() => { /* closed */ });
   }
 
   borrarExperiencia(id_experiencia: string) {
-    this.datosPortfolio.borrarExperiencia(id_experiencia).subscribe(()=>{
+    this.servicePortfolio.borrarExperiencia(id_experiencia).subscribe(()=>{
       if(this.subscription) this.subscription.unsubscribe();
-      this.actualizarExperiencia(); 
+      this.obtenerExperiencia(); 
   });
   }
   

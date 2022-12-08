@@ -2,7 +2,8 @@ export class Habilidad {
 
     id?: number;
     persona?: number;
-    titulo_habilidad?: string;
+    programacion_habilidad?: string;
+    idioma_habilidad?: string;
     nivel_habilidad?: string;
    
 }

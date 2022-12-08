@@ -20,24 +20,24 @@ export class EducacionComponent implements OnInit {
   educacionSelect: any;
   private subscription!: Subscription;
 
-  constructor(private datosPortfolio:PortfolioService,
+  constructor(private servicePortfolio:PortfolioService,
     private modalService: NgbModal,
     public authService: AuthService
     ) { }
 
   ngOnInit(): void {
-    this.actualizarEducacion();
-    this.actualizarPortfolio();
+    this.obtenerEducacion();
+    this.obtenerPortfolio();
   }
 
-  actualizarPortfolio(){
-    this.datosPortfolio.obtenerDatosPersona().subscribe((data: Persona[]) =>{
+  obtenerPortfolio(){
+    this.servicePortfolio.obtenerDatosPersona().subscribe((data: Persona[]) =>{
       this.miPortfolio=data;
         });
   }
 
-  actualizarEducacion(){
-    this.subscription = this.datosPortfolio.obtenerDatosEducacion().subscribe((data: Educacion[]) =>{
+  obtenerEducacion(){
+    this.subscription = this.servicePortfolio.obtenerDatosEducacion().subscribe((data: Educacion[]) =>{
       this.educacionList=data;
       });
   }
@@ -56,7 +56,7 @@ export class EducacionComponent implements OnInit {
 
     modalRef.result.then((result) => {
       if(result){
-        this.datosPortfolio.actualizarDatosEducacion(result.id, result).subscribe(data => {
+        this.servicePortfolio.actualizarDatosEducacion(result.id, result).subscribe(data => {
           this.educacionSelect.id = data.id;});
         }
       }).catch(() => { /* closed */ });
@@ -84,18 +84,18 @@ export class EducacionComponent implements OnInit {
     
     modalRef.result.then((result) => {
       if (result) {
-        this.datosPortfolio.addEducacion(result).subscribe(()=>{
+        this.servicePortfolio.addEducacion(result).subscribe(()=>{
           if(this.subscription) this.subscription.unsubscribe();
-          this.actualizarEducacion();
+          this.obtenerEducacion();
         });
         }
       }).catch(() => { /* closed */ });
   }
 
   borrarEducacion(id_educacion: string) {
-    this.datosPortfolio.borrarEducacion(id_educacion).subscribe(()=>{
+    this.servicePortfolio.borrarEducacion(id_educacion).subscribe(()=>{
       if(this.subscription) this.subscription.unsubscribe();
-      this.actualizarEducacion(); 
+      this.obtenerEducacion(); 
   });
   }
   
