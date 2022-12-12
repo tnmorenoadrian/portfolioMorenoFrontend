@@ -11,42 +11,43 @@
       
       <div class="cont-skill">
         <h2>Programacion</h2>
-        <ul class="items-list" >
-          <li *ngFor="let habilidadesPro of fromParentHabilidades; let i = index" >
-            <div class="skill-box" *ngIf="habilidadesPro.programacion_habilidad">          
-              <button type="button" class="btn btn-info btn-circle" id="habilidad-trash" (click)="borrarHabilidad(habilidadesPro.id)" ><i class="fa fa-trash"></i>
+        <ul class="items-list">
+          <ng-container *ngFor="let habilidades of fromParentHabilidades; let i = index" >
+          <li *ngIf="habilidades.programacion_habilidad">  
+            <div class="skill-box">          
+              <button type="button" class="btn btn-info btn-circle" id="habilidad-trash" (click)="borrarHabilidad(habilidades.id)" ><i class="fa fa-trash"></i>
               </button>
               <div class="form-floating" style="padding-bottom: 15px;">
-                <input type="text" id="perfil" class="form-control" [(ngModel)]="habilidadesPro.programacion_habilidad" (ngModelChange)="onChange(habilidadesPro.id)"/>
-              </div>
-              
-              <div class="skill-bar">
-                  <span class="skill-per html" [ngStyle]="{'width': habilidadesPro.nivel_habilidad + '%','animation-delay': i/5 + 's'}">
-                      <span class="tooltipo">{{habilidadesPro.nivel_habilidad}}%</span>
-                  </span>
-              </div>
+                <input type="text" id="perfil" class="form-control" [(ngModel)]="habilidades.programacion_habilidad" (ngModelChange)="onChange(habilidades.id)"/>
+              </div>          
+            
+                <mat-slider [(ngModel)]="habilidades.nivel_habilidad" thumbLabel (change)="onChange(habilidades.id)" min="1" max="100">
+                  <input matSliderThumb>
+                </mat-slider>
+
             </div>          
           </li>
+          </ng-container>
         </ul>
       </div>
         
       <div class="cont-skill">
         <h2>Idiomas</h2>
-        <ul class="items-list" >
-          <li *ngFor="let habilidadesIdi of fromParentHabilidades; let i = index" >
-            <div class="skill-box" *ngIf="habilidadesIdi.idioma_habilidad">
-              <button type="button" class="btn btn-info btn-circle" id="habilidad-trash" (click)="borrarHabilidad(habilidadesIdi.id)" ><i class="fa fa-trash"></i>
+        <ul class="items-list">
+          <ng-container *ngFor="let habilidades of fromParentHabilidades; let i = index" >
+          <li *ngIf="habilidades.idioma_habilidad">
+            <div class="skill-box">
+              <button type="button" class="btn btn-info btn-circle" id="habilidad-trash" (click)="borrarHabilidad(habilidades.id)" ><i class="fa fa-trash"></i>
               </button>
              <div class="form-floating" style="padding-bottom: 15px;">
-              <input type="text" id="perfil" class="form-control" [(ngModel)]="habilidadesIdi.idioma_habilidad" (ngModelChange)="onChange(habilidadesIdi.id)"/>
+              <input type="text" id="perfil" class="form-control" [(ngModel)]="habilidades.idioma_habilidad" (ngModelChange)="onChange(habilidades.id)"/>
             </div>
-              <div class="skill-bar">
-                  <span class="skill-per html" [ngStyle]="{'width': habilidadesIdi.nivel_habilidad + '%','animation-delay': i/5 + 's'}">
-                      <span class="tooltipo">{{habilidadesIdi.nivel_habilidad}}%</span>
-                  </span>
-              </div>
+              <mat-slider [(ngModel)]="habilidades.nivel_habilidad" thumbLabel (change)="onChange(habilidades.id)" min="1" max="100">
+                <input matSliderThumb>
+              </mat-slider>
             </div>          
           </li>
+         </ng-container>
         </ul>
       </div>        
         

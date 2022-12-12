@@ -6,6 +6,7 @@ import { Persona } from 'src/app/models/persona.model';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/servicios/auth.service';
 import { Habilidad } from 'src/app/models/habilidad.model';
+import { ModalHabilidadAddComponent } from '../modal-habilidad-add/modal-habilidad-add.component';
 
 @Component({
   selector: 'app-habilidades',
@@ -55,20 +56,37 @@ export class HabilidadesComponent implements OnInit {
 
     modalRef.result.then((result) => {
       if(result){
-        this.obtenerHabilidades();
+       this.obtenerHabilidades();
         }
-      },(error) =>{
-        this.obtenerHabilidades();
+      }).catch(() => { /* closed */ });
+  }
+
+  openModalHabilidadAdd() {
+    const modalRef = this.modalService.open(ModalHabilidadAddComponent,
+      {
+        windowClass: 'modal-xl'
       });
-  }
 
+    let title = "Habilidad"
+    let newHabilidad: Habilidad = {
+      "persona": 1,
+	    "programacion_habilidad": '',
+	    "idioma_habilidad": '',
+	    "nivel_habilidad": ''
+    };
 
-  borrarHabilidad(id_habilidad: string) {
-    this.servicePortfolio.borrarHabilidad(id_habilidad).subscribe(()=>{
-      if(this.subscription) this.subscription.unsubscribe();
-      this.obtenerHabilidades(); 
-  });
+    modalRef.componentInstance.fromParentHabilidad = newHabilidad;
+    modalRef.componentInstance.fromParentIdPersona = this.miPortfolio.id;
+    modalRef.componentInstance.fromParentTitle = title;
+    
+    modalRef.result.then((result) => {
+      if (result) {
+        this.servicePortfolio.addHabilidad(result).subscribe(()=>{
+          if(this.subscription) this.subscription.unsubscribe();
+          this.obtenerHabilidades();
+        });
+        }
+      }).catch(() => { /* closed */ });
   }
-  
 
 }

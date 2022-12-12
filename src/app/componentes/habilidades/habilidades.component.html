@@ -3,9 +3,9 @@
 <div class="card mat-card" id="habilidades">
     <div class="card-titles">
       <h1>Habilidades</h1>
-      <button type="button" class="btn btn-info btn-circle" id="experiencia-edit" *ngIf="authService.isLoggedIn" (click)="openModalHabilidades(miPortfolio.id)"><i class="fa fa-pen"></i>
+      <button type="button" class="btn btn-info btn-circle" id="habilidades-add" *ngIf="authService.isLoggedIn" (click)="openModalHabilidadAdd()" ><i class="fa fa-plus"></i>
       </button>
-      <button type="button" class="btn btn-info btn-circle" id="experiencia-trash" *ngIf="authService.isLoggedIn" (click)="borrarHabilidad(habilidadesList.persona)" ><i class="fa fa-trash"></i>
+      <button type="button" class="btn btn-info btn-circle" id="habilidades-edit" *ngIf="authService.isLoggedIn" (click)="openModalHabilidades(miPortfolio.id)"><i class="fa fa-pen"></i>
       </button>
     </div>
     
@@ -14,10 +14,9 @@
       <div class="cont-skill">
         <h2>Programación</h2>
         <ul class="items-list" >
-          <li *ngFor="let habilidades of habilidadesList; let i = index" >
-           
-            <div class="skill-box" *ngIf="habilidades.programacion_habilidad">
-              
+          <ng-container *ngFor="let habilidades of habilidadesList; let i = index">
+          <li *ngIf="habilidades.programacion_habilidad">      
+            <div class="skill-box" >           
               <span class="title">{{habilidades.programacion_habilidad}}</span>
               <div class="skill-bar">
                   <span class="skill-per html" [ngStyle]="{'width': habilidades.nivel_habilidad + '%','animation-delay': i/5 + 's'}">
@@ -26,15 +25,16 @@
               </div>
             </div>          
           </li>
+          </ng-container>
         </ul>
       </div>
         
       <div class="cont-skill">
         <h2>Idiomas</h2>
         <ul class="items-list" >
-          <li *ngFor="let habilidades of habilidadesList; let i = index" >
-           
-            <div class="skill-box" *ngIf="habilidades.idioma_habilidad">
+          <ng-container *ngFor="let habilidades of habilidadesList; let i = index">
+          <li *ngIf="habilidades.idioma_habilidad">
+            <div class="skill-box" >
               <span class="title">{{habilidades.idioma_habilidad}}</span>
               <div class="skill-bar">
                   <span class="skill-per html" [ngStyle]="{'width': habilidades.nivel_habilidad + '%','animation-delay': i/5 + 's'}">
@@ -43,6 +43,7 @@
               </div>
             </div>          
           </li>
+          </ng-container>
         </ul>
       </div>        
         

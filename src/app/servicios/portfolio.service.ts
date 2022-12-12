@@ -94,6 +94,13 @@ export class PortfolioService {
     )
   }
 
+  addHabilidad(data: any): Observable<any> {
+    let API_URL = `${this.apiUrl}/new/habilidad`;
+    return this.http.post(API_URL, data, { headers: this.headers }).pipe(
+      catchError(this.handleError)
+    )
+  }
+
   addProyecto(data: any): Observable<any> {
     let API_URL = `${this.apiUrl}/new/proyecto`;
     return this.http.post(API_URL, data, { headers: this.headers }).pipe(

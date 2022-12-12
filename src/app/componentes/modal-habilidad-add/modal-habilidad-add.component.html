@@ -1,0 +1,57 @@
+<div class="modal-header">
+    <h2 class="modal-title">{{ fromParentTitle }}</h2>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+</div>
+
+<div class="modal-body" id="habilidades">
+    
+    <div id="background-skills">
+      
+      <div class="cont-skill">
+        <h2>Programacion</h2>
+        <ul class="items-list">
+          <ng-container>
+          <li>  
+            <div class="skill-box">          
+                <div class="form-floating" style="padding-bottom: 15px;">
+                    <input type="text" id="programacion" class="form-control" [(ngModel)]="fromParentHabilidad.programacion_habilidad"/>
+                    <label for="floatingTextarea">Lenguaje de Programacion</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="text" id="nivel-programacion" class="form-control" [(ngModel)]="fromParentHabilidad.nivel_habilidad"/>
+                    <label for="floatingTextarea">Nivel</label>
+                  </div>
+            </div>          
+          </li>
+          </ng-container>
+        </ul>
+      </div>
+        
+      <div class="cont-skill">
+        <h2>Idiomas</h2>
+        <ul class="items-list">
+            <ng-container>
+                <li>  
+                  <div class="skill-box">          
+                      <div class="form-floating" style="padding-bottom: 15px;">
+                          <input type="text" id="idioma" class="form-control" [(ngModel)]="fromParentHabilidad.idioma_habilidad"/>
+                          <label for="floatingTextarea">Idioma</label>
+                        </div>
+                        <div class="form-floating">
+                          <input type="text" id="nivel_idioma" class="form-control" [(ngModel)]="fromParentHabilidad.nivel_habilidad"/>
+                          <label for="floatingTextarea">Nivel</label>
+                        </div>
+                  </div>          
+                </li>
+            </ng-container>
+        </ul>
+      </div>        
+        
+      </div>
+</div> 
+    <div class="modal-footer">
+        <button type="button" type="submit" class="btn custom-btn" (click)="agregar()">Guardar Cambios</button>
+    </div> 
+

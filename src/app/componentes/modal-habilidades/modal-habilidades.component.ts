@@ -26,14 +26,15 @@ export class ModalHabilidadesComponent implements OnInit {
 
   onChange(id_habilidad: string){
     this.datosEdit.emit(this.fromParentHabilidades);
-    this.habilidadSelect =this.fromParentHabilidades.find(x => x.id === id_habilidad);
+    this.habilidadSelect = this.fromParentHabilidades.find(x => x.id === id_habilidad);
     this.servicePortfolio.actualizarDatosHabilidades(id_habilidad, this.habilidadSelect).subscribe(data => {
       this.habilidadSelect.id = id_habilidad;});
   }
 
   borrarHabilidad(id_habilidad: string) {
     this.servicePortfolio.borrarHabilidad(id_habilidad).subscribe(()=>{
-      if(this.subscription) this.subscription.unsubscribe(); 
+      if(this.subscription) this.subscription.unsubscribe();
+      this.activeModal.close(this.fromParentHabilidades); 
   });
   
   }

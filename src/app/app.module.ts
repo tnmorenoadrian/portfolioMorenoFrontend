@@ -34,6 +34,8 @@ import { ModalLoginComponent } from './componentes/modal-login/modal-login.compo
 import {NgxTypedJsModule} from 'ngx-typed-js';
 import { AuthInterceptor } from './servicios/auth.interceptor';
 import { ModalHabilidadesComponent } from './componentes/modal-habilidades/modal-habilidades.component';
+import { ModalHabilidadAddComponent } from './componentes/modal-habilidad-add/modal-habilidad-add.component';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   imports:      [ BrowserModule,
@@ -51,7 +53,8 @@ import { ModalHabilidadesComponent } from './componentes/modal-habilidades/modal
                   MatNativeDateModule,
                   ReactiveFormsModule,
                   MatInputModule,
-                  NgxTypedJsModule
+                  NgxTypedJsModule,
+                  MatSliderModule
                  ],
   declarations: [ AppComponent,
                   EncabezadoComponent,
@@ -72,7 +75,8 @@ import { ModalHabilidadesComponent } from './componentes/modal-habilidades/modal
                   ModalProyectosComponent,
                   ModalProyectosAddComponent,
                   ModalLoginComponent,
-                  ModalHabilidadesComponent
+                  ModalHabilidadesComponent,
+                  ModalHabilidadAddComponent
                 ],
   providers: [ 
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi:

@@ -70,16 +70,14 @@
     color: #CCD6F6 !important;
 }
 .btn-circle {
-  background-color: #F2B53A !important ;
-  border-color: #F2B53A !important;
+  width: 70px;
+  height: 36px;
+  border:none;
+  border:solid 2px #F2B53A;
+  border-radius: 5px;
   color: #CCD6F6 !important;
-  width: 40px !important;
-  height: 40px !important;
-  padding: 6px 0px !important;
-  border-radius: 21px !important;
-  text-align: center !important;
-  font-size: 17px !important;
-  line-height: 1.42857 !important;
+  background: rgba(255, 255, 255,0);
+  font-size: 15px;
   z-index: 1010;
 }
 
@@ -154,17 +152,17 @@ body{
 .btn-circle#profile-img{
   position: absolute;
   top: -7px;
-  left: 207px;
+  left: 219px;
 }
 .btn-circle#profile-info{
   position: absolute;
-  right: 23px;
-  top: 170px;
+  right: 0px;
+  top: 219px;
 }
 .btn-circle#acerca-edit{
   position: absolute;
   right: 30px;
-  top: 20px;
+  top: 47px;
 }
 .btn-circle#acerca-trash{
   background-color: #FF0083 !important;
@@ -175,13 +173,18 @@ body{
 }
 .btn-circle#experiencia-add{
   position: absolute;
-  right: 49px;
-  top: 20px;
+  right: 60px;
+  top: 25px;
 }
 .btn-circle#experiencia-edit{
   position: absolute;
-  right: 53px;
+  right: 80px;
   top: 20px;
+}
+.btn-circle#habilidades-edit{
+  position: absolute;
+  right: 55px;
+  top: 55px;
 }
 .btn-circle#experiencia-trash{
   background-color:#FF0083 !important;
@@ -190,27 +193,27 @@ body{
   right: 5px;
   top: 20px;
 }
-.btn-circle#habilidad-add{
-  position: absolute;
-  right: 49px;
-  top: 20px;
-}
-.btn-circle#habilidad-edit{
+.btn-circle#habilidades-add{
   position: absolute;
   right: 53px;
   top: 20px;
+}
+.btn-circle#habilidades-edit{
+  position: absolute;
+  right: 53px;
+  top: 56px;
 }
 .btn-circle#habilidad-trash{
   background-color:#FF0083 !important;
   border-color: #FF0083 !important;
   position: absolute;
   right: 5px;
-  top: 20px;
+  top: 28px;
 }
 .btn-circle#educacion-edit{
   position: absolute;
   right: 53px;
-  top: 20px;
+  top: 25px;
 }
 .btn-circle#educacion-trash{
   background-color: #FF0083 !important;
