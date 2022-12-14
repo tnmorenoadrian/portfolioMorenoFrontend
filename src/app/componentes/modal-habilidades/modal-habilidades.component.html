@@ -13,12 +13,14 @@
         <h2>Programacion</h2>
         <ul class="items-list">
           <ng-container *ngFor="let habilidades of fromParentHabilidades; let i = index" >
-          <li *ngIf="habilidades.programacion_habilidad">  
+          <li *ngIf="habilidades.programacion_habilidad" style="background-color: #0A192F">  
             <div class="skill-box">          
               <button type="button" class="btn btn-info btn-circle" id="habilidad-trash" (click)="borrarHabilidad(habilidades.id)" ><i class="fa fa-trash"></i>
               </button>
               <div class="form-floating" style="padding-bottom: 15px;">
-                <input type="text" id="perfil" class="form-control" [(ngModel)]="habilidades.programacion_habilidad" (ngModelChange)="onChange(habilidades.id)"/>
+                <mat-form-field class="formcontrol"> 
+                  <input matInput  [(ngModel)]="habilidades.programacion_habilidad" (ngModelChange)="onChange(habilidades.id)"/>
+                  </mat-form-field>
               </div>          
             
                 <mat-slider [(ngModel)]="habilidades.nivel_habilidad" thumbLabel (change)="onChange(habilidades.id)" min="1" max="100">
@@ -35,12 +37,14 @@
         <h2>Idiomas</h2>
         <ul class="items-list">
           <ng-container *ngFor="let habilidades of fromParentHabilidades; let i = index" >
-          <li *ngIf="habilidades.idioma_habilidad">
+          <li *ngIf="habilidades.idioma_habilidad" style="background-color: #0A192F">
             <div class="skill-box">
               <button type="button" class="btn btn-info btn-circle" id="habilidad-trash" (click)="borrarHabilidad(habilidades.id)" ><i class="fa fa-trash"></i>
               </button>
              <div class="form-floating" style="padding-bottom: 15px;">
-              <input type="text" id="perfil" class="form-control" [(ngModel)]="habilidades.idioma_habilidad" (ngModelChange)="onChange(habilidades.id)"/>
+              <mat-form-field class="formcontrol"> 
+              <input matInput  [(ngModel)]="habilidades.idioma_habilidad" (ngModelChange)="onChange(habilidades.id)"/>
+              </mat-form-field>
             </div>
               <mat-slider [(ngModel)]="habilidades.nivel_habilidad" thumbLabel (change)="onChange(habilidades.id)" min="1" max="100">
                 <input matSliderThumb>

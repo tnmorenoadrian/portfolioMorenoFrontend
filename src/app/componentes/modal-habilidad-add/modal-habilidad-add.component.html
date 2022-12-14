@@ -6,51 +6,32 @@
 </div>
 
 <div class="modal-body" id="habilidades">
-    
-    <div id="background-skills">
       
-      <div class="cont-skill">
-        <h2>Programacion</h2>
-        <ul class="items-list">
-          <ng-container>
-          <li>  
-            <div class="skill-box">          
-                <div class="form-floating" style="padding-bottom: 15px;">
-                    <input type="text" id="programacion" class="form-control" [(ngModel)]="fromParentHabilidad.programacion_habilidad"/>
-                    <label for="floatingTextarea">Lenguaje de Programacion</label>
-                  </div>
-                  <div class="form-floating">
-                    <input type="text" id="nivel-programacion" class="form-control" [(ngModel)]="fromParentHabilidad.nivel_habilidad"/>
-                    <label for="floatingTextarea">Nivel</label>
-                  </div>
-            </div>          
-          </li>
-          </ng-container>
-        </ul>
-      </div>
-        
-      <div class="cont-skill">
-        <h2>Idiomas</h2>
-        <ul class="items-list">
-            <ng-container>
-                <li>  
-                  <div class="skill-box">          
-                      <div class="form-floating" style="padding-bottom: 15px;">
-                          <input type="text" id="idioma" class="form-control" [(ngModel)]="fromParentHabilidad.idioma_habilidad"/>
-                          <label for="floatingTextarea">Idioma</label>
-                        </div>
-                        <div class="form-floating">
-                          <input type="text" id="nivel_idioma" class="form-control" [(ngModel)]="fromParentHabilidad.nivel_habilidad"/>
-                          <label for="floatingTextarea">Nivel</label>
-                        </div>
-                  </div>          
-                </li>
-            </ng-container>
-        </ul>
-      </div>        
-        
-      </div>
-</div> 
+                  <div class="skill-box">
+                      <mat-radio-group [(ngModel)]="selHabilidad"> 
+                      <mat-radio-button value="programacion" style="padding-right: 20px;">Lenguaje de Programacion</mat-radio-button>
+                      <mat-radio-button value="idioma" >Idioma</mat-radio-button>
+                      </mat-radio-group>
+                      <p></p>
+                      <div *ngIf="selHabilidad=='idioma'" class="form-floating" style="padding-bottom: 15px;">
+                         <mat-form-field > 
+                         <input matInput placeholder="Idioma" [(ngModel)]="fromParentHabilidad.idioma_habilidad"/>
+                         </mat-form-field>
+                      </div>
+                      <div *ngIf="selHabilidad=='programacion'" class="form-floating" style="padding-bottom: 15px;">
+                        <mat-form-field class="formcontrol"> 
+                        <input matInput placeholder="Lenguaje de programacion" [(ngModel)]="fromParentHabilidad.programacion_habilidad"/>
+                        </mat-form-field>
+                      </div>
+                      <div class="form-floating">
+                        <mat-form-field class="formcontrol"> 
+                          <input matInput placeholder="Nivel" [(ngModel)]="fromParentHabilidad.nivel_habilidad"/>
+                          </mat-form-field>
+                      </div>
+                  </div>                           
+      
+   </div> 
+
     <div class="modal-footer">
         <button type="button" type="submit" class="btn custom-btn" (click)="agregar()">Guardar Cambios</button>
     </div> 

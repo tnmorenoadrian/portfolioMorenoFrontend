@@ -208,7 +208,7 @@ body{
   border-color: #FF0083 !important;
   position: absolute;
   right: 5px;
-  top: 28px;
+  top: 45px;
 }
 .btn-circle#educacion-edit{
   position: absolute;
@@ -335,9 +335,20 @@ box-sizing: border-box;
 }
 
 h2{
+  display: flex;
+  align-items: center;
   font-family: 'RamaBold', sans-serif !important;
   font-size: 24px !important;
   color: #CCD6F6;
+}
+h2::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 140px;
+  height: 1px;
+  margin-left: 18px;
+  background-color: #F2B53A;
 }
 p{
   font-size:18px!important;
@@ -444,9 +455,10 @@ ul.items-list-proyecto li{
   margin-top: 20px; 
 }
 ul.items-list li h2{
+  display: flex;
+  align-items: center;
   margin-top: 20px;
   text-align: right; 
-  display:inline-block;
   padding: 0;
 }
 ul.items-list li p{
@@ -564,4 +576,8 @@ output{
 a{
   color:#CCD6F6 !important;
 }
+.mat-radio-outer-circle {
+  border-color: #F2B53A!important;
+}  
+
 body { margin: 0; font-family: Roboto, sans-serif; counter-reset: section;}

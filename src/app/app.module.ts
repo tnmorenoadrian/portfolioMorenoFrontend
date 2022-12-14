@@ -36,6 +36,7 @@ import { AuthInterceptor } from './servicios/auth.interceptor';
 import { ModalHabilidadesComponent } from './componentes/modal-habilidades/modal-habilidades.component';
 import { ModalHabilidadAddComponent } from './componentes/modal-habilidad-add/modal-habilidad-add.component';
 import { MatSliderModule } from '@angular/material/slider';
+import {MatRadioModule} from '@angular/material/radio'
 
 @NgModule({
   imports:      [ BrowserModule,
@@ -54,7 +55,8 @@ import { MatSliderModule } from '@angular/material/slider';
                   ReactiveFormsModule,
                   MatInputModule,
                   NgxTypedJsModule,
-                  MatSliderModule
+                  MatSliderModule,
+                  MatRadioModule
                  ],
   declarations: [ AppComponent,
                   EncabezadoComponent,

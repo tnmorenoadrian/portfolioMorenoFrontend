@@ -11,6 +11,7 @@ export class ModalHabilidadAddComponent implements OnInit {
   @Input() fromParentTitle:any;
   @Input() fromParentHabilidad:any;
   @Output() datosEdit: EventEmitter<any> = new EventEmitter();
+  selHabilidad: any;
  
   constructor(
     public activeModal: NgbActiveModal,
