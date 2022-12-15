@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <h2 class="modal-title"><i class="fa fa-handshake" aria-hidden="true"></i>  {{ fromParentTitle }}</h2>
+    <h2 class="modal-title">{{ fromParentTitle }}</h2>
     <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -19,8 +19,9 @@
 
       <div style="width:100%; text-align: center;">
       <div class="form-floating" id="title-exp">
-      <input type="text" id="titulo" class="form-control" [(ngModel)]="fromParentExperiencia.titulo_experiencia"/>
-      <label for="floatingTextarea">Título </label>
+      <mat-form-field class="formcontrol"> 
+        <input matInput placeholder="Título" id="titulo" [(ngModel)]="fromParentExperiencia.titulo_experiencia"/>
+      </mat-form-field>
       </div>
       <div class="form-floating" id="info-exp">
       <textarea class="form-control" id="FormControlTextarea" style="height: 100px" [(ngModel)]="fromParentExperiencia.info_experiencia"></textarea>

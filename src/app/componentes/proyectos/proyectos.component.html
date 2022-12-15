@@ -6,7 +6,10 @@
       </button>
     </div>
     <div id="list-projets">
-      <ul class="items-list-proyecto">
+      <ul class="items-list-proyecto" data-aos="fade-down"
+      data-aos-anchor="#proyectos"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
        <li *ngFor="let proyecto of proyectosList">
         <button type="button" class="btn btn-info btn-circle" id="experiencia-edit" *ngIf="authService.isLoggedIn" (click)="openModalProyecto(proyecto.id)"><i class="fa fa-pen"></i>
         </button> 

@@ -80,6 +80,10 @@
   font-size: 15px;
   z-index: 1010;
 }
+.btn-info {
+  --bs-btn-hover-bg: #F2B53A !important ;
+  --bs-btn-hover-border-color: #F2B53A !important ;
+}
 
 .btn-square {
   background-color: #F2B53A !important ;
@@ -152,11 +156,11 @@ body{
 .btn-circle#profile-img{
   position: absolute;
   top: -7px;
-  left: 219px;
+  left: 233px;
 }
 .btn-circle#profile-info{
   position: absolute;
-  right: 0px;
+  right: 50px;
   top: 219px;
 }
 .btn-circle#acerca-edit{
@@ -578,6 +582,12 @@ a{
 }
 .mat-radio-outer-circle {
   border-color: #F2B53A!important;
-}  
+} 
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  color: #F2B53A!important;
+} 
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: #F2B53A!important;
+}
 
 body { margin: 0; font-family: Roboto, sans-serif; counter-reset: section;}

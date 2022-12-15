@@ -106,6 +106,7 @@
   div#title-exp{
     width: 100%;
     float: right;
+    text-align: left;
   }
   div#info-exp{
     width: 100%;

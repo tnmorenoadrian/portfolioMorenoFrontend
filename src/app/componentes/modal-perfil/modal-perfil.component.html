@@ -4,18 +4,21 @@
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
-  <div class="modal-body">
+  <div class="modal-body">   
       <div class="form-floating" style="padding-bottom: 15px;">
-        <input type="text" id="perfil" class="form-control" [(ngModel)]="fromParentPersona.nombres"/>
-        <label for="floatingTextarea">Nombres </label>
+        <mat-form-field class="formcontrol" style="padding-bottom: 15px;" > 
+          <input matInput placeholder="Nombres" id="perfil" [(ngModel)]="fromParentPersona.nombres"/>
+        </mat-form-field>
       </div>
       <div class="form-floating" style="padding-bottom: 15px;">
-        <input type="text" id="perfil" class="form-control" [(ngModel)]="fromParentPersona.apellido"/>
-        <label for="floatingTextarea">Apellido </label>
+        <mat-form-field class="formcontrol" style="padding-bottom: 15px;"> 
+          <input matInput placeholder="Apellido" id="perfil" [(ngModel)]="fromParentPersona.apellido"/>
+        </mat-form-field>
       </div>
       <div class="form-floating">
-        <input type="text" id="perfil" class="form-control" [(ngModel)]="fromParentPersona.ocupacion"/>
-        <label for="floatingTextarea">Ocupación </label>
+        <mat-form-field class="formcontrol"> 
+          <input matInput placeholder="Título" id="perfil" [(ngModel)]="fromParentPersona.ocupacion"/>
+        </mat-form-field>
       </div>
   </div>
   <div class="modal-footer">

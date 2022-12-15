@@ -19,8 +19,9 @@
 
       <div style="width:100%; text-align: center;">
       <div class="form-floating" id="title-exp">
-      <input type="text" id="titulo" class="form-control" [(ngModel)]="fromParentProyecto.titulo_proyecto"/>
-      <label for="floatingTextarea">Título </label>
+      <mat-form-field class="formcontrol"> 
+        <input matInput placeholder="Título" id="titulo" [(ngModel)]="fromParentProyecto.titulo_proyecto"/>
+      </mat-form-field>
       </div>
       <div class="form-floating" id="info-exp">
       <textarea class="form-control" id="FormControlTextarea" style="height: 100px" [(ngModel)]="fromParentProyecto.info_proyecto"></textarea>

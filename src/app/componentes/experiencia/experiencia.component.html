@@ -7,16 +7,16 @@
          </button>
        </div>
        
-         <ul class="items-list" >
+         <ul class="items-list" data-aos="zoom-out-up"
+         data-aos-anchor="#experiencia"
+         data-aos-offset="200"
+         data-aos-duration="500">
           <li *ngFor="let experiencia of experienciaList" >
             <button type="button" class="btn btn-info btn-circle" id="experiencia-edit" *ngIf="authService.isLoggedIn" (click)="openModalExperiencia(experiencia.id)"><i class="fa fa-pen"></i>
             </button>
             <button type="button" class="btn btn-info btn-circle" id="experiencia-trash" *ngIf="authService.isLoggedIn" (click)="borrarExperiencia(experiencia.id)" ><i class="fa fa-trash"></i>
             </button>
-            <div id="imagen" data-aos="zoom-out-up"
-         data-aos-anchor="#experiencia"
-         data-aos-offset="200"
-         data-aos-duration="500">
+            <div id="imagen" >
             <img [src]="experiencia.image_experiencia" width="170" height="200" />
             </div>
             <div id="contenido">
