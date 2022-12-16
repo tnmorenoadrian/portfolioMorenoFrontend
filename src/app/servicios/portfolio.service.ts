@@ -15,7 +15,7 @@ import { skipApiKey } from './http.context';
 
 export class PortfolioService {
 
-  apiUrl: string = 'http://localhost:8081';
+  apiUrl: string = 'https://yoprogramo-tnmorenoadrian.koyeb.app/';
   headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
 

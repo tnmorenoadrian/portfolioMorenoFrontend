@@ -9,7 +9,7 @@ import { skipApiKey } from './http.context';
 
 export class ImagenesService {
 
-  apiUrl: string = 'http://localhost:8081';
+  apiUrl: string = 'https://yoprogramo-tnmorenoadrian.koyeb.app/';
   urlPrevImg!: string;
   headers = new HttpHeaders().set('Content-Type', 'application/json')
 
