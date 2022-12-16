@@ -81,7 +81,7 @@ export class ModalImgPerfilComponent implements OnInit {
       }
     
    cambiarImagen() {
-    this.fromParentPersona.image_perfil='http://localhost:8081/get/image/' + this.uploadedImage.name;
+    this.fromParentPersona.image_perfil='https://yoprogramo-tnmorenoadrian.koyeb.app/get/image/' + this.uploadedImage.name;
     this.activeModal.close(this.fromParentPersona);
     }
 

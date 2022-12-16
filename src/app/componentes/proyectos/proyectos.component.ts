@@ -71,7 +71,7 @@ export class ProyectosComponent implements OnInit {
     let title = "PROYECTOS"
     let newProyecto: Proyecto = {
       "persona": 1,
-      "image_proyecto":'http://localhost:8081/get/image/default.png',
+      "image_proyecto":'https://yoprogramo-tnmorenoadrian.koyeb.app/get/image/default.png',
 	    "titulo_proyecto": '',
 	    "info_proyecto": '',
 	    "desde_proyecto": '',

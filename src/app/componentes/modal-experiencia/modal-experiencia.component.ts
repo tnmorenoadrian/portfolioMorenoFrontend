@@ -137,7 +137,7 @@ export class ModalExperienciaComponent implements OnInit {
       }
 
    cambiarImagen() {
-    this.fromParentExperiencia.image_experiencia='http://localhost:8081/get/image/' + this.uploadedImage.name;
+    this.fromParentExperiencia.image_experiencia='https://yoprogramo-tnmorenoadrian.koyeb.app/get/image/' + this.uploadedImage.name;
     }
 
     actualizar() {

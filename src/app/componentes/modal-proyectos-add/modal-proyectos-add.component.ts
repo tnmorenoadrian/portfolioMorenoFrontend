@@ -143,13 +143,13 @@ export class ModalProyectosAddComponent implements OnInit {
       }
 
    cambiarImagen() {
-    this.fromParentProyecto.image_experiencia='http://localhost:8081/get/image/' + this.uploadedImage.name;
+    this.fromParentProyecto.image_experiencia='https://yoprogramo-tnmorenoadrian.koyeb.app/get/image/' + this.uploadedImage.name;
     }
 
     agregar() {
       this.datosAdd.emit(this.fromParentProyecto);
       this.fromParentProyecto.persona= this.fromParentIdPersona;
-      this.fromParentProyecto.image_proyecto='http://localhost:8081/get/image/' + this.uploadedImage.name;
+      this.fromParentProyecto.image_proyecto='https://yoprogramo-tnmorenoadrian.koyeb.app/get/image/' + this.uploadedImage.name;
       this.fromParentProyecto.desde_proyecto=moments(this.ctrlValueDesde).format('MMM, YYYY');
       this.fromParentProyecto.hasta_proyecto=moments(this.ctrlValueHasta).format('MMM, YYYY');
       this.activeModal.close(this.fromParentProyecto);

@@ -140,13 +140,13 @@ export class ModalExperienciaAddComponent implements OnInit {
       }
 
    cambiarImagen() {
-    this.fromParentExperiencia.image_experiencia='http://localhost:8081/get/image/' + this.uploadedImage.name;
+    this.fromParentExperiencia.image_experiencia='https://yoprogramo-tnmorenoadrian.koyeb.app/get/image/' + this.uploadedImage.name;
     }
 
     agregar() {
       this.datosAdd.emit(this.fromParentExperiencia);
       this.fromParentExperiencia.persona= this.fromParentIdPersona;
-      this.fromParentExperiencia.image_experiencia='http://localhost:8081/get/image/' + this.uploadedImage.name;
+      this.fromParentExperiencia.image_experiencia='https://yoprogramo-tnmorenoadrian.koyeb.app/get/image/' + this.uploadedImage.name;
       this.fromParentExperiencia.desde_experiencia=moments(this.ctrlValueDesde).format('MMM, YYYY');
       this.fromParentExperiencia.hasta_experiencia=moments(this.ctrlValueHasta).format('MMM, YYYY');
       this.activeModal.close(this.fromParentExperiencia);

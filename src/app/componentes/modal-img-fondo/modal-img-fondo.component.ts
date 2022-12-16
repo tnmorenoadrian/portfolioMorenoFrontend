@@ -81,7 +81,7 @@ export class ModalImgFondoComponent implements OnInit {
       }
 
    cambiarImagen() {
-    this.fromParentPersona.image_background='http://localhost:8081/get/image/' + this.uploadedImage.name;
+    this.fromParentPersona.image_background='https://yoprogramo-tnmorenoadrian.koyeb.app/get/image/' + this.uploadedImage.name;
     this.activeModal.close(this.fromParentPersona);
     }
 

@@ -71,7 +71,7 @@ export class EducacionComponent implements OnInit {
     let title = "Educación"
     let newEducacion: Educacion = {
       "persona": 1,
-      "image_educacion":'http://localhost:8081/get/image/default.png',
+      "image_educacion":'https://yoprogramo-tnmorenoadrian.koyeb.app/get/image/default.png',
 	    "titulo_educacion": '',
 	    "info_educacion": '',
 	    "desde_educacion": '',

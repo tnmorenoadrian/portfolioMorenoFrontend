@@ -141,13 +141,13 @@ export class ModalEducacionAddComponent implements OnInit {
       }
 
    cambiarImagen() {
-    this.fromParentEducacion.image_educacion='http://localhost:8081/get/image/' + this.uploadedImage.name;
+    this.fromParentEducacion.image_educacion='https:/yoprogramo-tnmorenoadrian.koyeb.app/get/image/' + this.uploadedImage.name;
     }
 
     agregar() {
       this.datosAdd.emit(this.fromParentEducacion);
       this.fromParentEducacion.persona= this.fromParentIdPersona;
-      this.fromParentEducacion.image_educacion='http://localhost:8081/get/image/' + this.uploadedImage.name;
+      this.fromParentEducacion.image_educacion='https://yoprogramo-tnmorenoadrian.koyeb.app/get/image/' + this.uploadedImage.name;
       this.fromParentEducacion.desde_educacion=moments(this.ctrlValueDesde).format('MMM, YYYY');
       this.fromParentEducacion.hasta_educacion=moments(this.ctrlValueHasta).format('MMM, YYYY');
       this.activeModal.close(this.fromParentEducacion);

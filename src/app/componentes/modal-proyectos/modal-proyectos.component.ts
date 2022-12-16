@@ -142,7 +142,7 @@ export class ModalProyectosComponent implements OnInit {
       }
 
    cambiarImagen() {
-    this.fromParentProyecto.image_proyecto='http://localhost:8081/get/image/' + this.uploadedImage.name;
+    this.fromParentProyecto.image_proyecto='https://yoprogramo-tnmorenoadrian.koyeb.app/get/image/' + this.uploadedImage.name;
     }
 
     actualizar() {

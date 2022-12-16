@@ -9,7 +9,7 @@ import { map } from "rxjs/operators";
 
 export class AuthService {
 
-  uri= 'https://yoprogramo-tnmorenoadrian.koyeb.app/';
+  uri= 'https://yoprogramo-tnmorenoadrian.koyeb.app';
   token:any;
   headers = new HttpHeaders().set('Content-Type', 'application/json')
 

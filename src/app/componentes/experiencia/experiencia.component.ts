@@ -71,7 +71,7 @@ export class ExperienciaComponent implements OnInit {
     let title = "Experiencia"
     let newExperiencia: Experiencia = {
       "persona": 1,
-      "image_experiencia":'http://localhost:8081/get/image/default.png',
+      "image_experiencia":'https://yoprogramo-tnmorenoadrian.koyeb.app/get/image/default.png',
 	    "titulo_experiencia": '',
 	    "info_experiencia": '',
 	    "desde_experiencia": '',

@@ -137,7 +137,7 @@ export class ModalEducacionComponent implements OnInit {
       }
 
    cambiarImagen() {
-    this.fromParentEducacion.image_educacion='http://localhost:8081/get/image/' + this.uploadedImage.name;
+    this.fromParentEducacion.image_educacion='https://yoprogramo-tnmorenoadrian.koyeb.app/get/image/' + this.uploadedImage.name;
     }
 
     actualizar() {
